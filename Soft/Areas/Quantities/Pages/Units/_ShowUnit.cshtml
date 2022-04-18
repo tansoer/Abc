@@ -1,0 +1,89 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Facade.Quantities
+@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Consts
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Quantities.UnitsPage
+
+<body>
+    @if (Model.Terms.Count != 0)
+    {
+        <h3>Terms for selected unit </h3>
+        <table class="table">
+            <tr>
+                <th>@(GetMember.DisplayName<UnitTermView>(x => x.MasterId))</th>
+                <th>@(GetMember.DisplayName<UnitTermView>(x => x.TermId))</th>
+                <th>@(GetMember.DisplayName<UnitTermView>(x => x.Power))</th>
+                <th>@(GetMember.DisplayName<UnitTermView>(x => x.ValidFrom))</th>
+                <th>@(GetMember.DisplayName<UnitTermView>(x => x.ValidTo))</th>
+            </tr>
+
+            @foreach (var item in Model.Terms)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.MasterId) </td>
+                    <td> @Html.DisplayFor(modelItem => item.TermId) </td>
+                    <td> @Html.DisplayFor(modelItem => item.Power) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidFrom) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidTo) </td>
+                </tr>
+            }
+
+        </table>
+    }
+
+    @if (Model.Factors.Count != 0)
+    {
+        <h3>Factors for selected unit </h3>
+        <table class="table">
+            <tr>
+                <th>@(GetMember.DisplayName<UnitFactorView>(x => x.SystemOfUnitsId))</th>
+                <th>@(GetMember.DisplayName<UnitFactorView>(x => x.UnitId))</th>
+                <th>@(GetMember.DisplayName<UnitFactorView>(x => x.Factor))</th>
+                <th>@(GetMember.DisplayName<UnitFactorView>(x => x.ValidFrom))</th>
+                <th>@(GetMember.DisplayName<UnitFactorView>(x => x.ValidTo))</th>
+            </tr>
+
+            @foreach (var item in Model.Factors)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.SystemOfUnitsId) </td>
+                    <td> @Html.DisplayFor(modelItem => item.UnitId) </td>
+                    <td> @Html.DisplayFor(modelItem => item.Factor) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidFrom) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidTo) </td>
+                </tr>
+            }
+
+        </table>
+    }
+
+    @if (Model.UnitRules.Count != 0)
+    {
+        <h3>Rules for selected unit </h3>
+        <table class="table">
+            <tr>
+                <th>@(GetMember.DisplayName<UnitRulesView>(x => x.SystemOfUnitsId))</th>
+                <th>@(GetMember.DisplayName<UnitRulesView>(x => x.UnitId))</th>
+                <th>@(GetMember.DisplayName<UnitRulesView>(x => x.FromBaseUnitRuleId))</th>
+                <th>@(GetMember.DisplayName<UnitRulesView>(x => x.ToBaseUnitRuleId))</th>
+                <th>@(GetMember.DisplayName<UnitRulesView>(x => x.ValidFrom))</th>
+                <th>@(GetMember.DisplayName<UnitFactorView>(x => x.ValidTo))</th>
+            </tr>
+
+            @foreach (var item in Model.UnitRules)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.SystemOfUnitsId) </td>
+                    <td> @Html.DisplayFor(modelItem => item.UnitId) </td>
+                    <td> @Html.DisplayFor(modelItem => item.FromFormula) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ToFormula) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidFrom) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidTo) </td>
+                </tr>
+            }
+
+        </table>
+    }
+
+</body>

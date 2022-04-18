@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.Organization" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Person" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAACAAAAAAAAAAAAQAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.OrganizationName" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Names\OrganizationName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.PersonName" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAgBAAgAEAIAUAAAAEAAAAAAAgAAICQAAAAA=</HashCode>
+      <FileName>Parties\Names\PersonName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <Members>
+      <Property Name="Addresses" Hidden="true" />
+      <Property Name="Emails" Hidden="true" />
+      <Method Name="GetAddress" Hidden="true" />
+      <Method Name="getContact" Hidden="true" />
+      <Method Name="getContacts" Hidden="true" />
+      <Method Name="GetEmail" Hidden="true" />
+      <Method Name="getFirstName" Hidden="true" />
+      <Method Name="GetName" Hidden="true" />
+      <Method Name="getOfficialName" Hidden="true" />
+      <Method Name="GetPhone" Hidden="true" />
+      <Method Name="names" Hidden="true" />
+      <Method Name="Party" Hidden="true" />
+      <Property Name="partyId" Hidden="true" />
+      <Property Name="partyNames" Hidden="true" />
+      <Property Name="Phones" Hidden="true" />
+      <Method Name="ToPartySummary" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Roles" />
+      <Property Name="Contacts" />
+      <Property Name="Identifiers" />
+      <Property Name="Capabilities" />
+      <Property Name="Preferences" />
+      <Property Name="Authentications" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.Authentication" Collapsed="true">
+    <Position X="6" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Parties\Signatures\Authentication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.RegisteredIdentifier" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAABAAAAAAAQAAYAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\RegisteredIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Preferences.Preference" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAgAAAAAAAACAAAACAAgAQAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Preferences\Preference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Capabilities.PartyCapability" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAIAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Parties\Capabilities\PartyCapability.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.BasePartySignature&lt;T&gt;" Collapsed="true">
+    <Position X="4" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAIAAAAAAAAAAAAAAAEAAEAAABAAICgAA=</HashCode>
+      <FileName>Parties\Signatures\BasePartySignature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Authentication" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.PartyContactUsage" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.75" />
+    <AssociationLine Name="Contact" Type="Abc.Domain.Parties.Contacts.IPartyContact" FixedFromPoint="true">
+      <Path>
+        <Point X="7.438" Y="3.191" />
+        <Point X="7.438" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.859" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\PartyContactUsage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contact" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.Contacts.IPartyContact" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\IPartyContact.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

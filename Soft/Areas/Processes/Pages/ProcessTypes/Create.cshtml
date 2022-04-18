@@ -1,0 +1,14 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Processes.ProcessTypesPage
+
+@{
+    Layout = "_Create";
+    Model.LoadDetails();
+}
+
+<body>
+    @Html.EditItem(Model)
+</body>
+
+<partial name="_EditElement" />

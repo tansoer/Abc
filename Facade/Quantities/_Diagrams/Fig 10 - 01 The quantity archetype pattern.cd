@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Common.EntityBaseView">
+    <Position X="4.5" Y="4" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAABAAAAAQAiAAQAgAAAACAAACAAABAAIAA=</HashCode>
+      <FileName>Common\EntityBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.MeasureView">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.MetricBaseView">
+    <Position X="0.5" Y="6" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\MetricBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitView">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.CommonTermView">
+    <Position X="4.5" Y="2" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\CommonTermView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.MeasureTermView">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureTermView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitTermView">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitTermView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.SystemOfUnitsView">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\SystemOfUnitsView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitAttributeView">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitAttributeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitRulesView">
+    <Position X="9.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitRulesView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitFactorView">
+    <Position X="9.75" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitFactorView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitType">
+    <Position X="2.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Quantities.MeasureType">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,12 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Parties.PartyContactsPage
+
+@{
+    Layout = "_Create";
+}
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.ContactType" />
+    @Html.EditItem(Model)
+</body>

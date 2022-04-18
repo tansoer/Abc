@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Processes.Thread" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <Members>
+      <Property Name="processId" Hidden="true" />
+      <Property Name="terminatorId" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Type" Type="Abc.Domain.Processes.ThreadType" FixedFromPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.125" />
+        <Point X="5.25" Y="2.125" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Terminator" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="2" />
+        <Point X="3.25" Y="1.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.315" Y="0.135" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Process" Type="Abc.Domain.Processes.Process" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="2.691" />
+        <Point X="3.25" Y="3.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.332" Y="0.243" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Next" Type="Abc.Domain.Processes.Thread" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.312" />
+        <Point X="4.5" Y="2.312" />
+        <Point X="4.5" Y="2.562" />
+        <Point X="4.25" Y="2.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="0.085" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Previous" Type="Abc.Domain.Processes.Thread" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2" />
+        <Point X="3.75" Y="1.75" />
+        <Point X="3.938" Y="1.75" />
+        <Point X="3.938" Y="2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.28" Y="0.275" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAggAAgAAAAAQAAAAAAAAAQAIICEAAAA=</HashCode>
+      <FileName>Processes\Thread.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Terminator" />
+      <Property Name="Process" />
+      <Property Name="Next" />
+      <Property Name="Previous" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tasks" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.ThreadType" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <Members>
+      <Property Name="processId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Process" Type="Abc.Domain.Processes.ProcessType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.34" Y="0.302" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Previous" Type="Abc.Domain.Processes.ThreadType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.769" Y="2" />
+        <Point X="5.769" Y="1.75" />
+        <Point X="6" Y="1.75" />
+        <Point X="6" Y="2" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.232" Y="0.277" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Next" Type="Abc.Domain.Processes.ThreadType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.75" Y="2.312" />
+        <Point X="7" Y="2.312" />
+        <Point X="7" Y="2.562" />
+        <Point X="6.75" Y="2.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAAgAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ThreadType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Process" />
+      <Property Name="Previous" />
+      <Property Name="Next" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Processes.Process" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Threads" Type="Abc.Domain.Processes.Thread">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.348" Y="0.235" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAIAAAEAAQEAABQCAAQBAAAAQAAIAAgAAE=</HashCode>
+      <FileName>Processes\Process.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Threads" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ProcessType" Collapsed="true">
+    <Position X="5.25" Y="3.75" Width="1.5" />
+    <AssociationLine Name="Threads" Type="Abc.Domain.Processes.ThreadType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.415" Y="0.202" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAARAAIAAAAIBEAAAABAAAA=</HashCode>
+      <FileName>Processes\ProcessType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Threads" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Abc.Domain.Processes.ITask" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAAAAAABAAAAAAAAAAAAAAASAAgAAABAA=</HashCode>
+      <FileName>Processes\TaskBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

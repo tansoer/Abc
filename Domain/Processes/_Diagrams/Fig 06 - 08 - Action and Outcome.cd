@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Processes.Action" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.25" />
+    <AssociationLine Name="Approvers" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedToPoint="true">
+      <Path>
+        <Point X="3.625" Y="3.191" />
+        <Point X="3.625" Y="4" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAQQAAAAAAAAABAAAAACAIAAAgAAAAAAUIEAQAAAgA=</HashCode>
+      <FileName>Processes\Action.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Task" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Approvers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.ActionType" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.25" />
+    <AssociationLine Name="BaseType" Type="Abc.Domain.Processes.ActionType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1" Y="3.441" />
+        <Point X="1" Y="3.691" />
+        <Point X="1.188" Y="3.691" />
+        <Point X="1.188" Y="3.441" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.24" Y="0.277" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAAAAA=</HashCode>
+      <FileName>Processes\ActionType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.Outcome">
+    <Position X="5" Y="2" Width="1.75" />
+    <Members>
+      <Property Name="actionId" Hidden="true" />
+      <Property Name="approvers" Hidden="true" />
+      <Property Name="outcomeId" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Action" Type="Abc.Domain.Processes.Action" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="3" />
+        <Point X="3.75" Y="3" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Approvers" Type="Abc.Domain.Parties.Signatures.PartySignature">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.87" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAACAAAAABAAAAAAQAAMAAAAAQ=</HashCode>
+      <FileName>Processes\Outcome.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Action" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Approvers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.OutcomeType" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\OutcomeType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Processes.TaskType" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAQAAAgAAABAAAAAQAAAAAAAIhEAAAABAAAA=</HashCode>
+      <FileName>Processes\TaskType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="2.5" Y="4" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Processes.TaskBase" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAAIwAAAoAAABAEAAAQAAAAIAAIgSAAgCAABAE=</HashCode>
+      <FileName>Processes\TaskBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Abc.Domain.Processes.ITask" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAAAAAABAAAAAAAAAAAAAAASAAgAAABAA=</HashCode>
+      <FileName>Processes\TaskBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

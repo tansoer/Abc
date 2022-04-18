@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Products.CatalogEntryData">
+    <Position X="0.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Products\CatalogEntryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductCatalogData" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductCatalogData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.FeatureData">
+    <Position X="2.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\FeatureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.FeatureTypeData">
+    <Position X="2.75" Y="2.75" Width="2" />
+    <Members>
+      <Property Name="IsMandatory" Hidden="true" />
+      <Property Name="MustSatisfyAll" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="ValueType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAECA=</HashCode>
+      <FileName>Products\FeatureTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.CatalogedProductData">
+    <Position X="2.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\CatalogedProductData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductData">
+    <Position X="0.5" Y="4.25" Width="2" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Property Name="DeliveredFrom" Hidden="true" />
+      <Property Name="DeliveredTo" Hidden="true" />
+      <Property Name="DeliveryStatus" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Property Name="ScheduledFrom" Hidden="true" />
+      <Property Name="ScheduledTo" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAACAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductTypeData" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAAAAAAAEgCQAAAAABAAAAAEAAAQACA=</HashCode>
+      <FileName>Products\ProductTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.PossibleFeatureValueData">
+    <Position X="5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PossibleFeatureValueData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductCategoryData">
+    <Position X="5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductCategoryData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

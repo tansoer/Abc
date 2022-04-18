@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Roles.PartyRoleData" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyData" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAQAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRelationshipData" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationshipData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRelationshipTypeData" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationshipTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRoleTypeData" Collapsed="true">
+    <Position X="4" Y="2.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.AssignedResponsibilityData" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAQAAA=</HashCode>
+      <FileName>Roles\AssignedResponsibilityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRoleConstraintData" Collapsed="true">
+    <Position X="3.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Roles\PartyRoleConstraintData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.ResponsibilityData" Collapsed="true">
+    <Position X="5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Roles\ResponsibilityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRelationshipConstraintData" Collapsed="true">
+    <Position X="2" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationshipConstraintData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Rules.RuleSetData" Collapsed="true">
+    <Position X="6" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleSetData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="&#xD;&#xA;1. OrderEvent has multiple authentications&#xD;&#xA;2. PaymentEvent has zero or one orderLines&#xD;&#xA;3. InvoiceEvent has Invoice&#xD;&#xA;4. All the following processes start from the Order.&#xD;&#xA;	a -  Make Payment&#xD;&#xA;	b - Accept Payment&#xD;&#xA;	c - Make Refund&#xD;&#xA;	d - Accept Refund&#xD;&#xA;	c - Send Invoice">
+    <Position X="6.427" Y="7.083" Height="1.708" Width="3.408" />
+  </Comment>
+  <Class Name="Abc.Domain.Orders.Events.Payments.OrderPayment" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="2.5" />
+    <Members>
+      <Property Name="toPaymentMethodId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Currencies.BasePayment" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.188" Y="6.25" />
+        <Point X="1.188" Y="4.941" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="ToAccount" Type="Abc.Domain.Currencies.BankAccount">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\OrderPayment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ToAccount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.BasePayment">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <Members>
+      <Method Name="BasePayment" Hidden="true" />
+      <Property Name="currency" Hidden="true" />
+      <Property Name="CurrencyId" Hidden="true" />
+      <Method Name="getAmount" Hidden="true" />
+      <Property Name="PaymentMethodId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAIAAAogBCAAIAAAAAAAAAEIAAAAAA=</HashCode>
+      <FileName>Currencies\BasePayment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Method" />
+      <Property Name="Amount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="3" Y="7.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQEAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.PaymentMethod" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Cash" Collapsed="true">
+    <Position X="4.75" Y="5.25" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentMethod" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="6.5" />
+        <Point X="5.5" Y="5.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\Cash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.PaymentCard" Collapsed="true">
+    <Position X="7.25" Y="6.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>IQAACAAAEgIAAAAAAAAIAAAAAAAAACAIAGEAACEAAAA=</HashCode>
+      <FileName>Currencies\PaymentCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.CreditCard" Collapsed="true">
+    <Position X="8.5" Y="5.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\CreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.BaseBankAccount" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAACAAAgAAAAAABQAAAAAAAA=</HashCode>
+      <FileName>Currencies\BaseBankAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Check" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAACAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Currencies\Check.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.BankAccount" Collapsed="true">
+    <Position X="2.25" Y="5.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\BankAccount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.DebitCard" Collapsed="true">
+    <Position X="6" Y="5.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\DebitCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.LoyalityCard" Collapsed="true">
+    <Position X="7.25" Y="5.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\LoyalityCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.PaymentEvent" Collapsed="true">
+    <Position X="2.75" Y="2" Width="2.5" />
+    <Members>
+      <Property Name="orderLineId" Hidden="true" />
+      <Method Name="PaymentEvent" Hidden="true" />
+      <Property Name="paymentEventId" Hidden="true" />
+      <Property Name="paymentId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Payment" Type="Abc.Domain.Orders.Events.Payments.OrderPayment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.859" Y="0.185" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OrderLine" Type="Abc.Domain.Orders.Lines.IOrderLine" FixedFromPoint="true">
+      <Path>
+        <Point X="4.937" Y="2" />
+        <Point X="4.937" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAECRAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\PaymentEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Payment" />
+      <Property Name="OrderLine" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEvent">
+    <Position X="5.5" Y="1.75" Width="1.75" />
+    <Members>
+      <Property Name="AuthorizedPartySignatureId" Hidden="true" />
+      <Property Name="eventIdInOrderLine" Hidden="true" />
+      <Property Name="eventIdInPartySignature" Hidden="true" />
+      <Property Name="IsAuthorized" Hidden="true" />
+      <Method Name="OrderEvent" Hidden="true" />
+      <Property Name="OrderId" Hidden="true" />
+      <Field Name="signature" Hidden="true" />
+    </Members>
+    <AssociationLine Name="OrderLines" Type="Abc.Domain.Orders.Lines.IOrderLine" FixedFromPoint="true">
+      <Path>
+        <Point X="6.769" Y="1.75" />
+        <Point X="6.769" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Authorization" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedFromPoint="true">
+      <Path>
+        <Point X="5.75" Y="3.175" />
+        <Point X="5.75" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Approvals" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedFromPoint="true">
+      <Path>
+        <Point X="7.062" Y="3.175" />
+        <Point X="7.062" Y="3.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>MCEAAQAAEBAAAAAAIAAAAAAAAACACgAAAAAAAAAQAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+      <Property Name="Authorization" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OrderLines" />
+      <Property Name="Approvals" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.InvoiceEvent" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Property Name="invoiceId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Payments.PaymentEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.375" />
+        <Point X="2.596" Y="2.375" />
+        <Point X="2.596" Y="0.932" />
+        <Point X="2.25" Y="0.932" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Invoice" Type="Abc.Domain.Orders.Events.Payments.Invoice">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.175" Y="-0.192" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASA=</HashCode>
+      <FileName>Orders\Events\Payments\InvoiceEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Invoice" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.AcceptPaymentEvent" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Payments.PaymentEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.375" />
+        <Point X="2.596" Y="2.375" />
+        <Point X="2.596" Y="1.596" />
+        <Point X="2.25" Y="1.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\AcceptPaymentEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.AcceptRefundEvent" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Payments.PaymentEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.375" />
+        <Point X="2.596" Y="2.375" />
+        <Point X="2.596" Y="2.346" />
+        <Point X="2.25" Y="2.346" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\AcceptRefundEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.MakePaymentEvent" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Payments.PaymentEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.375" />
+        <Point X="2.596" Y="2.375" />
+        <Point X="2.596" Y="3.096" />
+        <Point X="2.25" Y="3.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\MakePaymentEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.MakeRefundEvent" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Payments.PaymentEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.375" />
+        <Point X="2.596" Y="2.375" />
+        <Point X="2.596" Y="3.846" />
+        <Point X="2.25" Y="3.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\MakeRefundEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.ChargeLine" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\ChargeLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLine" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>oAMCgBAwGEAANAAAAAAABQACAAQAgAEAAABKAAAAABA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Payments.Invoice" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\Invoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.IOrder" Collapsed="true">
+    <Position X="8.5" Y="2.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAQAAAAAEAAABIIAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventsManager" />
+      <Property Name="LinesManager" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEventsManager">
+    <Position X="8" Y="3.75" Width="1.75" />
+    <AssociationLine Name="AuditTrail" Type="Abc.Domain.Orders.Events.IOrderEvent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="0.091" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEvent" Collapsed="true">
+    <Position X="5.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.Payments.IPaymentEvent" Collapsed="true">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <AssociationLine Name="Payment" Type="Abc.Domain.Orders.Events.Payments.OrderPayment">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.046" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Payments\PaymentEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Payment" />
+    </ShowAsAssociation>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLine" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLinesManager" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAJIQAAAAAAAgABAAAAABBAAIAAAEgAIQAAIAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductLines" />
+      <Property Name="ChargeLines" />
+    </ShowAsCollectionAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

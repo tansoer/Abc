@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="With OrderManager overloaded Add and Remove methods it is possible to add Orders, SalesTaxPolicies and DiscountTypes.">
+    <Position X="0.5" Y="2.718" Height="0.896" Width="3.033" />
+  </Comment>
+  <Class Name="Abc.Domain.Orders.SalesTaxPolicy" Collapsed="true">
+    <Position X="4" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Orders\SalesTaxPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Discounts.DiscountType" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAIAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\DiscountType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.OrdersManager">
+    <Position X="4" Y="1.75" Width="2" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="isDiscountType" Hidden="true" />
+      <Method Name="isListed" Hidden="true" />
+      <Method Name="isOrder" Hidden="true" />
+      <Method Name="isSalesTaxPolicy" Hidden="true" />
+      <Field Name="managerInDiscountType" Hidden="true" />
+      <Field Name="managerInTaxPolicy" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAMABAAgAAIAAAgCAAAABAACEAgAAAAAAAAAACAAAIA=</HashCode>
+      <FileName>Orders\OrdersManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+      <Property Name="TaxPolicies" />
+      <Property Name="DiscountTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Order" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMIAIEBAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Abc.Domain.Orders.IOrder" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAQAAAAAEAAABIIAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

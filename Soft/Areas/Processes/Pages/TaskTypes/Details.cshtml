@@ -1,0 +1,20 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Processes.TaskTypesPage
+
+@{
+    Layout = "_Details";
+    Model.LoadDetails();
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+<partial name="_ShowElement" />
+
+@section Details {
+    <a id="showActionTypes"
+       asp-route-handler="ShowActionTypes"
+       asp-route-id="@Model.ItemId">Action Types</a>
+}

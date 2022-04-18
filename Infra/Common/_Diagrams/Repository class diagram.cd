@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Infra.Common.FilteredRepo&lt;TDomain, TData&gt;">
+    <Position X="7" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAABAAAAAAgBAAoAAgAEQAAAAAAACAEhAASBAAAA=</HashCode>
+      <FileName>Common\FilteredRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Infra.Currencies.CurrencyRepo" Collapsed="true">
+    <Position X="0.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\CurrencyRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Infra.Common.EntityRepo&lt;TDomain, TData&gt;" Collapsed="true">
+    <Position X="0.75" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Common\EntityRepo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Infra.Common.PagedRepo&lt;TDomain, TData&gt;">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAIAAgAAAAAAAEAAAAAAlAAUAAAAAAAAAAAAEABAAAI=</HashCode>
+      <FileName>Common\PagedRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Infra.Common.OrderedRepo&lt;TDomain, TData&gt;">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABBAAAAAAAAAAAAAAQAAAABAEAAAAAAAEAABAEAA=</HashCode>
+      <FileName>Common\OrderedRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Infra.Common.CrudRepo&lt;TDomain, TData&gt;">
+    <Position X="9" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYYBBAAQAABAADAAECAQWMAAAEBgAgCGSCAIgBmAOE=</HashCode>
+      <FileName>Common\CrudRepo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Infra.Common.BaseRepo" Collapsed="true">
+    <Position X="11" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wUEAAgAJMACQIEAAICAAAgIUJiAAEMCDAIhQkICAoAA=</HashCode>
+      <FileName>Common\BaseRepo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

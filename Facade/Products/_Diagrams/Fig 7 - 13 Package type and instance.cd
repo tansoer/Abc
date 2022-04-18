@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="PackageType and Package are both represented by instances ProductTypeView and ProductView with ProductKind of &quot;Package&quot;">
+    <Position X="0.5" Y="5.414" Height="0.75" Width="3.739" />
+  </Comment>
+  <Class Name="Abc.Facade.Products.ProductView">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Property Name="Code" Hidden="true" />
+      <Property Name="DeliveredFrom" Hidden="true" />
+      <Property Name="DeliveredTo" Hidden="true" />
+      <Property Name="DeliveryStatus" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Property Name="ScheduledFrom" Hidden="true" />
+      <Property Name="ScheduledTo" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAgIASQAAACAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.ProductTypeView">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="ColumnsCount" Hidden="true" />
+      <Property Name="LevelsCount" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="PeriodOfOperationFrom" Hidden="true" />
+      <Property Name="PeriodOfOperationTo" Hidden="true" />
+      <Property Name="PricingStrategy" Hidden="true" />
+      <Property Name="RowsCount" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAAAAAAAEgCQAAAAABAAAAAEAAAQACA=</HashCode>
+      <FileName>Products\ProductTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.PackageComponentView">
+    <Position X="2.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PackageComponentView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.PackageContentView">
+    <Position X="2.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Products\PackageContentView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.EntityTypeView" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Orders.Order" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAEFAA0BAQgMCgBkAwgBJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventsManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.OrderEventsManager" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAACAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.OrderEvent" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>MCEAAQABEBAAAAAAIAAIAAAAEACACgAAAAIAAAAwAAA=</HashCode>
+      <FileName>Orders\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Delivery.DeliveryEvent" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAg=</HashCode>
+      <FileName>Orders\Delivery\DeliveryEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Discounts.DiscountEvent" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Orders\Discounts\DiscountEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Payments.PaymentEvent" Collapsed="true">
+    <Position X="4" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAECRAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Payments\PaymentEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.LifecycleEvent" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\LifecycleEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.AmendEvent" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\AmendEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.UnspecifiedOrderEvent" Collapsed="true">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\UnspecifiedOrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Delivery.DispatchEvent" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Delivery\DispatchEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Delivery.ReceiptEvent" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Delivery\ReceiptEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Payments.AcceptPaymentEvent" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Payments\AcceptPaymentEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Payments.AcceptRefundEvent" Collapsed="true">
+    <Position X="2" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Payments\AcceptRefundEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Payments.InvoiceEvent" Collapsed="true">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASA=</HashCode>
+      <FileName>Orders\Payments\InvoiceEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Payments.MakePaymentEvent" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Payments\MakePaymentEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Payments.MakeRefundEvent" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Payments\MakeRefundEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.CancelOrderEvent" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Orders\Statuses\CancelOrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.CloseOrderEvent" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\CloseOrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.OpenOrderEvent" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\OpenOrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.AmendOrderLineEvent" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAABCAAAAAAAQIAAAECQAAAAQAAICAAIAAAA=</HashCode>
+      <FileName>Orders\Lines\AmendOrderLineEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Parties.AmendPartySummaryEvent" Collapsed="true">
+    <Position X="6.25" Y="5.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAAAAACAAAEAAAEIAAAgCwBAACQAwIAAAIAAAA=</HashCode>
+      <FileName>Orders\Parties\AmendPartySummaryEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Terms.AmendTermsAndConditionsEvent" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAIQAAACDABAAAAAAAAAAAAAAACQAABAAAAAAAA=</HashCode>
+      <FileName>Orders\Terms\AmendTermsAndConditionsEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.IOrderEventsManager" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.IOrderEvent" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

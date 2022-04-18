@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Every unit can belong to more than one systems of units. A unit is a base unit in a particular system of units if the Factor, in the UnitFactor class, is 1.0. FactoredUnit has FromBase and ToBase methods for converting factored units to and from the base unit.">
+    <Position X="0.521" Y="3.906" Height="0.75" Width="5.908" />
+  </Comment>
+  <Class Name="Abc.Domain.Quantities.Unit" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAiAEAAEAIBJAAEAwQQBAgBAAAIAIAAAQI=</HashCode>
+      <FileName>Quantities\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.FactoredUnit">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Property Name="Factor" Hidden="true" />
+      <Method Name="FactoredUnit" Hidden="true" />
+      <Property Name="field" Hidden="true" />
+      <Method Name="formula" Hidden="true" />
+      <Method Name="multiply" Hidden="true" />
+      <Method Name="sqrt" Hidden="true" />
+      <Method Name="toPower" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Quantities.Unit" FixedFromPoint="true">
+      <Path>
+        <Point X="1.25" Y="1.191" />
+        <Point X="1.25" Y="1.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAAAAgIAAAAJAAEAQAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>Quantities\FactoredUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SiSystemFactor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Factors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitFactor">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="UnitFactor" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitFactor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitAttribute&lt;TData&gt;" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <AssociationLine Name="Unit" Type="Abc.Domain.Quantities.Unit">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.764" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAEAAQAAAA=</HashCode>
+      <FileName>Quantities\UnitAttribute.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SystemOfUnits" />
+      <Property Name="Unit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.SystemOfUnits" Collapsed="true">
+    <Position X="0.5" Y="3" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\SystemOfUnits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

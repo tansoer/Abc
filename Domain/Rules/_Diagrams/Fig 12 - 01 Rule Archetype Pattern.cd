@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Rules.ActivityRule" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Rules\ActivityRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseRule" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAAAQAgAAAAIAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Elements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Rule" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\Rule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Operand" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\Operand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Operator" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <InheritanceLine Type="Abc.Domain.Rules.RuleElement" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="4.691" />
+        <Point X="3.25" Y="4.846" />
+        <Point X="1.5" Y="4.846" />
+        <Point X="1.5" Y="5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Rules\Operator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseVariable&lt;TVariable, TValue&gt;" Collapsed="true">
+    <Position X="5.75" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAKiGAAiK0hGwABABQMDAAAAAGQAgCAhJAAgIAkfIgE=</HashCode>
+      <FileName>Rules\BaseVariable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.BooleanVariable" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAACAAAAAAAAAABAAAAACAAgAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BooleanVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.DateTimeVariable" Collapsed="true">
+    <Position X="2" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIiCAAgKghGAABAAAECAAAAAAAAAAAAJAAAIAgCIgA=</HashCode>
+      <FileName>Rules\DateTimeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.DecimalVariable" Collapsed="true">
+    <Position X="3.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\DecimalVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.DoubleVariable" Collapsed="true">
+    <Position X="5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\DoubleVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleError" Collapsed="true">
+    <Position X="6.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleError.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.StringVariable" Collapsed="true">
+    <Position X="5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKgAAAACEAAgAAABAAAAAAAACAAAAAAAAAAAAAYAAA=</HashCode>
+      <FileName>Rules\StringVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleContext" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAEAAAAAAAAEAAAAAAAAQAAAAAAwAAAAEAgA=</HashCode>
+      <FileName>Rules\RuleContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Variables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Overrides" />
+      <Property Name="Rules" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleOverride" Collapsed="true">
+    <Position X="6" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAEAAAAAAAAEAAAAAAAAAAAAAAAgAAAgAAoA=</HashCode>
+      <FileName>Rules\RuleOverride.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="6" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleElement" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\RuleElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseOperand" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseOperand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.NumericalVariable&lt;TVariable, TValue&gt;" Collapsed="true">
+    <Position X="4.75" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAIBAAAAAAQAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Rules\NumericalVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.QuantityVariable" Collapsed="true">
+    <Position X="6.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACQABAgEAAQIDRAAAA0UAAACBAQAkAQEGIAE=</HashCode>
+      <FileName>Rules\QuantityVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.MoneyVariable" Collapsed="true">
+    <Position X="2.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACwABAAEAAQADQAAAA0AAAAAAAAAAAQAGAAE=</HashCode>
+      <FileName>Rules\MoneyVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.BasePartySignature&lt;T&gt;" Collapsed="true">
+    <Position X="6" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAIAAAAAAAAAAAAAAAEAAEAAABAAICgAA=</HashCode>
+      <FileName>Parties\Signatures\BasePartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.ComparableVariable&lt;TVariable, TValue&gt;" Collapsed="true">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Rules\ComparableVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.IntegerVariable" Collapsed="true">
+    <Position X="2" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\IntegerVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Rules.IVariable" Collapsed="true">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAKiCAAgI0hGgABABQMDAAAAAGQAgAAhJAAgIAkaIgE=</HashCode>
+      <FileName>Rules\IVariable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Rules.IRuleElement" Collapsed="true">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\IRuleElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

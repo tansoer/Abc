@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Orders.Order" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <Members>
+      <Method Name="AcceptEvent" Hidden="true" />
+      <Method Name="acceptPayment" Hidden="true" />
+      <Method Name="acceptRefund" Hidden="true" />
+      <Property Name="DateCreated" Hidden="true" />
+      <Property Name="DiscountRuleContext" Hidden="true" />
+      <Property Name="DiscountRuleContextId" Hidden="true" />
+      <Field Name="eventsManager" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Field Name="linesManager" Hidden="true" />
+      <Method Name="makePayment" Hidden="true" />
+      <Method Name="makeRefund" Hidden="true" />
+      <Method Name="Order" Hidden="true" />
+      <Property Name="OrderManagerId" Hidden="true" />
+      <Field Name="partiesManager" Hidden="true" />
+      <Method Name="processAmend" Hidden="true" />
+      <Method Name="processDiscount" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="processLifecycle" Hidden="true" />
+      <Method Name="processPayment" Hidden="true" />
+      <Method Name="processReceipt" Hidden="true" />
+      <Method Name="processUnspecified" Hidden="true" />
+      <Property Name="SalesChannel" Hidden="true" />
+      <Property Name="SalesChannelId" Hidden="true" />
+      <Method Name="SetEventsManager" Hidden="true" />
+      <Method Name="SetLinesManager" Hidden="true" />
+      <Method Name="setManager" Hidden="true" />
+      <Method Name="SetPartiesManager" Hidden="true" />
+      <Method Name="SetStatusManager" Hidden="true" />
+      <Method Name="SetTermsManager" Hidden="true" />
+      <Field Name="statusManager" Hidden="true" />
+      <Property Name="StatusManager" Hidden="true" />
+      <Field Name="termsManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="EventsManager" Type="Abc.Domain.Orders.Events.IOrderEventsManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.44" Y="0.183" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TermsManager" Type="Abc.Domain.Orders.Terms.ITermsAndConditionsManager" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="1.191" />
+        <Point X="3.25" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AMIAIEBAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PartiesManager" />
+      <Property Name="EventsManager" />
+      <Property Name="LinesManager" />
+      <Property Name="TermsManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Parties.OrderPartiesManager">
+    <Position X="7.25" Y="1.5" Width="1.75" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="Add" Hidden="true" />
+      <Method Name="Amend" Hidden="true" />
+      <Property Name="data" Hidden="true" />
+      <Method Name="getCurrentRole" Hidden="true" />
+      <Method Name="getRole" Hidden="true" />
+      <Method Name="hasValue" Hidden="true" />
+      <Method Name="newPartySummary" Hidden="true" />
+      <Property Name="orderId" Hidden="true" />
+      <Method Name="OrderPartiesManager" Hidden="true" />
+      <Property Name="parties" Hidden="true" />
+      <Property Name="partySummaries" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+      <Method Name="sameValue" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEYAQAAAAAABAABEAAAABAAAAAQAAABAIAAQAVAiBAA=</HashCode>
+      <FileName>Orders\Parties\OrderPartiesManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryReceiver" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLinesManager" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.75" />
+    <AssociationLine Name="ProductLines" Type="Abc.Domain.Orders.Lines.OrderLine" FixedFromPoint="true">
+      <Path>
+        <Point X="6.375" Y="2.691" />
+        <Point X="6.375" Y="3" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.16" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AANYQAAAAAAAggRAAAAADBAAIAAAUgAIQAAIAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductLines" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEventsManager" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <Members>
+      <Method Name="OrderEventsManager" Hidden="true" />
+      <Property Name="orderIdInEvent" Hidden="true" />
+    </Members>
+    <AssociationLine Name="AuditTrail" Type="Abc.Domain.Orders.Events.IOrderEvent">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.192" Y="0.227" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAABAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEvent" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>MCEAAQAAEBAAAAAAIAAAAAAAAAKACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLine" Collapsed="true">
+    <Position X="5.25" Y="3" Width="1.25" />
+    <AssociationLine Name="DeliveryReceiver" Type="Abc.Domain.Orders.Parties.OrderLineReceiver">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.534" Y="0.079" Height="0.182" Width="1.295" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>oAMCgBAwGEAANAAAAAAABQACAAQAgAEAAABKAAAAABA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DeliveryReceiver" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Amend.AmendEvent" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.OrderEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="1.125" Y="5.691" />
+        <Point X="1.125" Y="6" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Amend\AmendEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Amend.AmendOrderLineEvent" Collapsed="true">
+    <Position X="3" Y="6.75" Width="2" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Amend.AmendEvent" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="1.75" Y="6.312" />
+        <Point X="2.078" Y="6.312" />
+        <Point X="2.078" Y="7.048" />
+        <Point X="3" Y="7.048" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="OldOrderLine" Type="Abc.Domain.Orders.Lines.IOrderLine" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="6.937" />
+        <Point X="7.5" Y="6.937" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="OrderLine" Type="Abc.Domain.Orders.Lines.IOrderLine" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="7.312" />
+        <Point X="7.5" Y="7.312" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ReturnedItems" Type="Abc.Domain.Orders.Events.Delivery.ReturnedItem" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="7.375" />
+        <Point X="1.75" Y="7.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAARAAgAAAAAQIAAAECAAAAIAAAIAAAIAAAA=</HashCode>
+      <FileName>Orders\Events\Amend\AmendOrderLineEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OldOrderLine" />
+      <Property Name="OrderLine" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="ReturnedItems" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Amend.AmendPartySummaryEvent" Collapsed="true">
+    <Position X="2.5" Y="5.75" Width="2.25" />
+    <Members>
+      <Method Name="AmendPartySummaryEvent" Hidden="true" />
+      <Method Name="getSummary" Hidden="true" />
+      <Method Name="IsCorrect" Hidden="true" />
+      <Property Name="IsNewRoleEvent" Hidden="true" />
+      <Property Name="IsRemoveRoleEvent" Hidden="true" />
+      <Method Name="IsTypeOf" Hidden="true" />
+      <Field Name="oldPartySummary" Hidden="true" />
+      <Property Name="OldPartySummaryId" Hidden="true" />
+      <Field Name="partySummary" Hidden="true" />
+      <Property Name="PartySummaryId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Amend.AmendEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="1.75" Y="6.312" />
+        <Point X="2.078" Y="6.312" />
+        <Point X="2.078" Y="6.096" />
+        <Point X="2.5" Y="6.096" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="OldPartySummary" Type="Abc.Domain.Orders.Parties.IPartyInOrder" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="6.25" />
+        <Point X="7.5" Y="6.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAoAABAAAEIwIAAQIAAAA=</HashCode>
+      <FileName>Orders\Events\Amend\AmendPartySummaryEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OldPartySummary" />
+      <Property Name="PartySummary" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Amend.AmendTermsAndConditionsEvent" Collapsed="true">
+    <Position X="2.25" Y="5" Width="2.5" />
+    <Members>
+      <Method Name="AmendTermsAndConditionsEvent" Hidden="true" />
+      <Property Name="IsNewTermsAndConditionsEvent" Hidden="true" />
+      <Property Name="IsRemoveTermsAndConditionsEvent" Hidden="true" />
+      <Field Name="oldTermsAndConditions" Hidden="true" />
+      <Property Name="OldTermsAndConditionsId" Hidden="true" />
+      <Field Name="termsAndConditions" Hidden="true" />
+      <Property Name="TermsAndConditionsId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Amend.AmendEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="1.75" Y="6.312" />
+        <Point X="2.078" Y="6.312" />
+        <Point X="2.078" Y="5.346" />
+        <Point X="2.25" Y="5.346" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="OldTermsAndConditions" Type="Abc.Domain.Orders.TermsAndConditions" FixedFromPoint="true">
+      <Path>
+        <Point X="2.688" Y="5" />
+        <Point X="2.688" Y="4.441" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.575" Y="0.318" Height="0.182" Width="1.691" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TermsAndConditions" Type="Abc.Domain.Orders.TermsAndConditions" FixedFromPoint="true">
+      <Path>
+        <Point X="4.188" Y="5" />
+        <Point X="4.188" Y="4.441" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.753" Y="0.318" Height="0.182" Width="1.68" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAgAAIAAAAABAAAAAAAAAIAAAAAAACAABBAAAAAABA=</HashCode>
+      <FileName>Orders\Events\Amend\AmendTermsAndConditionsEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OldTermsAndConditions" />
+      <Property Name="TermsAndConditions" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Delivery.ReturnedItem" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Delivery\ReturnedItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Parties.OrderLineReceiver" Collapsed="true">
+    <Position X="5" Y="4" Width="2" />
+    <InheritanceLine Type="Abc.Domain.Orders.Parties.DeliveryReceiver" FixedToPoint="true">
+      <Path>
+        <Point X="8.125" Y="5" />
+        <Point X="8.125" Y="4.845" />
+        <Point X="6.812" Y="4.845" />
+        <Point X="6.812" Y="4.691" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Parties\OrderLineReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Parties.DeliveryReceiver" Collapsed="true">
+    <Position X="7.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Parties\DeliveryReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Parties.PartyInOrder" Collapsed="true">
+    <Position X="5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Orders\Parties\PartyInOrder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Parties.OrderReceiver" Collapsed="true">
+    <Position X="7.25" Y="4" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Orders.Parties.DeliveryReceiver" FixedFromPoint="true">
+      <Path>
+        <Point X="8.125" Y="5" />
+        <Point X="8.125" Y="4.691" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Parties\OrderReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Terms.TermsAndConditionsManager" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="2.25" />
+    <Members>
+      <Method Name="Amend" Hidden="true" />
+      <Property Name="orderId" Hidden="true" />
+      <Method Name="TermsAndConditionsManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Terms" Type="Abc.Domain.Orders.TermsAndConditions">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.06" Y="0.11" Height="0.182" Width="0.764" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAA=</HashCode>
+      <FileName>Orders\Terms\TermsAndConditionsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Terms" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.TermsAndConditions" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAMAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Orders\TermsAndConditions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEvent" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLine" Collapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAEAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Parties.IPartyInOrder" Collapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Orders\Parties\PartyInOrder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Parties.IOrderPartiesManager" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Orders\Parties\OrderPartiesManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEventsManager" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLinesManager" Collapsed="true">
+    <Position X="5.25" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAJIQAAAAAAAgAAAAAAABBAAIAAAEgAIQAAAAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Terms.ITermsAndConditionsManager" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Orders\Terms\TermsAndConditionsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

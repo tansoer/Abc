@@ -1,0 +1,61 @@
+﻿@using Microsoft.AspNetCore.Components
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Abc.Facade.Parties
+
+
+<input type="hidden" value="@Items[Index].Id" name="Metrics[@(Index)].Id"/>
+<input type="hidden" value="@Items[Index].MetricType" name="Metrics[@(Index)].MetricType"/>
+<input type="hidden" value="@Items[Index].TypeId" name="Metrics[@(Index)].TypeId"/>
+<input type="hidden" value="@Items[Index].PartyId" name="Metrics[@(Index)].PartyId"/>
+<input type="hidden" value="@Items[Index].Name" name="Metrics[@(Index)].Name"/>
+<input type="hidden" value="@Items[Index].Details" name="Metrics[@(Index)].Details"/>
+<input type="hidden" value="@Items[Index].QuantityValue" name="Metrics[@(Index)].QuantityValue"/>
+<input type="hidden" value="@Items[Index].StringValue" name="Metrics[@(Index)].StringValue"/>
+<input type="hidden" value="@Items[Index].Code" name="Metrics[@(Index)].Code"/>
+<input type="hidden" value="@Items[Index].TypeId" name="Metrics[@(Index)].TypeId"/>
+<input type="hidden" value="@Items[Index].UnitId" name="Metrics[@(Index)].UnitId"/>
+
+<dd class="col-2">Metric @(Index+1):</dd>
+<dd class="col-8"> @Items[Index].Name @Items[Index].ToString() </dd>
+<dd class="col-1">
+    <button type="button" class="text-danger btn btn-link" @onclick="() => Remove(Index)">Remove</button>
+</dd>
+<dd class="col-1">
+    <button type="button" class="btn btn-link" @onclick="EditItem">Edit</button>
+</dd>
+
+@if (edit) { <BodyMetricModal Units="Units" Item="Items[Index]" Save="SaveItem" Cancel="Cancel"/>}
+@code {
+    [Parameter] public int Index { get; set; }
+    [Parameter] public List<BodyMetricView> Items { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> Units { get; set; }
+    [Parameter] public Action<int> Remove { get; set; }
+    private bool edit;
+    private BodyMetricView Backup { get; set; }
+
+    public void EditItem()
+    {
+        Backup = createBackup(Items[Index]);
+        edit = true;
+        StateHasChanged();
+    }
+
+    public void SaveItem()
+    {
+        edit = false;
+        StateHasChanged();
+    }
+
+    public void Cancel()
+    {
+        Items[Index] = Backup;
+        edit = false;
+        StateHasChanged();
+    }
+
+    private BodyMetricView createBackup(BodyMetricView item)
+    {
+        var backup = Newtonsoft.Json.JsonConvert.SerializeObject(item);
+        return Newtonsoft.Json.JsonConvert.DeserializeObject<BodyMetricView>(backup);
+    }
+}

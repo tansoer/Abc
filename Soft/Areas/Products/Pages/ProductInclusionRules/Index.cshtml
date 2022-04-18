@@ -1,0 +1,10 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Products.ProductInclusionRulesPage
+@{
+    Layout = "_Index";
+    var page = Model.PageUrl;
+}
+
+@section Create { @Html.ShowCreateDropDown(Model) }
+@Html.ShowTable(Model)

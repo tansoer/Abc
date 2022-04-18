@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Rules.Operand" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\Operand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Operator">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <Members>
+      <Property Name="Name" Hidden="true" />
+      <Method Name="Operator" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Rules\Operator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseVariable&lt;TVariable, TValue&gt;">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="AddDays" Hidden="true" />
+      <Method Name="AddHours" Hidden="true" />
+      <Method Name="AddMinutes" Hidden="true" />
+      <Method Name="AddMonths" Hidden="true" />
+      <Method Name="AddSeconds" Hidden="true" />
+      <Method Name="AddYears" Hidden="true" />
+      <Method Name="And" Hidden="true" />
+      <Method Name="BaseVariable" Hidden="true" />
+      <Method Name="Calculate" Hidden="true" />
+      <Method Name="Contains" Hidden="true" />
+      <Method Name="createVariable" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="EndsWith" Hidden="true" />
+      <Method Name="GetAge" Hidden="true" />
+      <Method Name="GetDay" Hidden="true" />
+      <Method Name="GetHour" Hidden="true" />
+      <Method Name="GetInterval" Hidden="true" />
+      <Method Name="GetLength" Hidden="true" />
+      <Method Name="GetMinute" Hidden="true" />
+      <Method Name="GetMonth" Hidden="true" />
+      <Method Name="GetSecond" Hidden="true" />
+      <Method Name="GetValue" Hidden="true" />
+      <Method Name="GetYear" Hidden="true" />
+      <Method Name="Inverse" Hidden="true" />
+      <Method Name="IsEqual" Hidden="true" />
+      <Method Name="IsGreater" Hidden="true" />
+      <Method Name="IsLess" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="newRuleError" Hidden="true" />
+      <Method Name="Not" Hidden="true" />
+      <Field Name="operation" Hidden="true" />
+      <Method Name="operationName" Hidden="true" />
+      <Method Name="Opposite" Hidden="true" />
+      <Method Name="Or" Hidden="true" />
+      <Method Name="Power" Hidden="true" />
+      <Method Name="Sqrt" Hidden="true" />
+      <Method Name="Square" Hidden="true" />
+      <Method Name="StartsWith" Hidden="true" />
+      <Method Name="Substring" Hidden="true" />
+      <Method Name="Subtract" Hidden="true" />
+      <Method Name="ToDays" Hidden="true" />
+      <Method Name="ToHours" Hidden="true" />
+      <Method Name="ToLower" Hidden="true" />
+      <Method Name="ToMinutes" Hidden="true" />
+      <Method Name="ToMonths" Hidden="true" />
+      <Method Name="ToSeconds" Hidden="true" />
+      <Method Name="ToUpper" Hidden="true" />
+      <Method Name="toValue" Hidden="true" />
+      <Method Name="ToYears" Hidden="true" />
+      <Method Name="Trim" Hidden="true" />
+      <Field Name="value" Hidden="true" />
+      <Method Name="variable" Hidden="true" />
+      <Method Name="Xor" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="Abc.Domain.Rules.BaseOperand" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="2.441" />
+        <Point X="5.25" Y="2.875" />
+        <Point X="4.562" Y="2.875" />
+        <Point X="4.562" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>IAKiGAAiK0hGwABABQMDAAAAAGQAgCAhJAAgIAkfIgE=</HashCode>
+      <FileName>Rules\BaseVariable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.BooleanVariable" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>IAIAAAAACAAAAAAAAAABAAAAACAAgAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BooleanVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.DateTimeVariable" Collapsed="true">
+    <Position X="2.25" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAIiCAAgKghGAABAAAECAAAAAAAAAAAAJAAAIAgCIgA=</HashCode>
+      <FileName>Rules\DateTimeVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.DecimalVariable" Collapsed="true">
+    <Position X="2.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\DecimalVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.DoubleVariable" Collapsed="true">
+    <Position X="3.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\DoubleVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleError" Collapsed="true">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleError.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.StringVariable" Collapsed="true">
+    <Position X="5.25" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAKgAAAACEAAgAAABAAAAAAAACAAAAAAAAAAAAAYAAA=</HashCode>
+      <FileName>Rules\StringVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.MoneyVariable" Collapsed="true">
+    <Position X="4.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACwABAAEAAQADQAAAA0AAAAAAAAAAAQAGAAE=</HashCode>
+      <FileName>Rules\MoneyVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.QuantityVariable" Collapsed="true">
+    <Position X="0.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAACQABAgEAAQIDRAAAA0UAAACBAQAkAQEGIAE=</HashCode>
+      <FileName>Rules\QuantityVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseOperand" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseOperand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.NumericalVariable&lt;TVariable, TValue&gt;" Collapsed="true">
+    <Position X="2.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAIBAAAAAAQAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Rules\NumericalVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleElement" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\RuleElement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.ComparableVariable&lt;TVariable, TValue&gt;" Collapsed="true">
+    <Position X="3.75" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Rules\ComparableVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.IntegerVariable" Collapsed="true">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\IntegerVariable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Aids.Enums.RuleElementType">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Abc.Domain.Rules.IVariable">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="AddDays" Hidden="true" />
+      <Method Name="AddHours" Hidden="true" />
+      <Method Name="AddMinutes" Hidden="true" />
+      <Method Name="AddMonths" Hidden="true" />
+      <Method Name="AddSeconds" Hidden="true" />
+      <Method Name="AddYears" Hidden="true" />
+      <Method Name="Calculate" Hidden="true" />
+      <Method Name="Contains" Hidden="true" />
+      <Method Name="EndsWith" Hidden="true" />
+      <Method Name="GetAge" Hidden="true" />
+      <Method Name="GetDay" Hidden="true" />
+      <Method Name="GetHour" Hidden="true" />
+      <Method Name="GetInterval" Hidden="true" />
+      <Method Name="GetLength" Hidden="true" />
+      <Method Name="GetMinute" Hidden="true" />
+      <Method Name="GetMonth" Hidden="true" />
+      <Method Name="GetSecond" Hidden="true" />
+      <Method Name="GetValue" Hidden="true" />
+      <Method Name="GetYear" Hidden="true" />
+      <Method Name="Inverse" Hidden="true" />
+      <Method Name="Opposite" Hidden="true" />
+      <Method Name="Power" Hidden="true" />
+      <Method Name="Sqrt" Hidden="true" />
+      <Method Name="Square" Hidden="true" />
+      <Method Name="StartsWith" Hidden="true" />
+      <Method Name="Substring" Hidden="true" />
+      <Method Name="ToDays" Hidden="true" />
+      <Method Name="ToHours" Hidden="true" />
+      <Method Name="ToLower" Hidden="true" />
+      <Method Name="ToMinutes" Hidden="true" />
+      <Method Name="ToMonths" Hidden="true" />
+      <Method Name="ToSeconds" Hidden="true" />
+      <Method Name="ToUpper" Hidden="true" />
+      <Method Name="ToYears" Hidden="true" />
+      <Method Name="Trim" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>IAKiCAAgI0hGgABABQMDAAAAAGQAgAAhJAAgIAkaIgE=</HashCode>
+      <FileName>Rules\IVariable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Rules.IRuleElement" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\IRuleElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

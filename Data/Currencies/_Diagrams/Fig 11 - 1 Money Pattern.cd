@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Currencies.PaymentMethodData">
+    <Position X="4.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ARgAAAAAAgAABAAAAAAAAAAIgAgAAAAAABEAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentMethodData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Currencies.PaymentData">
+    <Position X="2.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Currencies.ExchangeRuleData">
+    <Position X="0.5" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\ExchangeRuleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Currencies.ExchangeRateData">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Currencies\ExchangeRateData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Currencies.CurrencyUsageData">
+    <Position X="4.75" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Currencies\CurrencyUsageData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Currencies.CurrencyData">
+    <Position X="0.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAACAAAABIAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Currencies\CurrencyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

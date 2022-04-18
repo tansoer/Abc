@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Orders.OrderEventData">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ECAgIAQAABQAQAAAAAAAAAAAAAAAABIEIBAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderEventType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderLineData">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAwQAIAAAAAAAEACGAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Orders\OrderLineData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderLineType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderLineItemData">
+    <Position X="2.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Orders\OrderLineItemData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderLineType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderData">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAAAAAAAAAgAAAABAAAAAACAAAAAFAAAAAAA=</HashCode>
+      <FileName>Orders\OrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.ReturnedItemData">
+    <Position X="2.5" Y="6" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\ReturnedItemData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductData" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAECAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Orders.OrderEventType">
+    <Position X="6.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBCAAAAwABQABAECEAAAAIAAEAAIAAAAAAAQA=</HashCode>
+      <FileName>Orders\OrderEventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Orders.OrderLineType">
+    <Position X="6.25" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAARAAAAAAAAAAAGAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderLineType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Quantities.Quantity" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAABE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Unit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQEAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Unit" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAiAEAAEAIBJAAEAwQQBAgBAAAIAIAAAQI=</HashCode>
+      <FileName>Quantities\Unit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Measure" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Currency" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>QIACAAEAAAAAAAAEAAAAECgAAAhIAAgABAAIAAAAECA=</HashCode>
+      <FileName>Currencies\Currency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Measure" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAQACAQEAEAJBAAAEAwUQBAABEAAABKAAAAA=</HashCode>
+      <FileName>Quantities\Measure.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Units" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.DerivedUnit" Collapsed="true">
+    <Position X="1" Y="4.25" Width="2" />
+    <InheritanceLine Type="Abc.Domain.Quantities.Unit" FixedToPoint="true">
+      <Path>
+        <Point X="1.125" Y="2.441" />
+        <Point X="1.125" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Terms" Type="Abc.Domain.Quantities.UnitTerm" FixedFromPoint="true">
+      <Path>
+        <Point X="1.562" Y="4.941" />
+        <Point X="1.562" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACACAAAAAgAAAAAAAAAJAAEAQAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>Quantities\DerivedUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Terms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.FactoredUnit" Collapsed="true">
+    <Position X="3" Y="4.25" Width="2.5" />
+    <AssociationLine Name="Factors" Type="Abc.Domain.Quantities.UnitFactor" FixedFromPoint="true">
+      <Path>
+        <Point X="3.625" Y="4.941" />
+        <Point X="3.625" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.244" Y="0.175" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SiSystemFactor" Type="Abc.Domain.Quantities.UnitFactor" FixedFromPoint="true">
+      <Path>
+        <Point X="4.875" Y="4.941" />
+        <Point X="4.875" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.409" Y="0.173" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAAAAgIAAAAJAAEAQAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>Quantities\FactoredUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SiSystemFactor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Factors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.FunctionedUnit" Collapsed="true">
+    <Position X="5.5" Y="4.25" Width="2.5" />
+    <InheritanceLine Type="Abc.Domain.Quantities.Unit" ManuallyRouted="true">
+      <Path>
+        <Point X="1.125" Y="2.441" />
+        <Point X="1.125" Y="4.055" />
+        <Point X="6.75" Y="4.055" />
+        <Point X="6.75" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="ToBaseUnitRule" Type="Abc.Domain.Rules.BaseRule" FixedFromPoint="true">
+      <Path>
+        <Point X="7.766" Y="4.941" />
+        <Point X="7.766" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.252" Y="0.162" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="FromBaseUnitRule" Type="Abc.Domain.Rules.BaseRule" FixedFromPoint="true">
+      <Path>
+        <Point X="6.359" Y="4.941" />
+        <Point X="6.359" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.357" Y="0.152" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgCAAAEAAEAAAAAAAAAAJAAEAQAAAAgAAAAIAAAAACA=</HashCode>
+      <FileName>Quantities\FunctionedUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ToBaseUnitRule" />
+      <Property Name="FromBaseUnitRule" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitFactor" Collapsed="true">
+    <Position X="3" Y="5.5" Width="2.5" />
+    <InheritanceLine Type="Abc.Domain.Quantities.UnitAttribute&lt;TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="6.5" />
+        <Point X="4" Y="6.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitFactor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseRule" Collapsed="true">
+    <Position X="5.5" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAAAQAgAAAAIAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitAttribute&lt;TData&gt;" Collapsed="true">
+    <Position X="3" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAEAAQAAAA=</HashCode>
+      <FileName>Quantities\UnitAttribute.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SystemOfUnits" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.SystemOfUnits" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\SystemOfUnits.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitTerm" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="2.5" />
+    <AssociationLine Name="MasterUnit" Type="Abc.Domain.Quantities.DerivedUnit" FixedFromPoint="true">
+      <Path>
+        <Point X="2.5" Y="5.5" />
+        <Point X="2.5" Y="4.941" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.348" Y="0.154" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="TermUnit" Type="Abc.Domain.Quantities.Unit">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.378" Y="0.214" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAgAAABAAAAAAAAAAAQBAAAQAAAAAAAQAA=</HashCode>
+      <FileName>Quantities\UnitTerm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MasterUnit" />
+      <Property Name="TermUnit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.BaseMeasure" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Quantities.Measure" ManuallyRouted="true">
+      <Path>
+        <Point X="4.25" Y="2.441" />
+        <Point X="4.25" Y="2.875" />
+        <Point X="3.375" Y="2.875" />
+        <Point X="3.375" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAEAQEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\BaseMeasure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.DerivedMeasure" Collapsed="true">
+    <Position X="4.25" Y="3" Width="3.75" />
+    <NestedTypes>
+      <Class Name="Abc.Domain.Quantities.DerivedMeasure.comparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Quantities\DerivedMeasure.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <InheritanceLine Type="Abc.Domain.Quantities.Measure" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.441" />
+        <Point X="4.25" Y="2.875" />
+        <Point X="5.062" Y="2.875" />
+        <Point X="5.062" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Terms" Type="Abc.Domain.Quantities.MeasureTerm" FixedFromPoint="true">
+      <Path>
+        <Point X="7.75" Y="3" />
+        <Point X="7.75" Y="2.441" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACACAABAAgAAAAAAAAAAAAEAQEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\DerivedMeasure.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Terms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.MeasureTerm" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <AssociationLine Name="MasterMeasure" Type="Abc.Domain.Quantities.DerivedMeasure" FixedFromPoint="true">
+      <Path>
+        <Point X="6.75" Y="2.441" />
+        <Point X="6.75" Y="3" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAIAAAAAAAAAAAAAAABAQBACAAABAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureTerm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MasterMeasure" />
+      <Property Name="TermMeasure" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

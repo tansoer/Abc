@@ -1,0 +1,26 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Pages.Common.Extensions
+@using Abc.Facade.Processes
+@model Abc.Pages.Processes.TaskTypesPage
+
+<body>
+    @if (Model.ActionTypes.Count != 0)
+    {
+        <h3>Action types for selected task type</h3>
+        <table class="table">
+            <tr>
+                <th>@(GetMember.DisplayName<ActionTypeView>(x => x.Name))</th>
+                <th>@(GetMember.DisplayName<ActionTypeView>(x => x.ValidFrom))</th>
+                <th>@(GetMember.DisplayName<ActionTypeView>(x => x.ValidTo))</th>
+            </tr>
+            @foreach (var item in Model.ActionTypes)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Name) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidFrom) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidTo) </td>
+                </tr>
+            }
+        </table>
+    }
+</body>

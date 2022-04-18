@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Inventory.Inventory" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAACAAEAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Entries" />
+      <Property Name="Reservations" />
+      <Property Name="Requests" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.InventoryEntry" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.ProductInventoryEntry" Collapsed="true">
+    <Position X="2.25" Y="2.75" Width="2.75" />
+    <InheritanceLine Type="Abc.Domain.Inventory.InventoryEntry" FixedFromPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.441" />
+        <Point X="4.25" Y="2.596" />
+        <Point X="3.625" Y="2.596" />
+        <Point X="3.625" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAEBAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAIAAAACAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RestockPolicy" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="OutstandingOrders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.ServiceInventoryEntry" Collapsed="true">
+    <Position X="5.25" Y="2.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Inventory.InventoryEntry" FixedFromPoint="true">
+      <Path>
+        <Point X="4.25" Y="2.441" />
+        <Point X="4.25" Y="2.596" />
+        <Point X="6.125" Y="2.596" />
+        <Point X="6.125" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CapacityManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.Reservation" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Request" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartySummary" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAQAAAAAAAAAECAAAAAgAAAAA=</HashCode>
+      <FileName>Roles\PartySummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.ReservationRequest" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.75" />
+    <AssociationLine Name="Receivers" Type="Abc.Domain.Roles.PartySummary" FixedFromPoint="true">
+      <Path>
+        <Point X="5.875" Y="1.191" />
+        <Point X="5.875" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Requester" Type="Abc.Domain.Roles.PartySummary" FixedFromPoint="true">
+      <Path>
+        <Point X="6.938" Y="1.191" />
+        <Point X="6.938" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAAAARAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Requester" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Receivers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.CapacityManager" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.RestockPolicy" Collapsed="true">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.PurchaseOrder" Collapsed="true">
+    <Position X="2.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Service">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <Members>
+      <Property Name="DeliveredFrom" Hidden="true" />
+      <Property Name="DeliveredTo" Hidden="true" />
+      <Property Name="ScheduledFrom" Hidden="true" />
+      <Property Name="ScheduledTo" Hidden="true" />
+      <Method Name="Service" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAAAAAFAAAAAAIAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Service.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.ServiceType" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ServiceType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAIAEAIAAAAABCAAQAAAACgEJAAAAAAAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PossiblePrices" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;">
+    <Position X="0.5" Y="6.75" Width="4.75" />
+    <Members>
+      <Method Name="BaseProduct" Hidden="true" />
+      <Property Name="Batch" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="Description" Hidden="true" />
+      <Property Name="Features" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="Relations" Hidden="true" />
+      <Property Name="RelationsWhereConsumer" Hidden="true" />
+      <Property Name="RelationsWhereProvider" Hidden="true" />
+      <Property Name="SerialNumber" Hidden="true" />
+      <Property Name="type" Hidden="true" />
+      <Property Name="Type" Hidden="true" />
+      <Property Name="TypeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEkAIAAEAABAAAQAAkDCACgAQAAAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Price" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.Price.AppliedPrice" Collapsed="true">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Price\AppliedPrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Price.PossiblePrice" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Products\Price\PossiblePrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Price.BasePrice" Collapsed="true">
+    <Position X="2.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Price\BasePrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProductType" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProductType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

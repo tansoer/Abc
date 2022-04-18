@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Products.Product" Collapsed="true">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.ProductType" Collapsed="true">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="3.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAAAkAICAAAABAAAQAAgACgEIAAAAAQAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;" Collapsed="true">
+    <Position X="3.25" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEEAIABEAABAAAQAAkDCACgAQACAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.Feature" Collapsed="true">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Features\Feature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FeatureType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureType" Collapsed="true">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAAAAAAgAAAAAAAIAAAAgAAAAIAAAECA=</HashCode>
+      <FileName>Products\Features\FeatureType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

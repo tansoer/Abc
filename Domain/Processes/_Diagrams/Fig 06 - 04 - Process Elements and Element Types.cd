@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Processes.ProcessElementBase&lt;TRepo, TEntity, TData&gt;">
+    <Position X="1.25" Y="0.5" Width="3" />
+    <Members>
+      <Property Name="nextId" Hidden="true" />
+      <Property Name="prevId" Hidden="true" />
+      <Method Name="ProcessElementBase" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAABAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElementBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ProcessElementType&lt;TRepo, TEntity, TData&gt;" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="2" />
+    <Members>
+      <Property Name="baseTypeId" Hidden="true" />
+      <Method Name="ProcessElementType" Hidden="true" />
+      <Property Name="ruleSetId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAARAAIAAAAIBEAAAABAAAA=</HashCode>
+      <FileName>Processes\ProcessElementType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ProcessElement&lt;TRepo, TEntity, TData&gt;" Collapsed="true">
+    <Position X="3" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAEAAAQAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Context" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleContext" Collapsed="true">
+    <Position X="3" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAwAAAAEAgA=</HashCode>
+      <FileName>Rules\RuleContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="0.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Exactly the same pattern for product type and product will be used also for unique products (e.g. paintings). In case the unique product is specified for the product type, the system checks, that only one product instance will be possible.">
+    <Position X="0.5" Y="6.584" Height="0.656" Width="6.492" />
+  </Comment>
+  <Class Name="Abc.Data.Products.ProductTypeData">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAEAAAAAAEACQAAAAAAABAAAEAAgAACA=</HashCode>
+      <FileName>Products\ProductTypeData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductData">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAEAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.PriceData">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAwFAAAAAIAEAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PriceData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.FeatureData">
+    <Position X="2.75" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\FeatureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Products.ProductKind">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAQBAAAAAAAAAAAQAAAAAAAAQABAAAQAAAAAAAA=</HashCode>
+      <FileName>Products\ProductKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

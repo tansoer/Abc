@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Currencies.Currency" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <AssociationLine Name="AcceptedIn" Type="Abc.Domain.Currencies.CurrencyUsage" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="1.191" />
+        <Point X="2.75" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QIAAAAAAAAAAAAAAAAAAECAAAAhIAAgABAAIAAAAECA=</HashCode>
+      <FileName>Currencies\Currency.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AcceptedIn" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.CurrencyUsage">
+    <Position X="0.5" Y="1.75" Width="2.5" />
+    <Members>
+      <Property Name="CountryId" Hidden="true" />
+      <Property Name="CurrencyId" Hidden="true" />
+      <Method Name="CurrencyUsage" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Currency" Type="Abc.Domain.Currencies.Currency" FixedToPoint="true">
+      <Path>
+        <Point X="1.375" Y="1.75" />
+        <Point X="1.375" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAACAIQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Currencies\CurrencyUsage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Country" />
+      <Property Name="Currency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.Country">
+    <Position X="4.25" Y="0.75" Width="1.75" />
+    <Members>
+      <Method Name="Country" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAQAAEAAAAQAAAACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Parties\Contacts\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

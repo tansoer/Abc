@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Processes.TaskData">
+    <Position X="5.25" Y="0.5" Width="2" />
+    <InheritanceLine Type="Abc.Data.Roles.PartyRelationshipBaseData" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.25" />
+        <Point X="6.25" Y="2.887" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAjAAAAAAAAAAAAACAAAAAAAAAAEAAAAIA=</HashCode>
+      <FileName>Processes\TaskData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.TaskParticipantData">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Processes\TaskParticipantData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Processes.TaskTypeData">
+    <Position X="0.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Processes\TaskTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRelationshipBaseTypeData">
+    <Position X="0.5" Y="2.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationshipBaseTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRelationshipBaseData" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="2" />
+    <InheritanceLine Type="Abc.Data.Common.RelationshipData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.812" Y="4.5" />
+        <Point X="6.812" Y="3.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationshipBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.RelationshipData">
+    <Position X="5.25" Y="4.5" Width="2" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.285" />
+        <Point X="4.99" Y="3.285" />
+        <Point X="4.99" Y="5.309" />
+        <Point X="5.25" Y="5.309" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Common\RelationshipData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Common.RelationshipTypeData">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Common\RelationshipTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Common.EntityTypeData">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <Members>
+      <Property Name="Recorded" Hidden="true" />
+      <Property Name="RecordedBy" Hidden="true" />
+      <Property Name="RecordedWhy" Hidden="true" />
+      <Property Name="Replaced" Hidden="true" />
+      <Property Name="Timestamp" Hidden="true" />
+      <Property Name="ValidFrom" Hidden="true" />
+      <Property Name="ValidTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAABAAAEAQAiAAQAgAAAACAAACAAAAAAIAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

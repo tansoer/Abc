@@ -1,0 +1,61 @@
+﻿@using Abc.Facade.Parties
+@using Microsoft.AspNetCore.Components
+@using Abc.Aids.Enums
+@using Abc.Aids.Methods
+@using Abc.Data.Parties
+@using Abc.Domain.Parties.Contacts
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<div class="modal fade @show" id="modal" tabindex="-1" aria-labelledby="modalLabel" style="@display" aria-hidden="true">
+    <div class="modal-lg modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Edit</h5>
+            </div>
+            <div class="modal-body">
+                @ModalContent
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @onclick="Cancel">Cancel</button>
+                <button type="button" class="btn btn-primary" @onclick="Save">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public RenderFragment ModalContent { get; set; }
+    [Parameter] public Action OnCancel { get; set; }
+    [Parameter] public Action OnSave { get; set; }
+
+    private string show = "";
+    private string display = "display: block";
+
+    private async void Cancel()
+    {
+        await Fade();
+        OnCancel();
+    }
+
+    private async void Save()
+    {
+        await Fade();
+        OnSave();
+    }
+
+    private async Task Fade()
+    {
+        show = "";
+        StateHasChanged();
+        await Task.Delay(75);
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        show = "show";
+        base.OnAfterRender(firstRender);
+        StateHasChanged();
+    }
+
+}

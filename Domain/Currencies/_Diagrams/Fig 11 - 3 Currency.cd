@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Currency">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <Members>
+      <Method Name="CentralBankDayRate" Hidden="true" />
+      <Method Name="Currency" Hidden="true" />
+      <Method Name="FromBase" Hidden="true" />
+      <Method Name="Rate" Hidden="true" />
+      <Method Name="Rates" Hidden="true" />
+      <Method Name="ToBase" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QIAAAAAAAAAAAAAAAAAAECAAAAhIAAgABAAIAAAAECA=</HashCode>
+      <FileName>Currencies\Currency.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AcceptedIn" />
+      <Property Name="AcceptedInCountries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.CurrencyUsage" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAACAIQAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Currencies\CurrencyUsage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Country" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.Country">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="Country" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAQAAEAAAAQAAAACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Parties\Contacts\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Common.MeasurableValue&lt;TQuantity, TAmount, TMeasure&gt;" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAAAAAQAAAAQEAQADAACAAEAAACAAAAAAAIIAAAE=</HashCode>
+      <FileName>Common\MeasurableValue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Quantity" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAAAE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Unit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Common.CommonMetric&lt;TData&gt;" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\CommonMetric.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Unit" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAiAEAAEAIBJAAEAwQQBAgBAAAIAIAAAQI=</HashCode>
+      <FileName>Quantities\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

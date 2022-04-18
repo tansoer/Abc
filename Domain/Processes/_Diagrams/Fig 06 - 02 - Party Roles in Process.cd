@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Roles.PartyRoleType" Collapsed="true">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <AssociationLine Name="BaseType" Type="Abc.Domain.Roles.PartyRoleType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.519" Y="2.941" />
+        <Point X="6.519" Y="3.191" />
+        <Point X="6.75" Y="3.191" />
+        <Point X="6.75" Y="2.941" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.24" Y="0.285" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Requirements" Type="Abc.Domain.Rules.RuleSet" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="2.562" />
+        <Point X="8.125" Y="2.562" />
+        <Point X="8.125" Y="2.562" />
+        <Point X="8.75" Y="2.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MandatoryResponsibilities" Type="Abc.Domain.Roles.Responsibility" FixedFromPoint="true">
+      <Path>
+        <Point X="6.438" Y="2.25" />
+        <Point X="6.438" Y="1.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.899" Y="0.21" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="OptionalResponsibilities" Type="Abc.Domain.Roles.Responsibility" FixedFromPoint="true">
+      <Path>
+        <Point X="7.375" Y="2.25" />
+        <Point X="7.375" Y="1.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.871" Y="0.401" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAgAAEAAAAiAgABAAIAABlIAEAAgCgAAgA=</HashCode>
+      <FileName>Roles\PartyRoleType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseType" />
+      <Property Name="Requirements" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Constraints" />
+      <Property Name="MandatoryResponsibilities" />
+      <Property Name="OptionalResponsibilities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Preferences" />
+      <Property Name="Responsibilities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.AssignedResponsibility" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAABAAAUAA=</HashCode>
+      <FileName>Roles\AssignedResponsibility.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Responsibility" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.Responsibility" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAIQAAIAAAAAA=</HashCode>
+      <FileName>Roles\Responsibility.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.ResponsibilityType" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAMAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Roles\ResponsibilityType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Preferences.Preference" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAgAAAAAAAACAAAACAAgAQAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Preferences\Preference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="8.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRoleConstraint" Collapsed="true">
+    <Position X="8.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAQAAIAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.IParty" Collapsed="true">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Parties\IParty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

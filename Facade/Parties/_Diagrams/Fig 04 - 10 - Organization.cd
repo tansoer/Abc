@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Parties.PartyView" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEgAACEAAAAAAQQAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.PartyAttributeView" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Facade.Common.EntityBaseView" FixedToPoint="true">
+      <Path>
+        <Point X="1.375" Y="1.75" />
+        <Point X="1.375" Y="1.125" />
+        <Point X="5.438" Y="1.125" />
+        <Point X="5.438" Y="1.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\PartyAttributeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.EntityBaseView">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <Members>
+      <Property Name="Code" Hidden="true" />
+      <Property Name="Details" Hidden="true" />
+      <Property Name="Id" Hidden="true" />
+      <Property Name="setDisplayNameValue" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAABAAAAA=</HashCode>
+      <FileName>Common\EntityBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PartyNameView">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <Members>
+      <Property Name="FamilyNameCaption" Hidden="true" />
+      <Property Name="GivenName" Hidden="true" />
+      <Method Name="IsOrganizationName" Hidden="true" />
+      <Method Name="IsPersonName" Hidden="true" />
+      <Property Name="MiddleName" Hidden="true" />
+      <Property Name="PartyType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAQAAAEQAAAAAQCgAQAAQAAAAA=</HashCode>
+      <FileName>Parties\PartyNameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.RegisteredIdentifierView" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAgAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\RegisteredIdentifierView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

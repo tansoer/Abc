@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Abc.Domain.Rules.RuleSet">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Property Name="fixedFilter" Hidden="true" />
+      <Method Name="RuleSet" Hidden="true" />
+      <Property Name="ruleSetId" Hidden="true" />
+      <Property Name="RuleUsages" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Overrides" Type="Abc.Domain.Rules.RuleOverride" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="1.125" />
+        <Point X="4.75" Y="1.125" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.943" Y="0.06" Height="0.182" Width="0.902" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Rules" Type="Abc.Domain.Rules.BaseRule">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.057" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Overrides" />
+      <Property Name="Rules" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleOverride" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="3.25" />
+    <InheritanceLine Type="Abc.Domain.Parties.Signatures.BasePartySignature&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="7.125" Y="1.5" />
+        <Point X="7.125" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAEAAAAAAAAEAAAAAAAAAAAAAAAgAAAgAAoA=</HashCode>
+      <FileName>Rules\RuleOverride.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RuleSet" />
+      <Property Name="Rule" />
+      <Property Name="RuleContext" />
+      <Property Name="RuleVariable" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseRule" Collapsed="true">
+    <Position X="1.25" Y="2.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAAAQAgAAAAIAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleContext" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="7.5" />
+    <AssociationLine Name="Variables" Type="Abc.Domain.Rules.IVariable">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.921" Y="0.195" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAwAAAAEAgA=</HashCode>
+      <FileName>Rules\RuleContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rule" />
+      <Property Name="RuleSet" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Variables" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="6.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.BasePartySignature&lt;T&gt;">
+    <Position X="6.25" Y="1.5" Width="1.75" />
+    <Members>
+      <Property Name="Authentication" Hidden="true" />
+      <Method Name="BasePartySignature" Hidden="true" />
+      <Method Name="IsSigned" Hidden="true" />
+      <Property Name="PartySummary" Hidden="true" />
+      <Property Name="SignedEntity" Hidden="true" />
+      <Property Name="SignedEntityType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAIAAAAACAAAAAAAIAEAAAAAAAIAICgAA=</HashCode>
+      <FileName>Parties\Signatures\BasePartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Rules.IVariable" Collapsed="true">
+    <Position X="2.5" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>IAKiCAAgI0hGgABABQMDAAAAAGQAgAAhJAAgIAkaIgE=</HashCode>
+      <FileName>Rules\IVariable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

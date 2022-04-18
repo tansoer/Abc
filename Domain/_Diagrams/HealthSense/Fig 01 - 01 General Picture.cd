@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.PartyManager" Collapsed="true">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Parties\PartyManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;" Collapsed="true">
+    <Position X="7.5" Y="1" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Organization" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Parties.Party&lt;TName&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.375" />
+        <Point X="7.26" Y="1.375" />
+        <Point X="7.26" Y="1" />
+        <Point X="7" Y="1" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Person" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Parties.Party&lt;TName&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.5" Y="1.375" />
+        <Point X="7.26" Y="1.375" />
+        <Point X="7.26" Y="1.875" />
+        <Point X="7" Y="1.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAACAAAAAAAAAAAAQAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Person.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Quantities.MeasurableValue&lt;TQuantity, TAmount, TMeasure&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="1.5" />
+        <Point X="3.375" Y="1.5" />
+        <Point X="3.375" Y="1.062" />
+        <Point X="4" Y="1.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Quantity" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Quantities.MeasurableValue&lt;TQuantity, TAmount, TMeasure&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="1.5" />
+        <Point X="3.375" Y="1.5" />
+        <Point X="3.375" Y="1.938" />
+        <Point X="4" Y="1.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAABE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.MeasurableValue&lt;TQuantity, TAmount, TMeasure&gt;" Collapsed="true">
+    <Position X="1.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAQEAQADAACAAEAAACAAACAAAIIAAAE=</HashCode>
+      <FileName>Quantities\MeasurableValue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.Process" Collapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAIAAAEAAQEAABQCAAQBAAAAQAAIAAgAAE=</HashCode>
+      <FileName>Processes\Process.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Inventory.Inventory" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABQAAAAACAAEAAEAAAAIAACAAAQAACAAhBAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductTypes" />
+      <Property Name="Entries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.InventoryEntry" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\InventoryEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductType" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProductType" Collapsed="true">
+    <Position X="1.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProductType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

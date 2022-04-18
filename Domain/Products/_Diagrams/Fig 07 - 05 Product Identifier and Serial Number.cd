@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="The SerialNumber has the same content as the Code. Just for consistency with the original patterns from the archetype patterns book.&#xD;&#xA;">
+    <Position X="0.5" Y="6.2" Height="0.75" Width="4.726" />
+  </Comment>
+  <Class Name="Abc.Domain.Products.ProductType" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Product" Collapsed="true">
+    <Position X="3.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAAAkAICAAAABAAAQAAgACgEIAAAAAQAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;">
+    <Position X="0.75" Y="4.5" Width="1.75" />
+    <Members>
+      <Method Name="BaseProduct" Hidden="true" />
+      <Property Name="Batch" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Method Name="CancelReservation" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="Features" Hidden="true" />
+      <Property Name="Price" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="Relations" Hidden="true" />
+      <Property Name="RelationsWhereConsumer" Hidden="true" />
+      <Property Name="RelationsWhereProvider" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Method Name="Reserve" Hidden="true" />
+      <Property Name="type" Hidden="true" />
+      <Property Name="Type" Hidden="true" />
+      <Property Name="TypeId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Common.Entity&lt;TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="3.877" />
+        <Point X="1.625" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEEAIABEAABAAAQAAkDCACgAQACAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Common.Entity&lt;TData&gt;">
+    <Position X="0.75" Y="2" Width="1.75" />
+    <Members>
+      <Property Name="Details" Hidden="true" />
+      <Method Name="Entity" Hidden="true" />
+      <Property Name="IsRemoved" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Property Name="ValidFrom" Hidden="true" />
+      <Property Name="ValidTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAEAAAgAAQAAAAAACAAACAgAAAAAAA=</HashCode>
+      <FileName>Common\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

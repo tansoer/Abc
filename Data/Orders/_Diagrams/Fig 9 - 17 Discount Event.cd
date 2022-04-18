@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Orders.DiscountTypeData">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAIAAAAAAAAACAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Orders\DiscountTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Rules.RuleSetData" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleSetData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderEventData">
+    <Position X="2.75" Y="3.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ECAgIAQAABQAQAAAAAAAAAAAAAAAABIEIBAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderEventType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.DiscountData">
+    <Position X="0.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAgAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Orders\DiscountData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderData">
+    <Position X="2.75" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAAAAAAAAAgAAAABAAAAAACAAAAAFAAAAAAA=</HashCode>
+      <FileName>Orders\OrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.ManagerData" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ManagerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Orders.OrderEventType">
+    <Position X="6.75" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBCAAAAwABQABAECEAAAAIAAEAAIAAAAAAAQA=</HashCode>
+      <FileName>Orders\OrderEventType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

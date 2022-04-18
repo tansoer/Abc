@@ -1,0 +1,20 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Processes.ThreadTypesPage
+
+@{
+    Layout = "_Details";
+    Model.LoadDetails();
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+<partial name="_ShowElement" />
+
+@section Details {
+    <a id="showTaskTypes"
+       asp-route-handler="ShowTaskTypes"
+       asp-route-id="@Model.ItemId">Task Types</a>
+}

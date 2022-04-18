@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Products.Product" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="2.25" />
+    <Members>
+      <Method Name="Product" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Products.BaseProduct&lt;TType&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="4.733" />
+        <Point X="1.625" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Batch">
+    <Position X="0.5" Y="0.5" Width="8" />
+    <Members>
+      <Method Name="Batch" Hidden="true" />
+      <Property Name="batchId" Hidden="true" />
+      <Property Name="checkedBy" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AgAgAABAAAAAAAIABAAAABAAAAAAAAIAAABAMAAAICQ=</HashCode>
+      <FileName>Products\Batch.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BatchOf" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Products" />
+      <Property Name="CheckedBy" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.ProductType" Collapsed="true">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAAAkAICAAAABAAAQAAgACgEIAAAAAQAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;">
+    <Position X="0.5" Y="3.5" Width="2.25" />
+    <Members>
+      <Method Name="BaseProduct" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Method Name="CancelReservation" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="Features" Hidden="true" />
+      <Property Name="Price" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="Relations" Hidden="true" />
+      <Property Name="RelationsWhereConsumer" Hidden="true" />
+      <Property Name="RelationsWhereProvider" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Method Name="Reserve" Hidden="true" />
+      <Property Name="type" Hidden="true" />
+      <Property Name="Type" Hidden="true" />
+      <Property Name="TypeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEEAIABEAABAAAQAAkDCACgAQACAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Batch" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProductType" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProductType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Products.IProduct" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

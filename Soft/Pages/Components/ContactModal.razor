@@ -1,0 +1,134 @@
+﻿@using Abc.Facade.Parties
+@using Microsoft.AspNetCore.Components
+@using Abc.Aids.Enums
+@using Abc.Aids.Methods
+@using Abc.Data.Parties
+@using Abc.Domain.Parties.Contacts
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+<Modal OnCancel="() => OnCancel()" OnSave="() => OnSave()">
+    <ModalContent>
+        <input type="hidden" @bind="Contact.Id"/>
+    <input type="hidden" @bind="Contact.ContactUsageId"/>
+    <dl class="row">
+        <StandardInput Label="Contact Type">
+            <Value>
+                <select @bind="Contact.ContactType" @onselect="StateHasChanged" class="form-control">
+                    <option value="@ContactType.Email">Email</option>
+                    <option value="@ContactType.Telecom">Telecom</option>
+                    <option value="@ContactType.Web">Web</option>
+                    <option value="@ContactType.Postal">Postal</option>
+                </select>
+            </Value>
+        </StandardInput>
+        @if (Contact.ContactType == ContactType.Email)
+        {
+            <StandardInput Label="E-mail">
+                <Value>
+                    <input @bind="Contact.Name" class="form-control"/>
+                </Value>
+            </StandardInput>
+        }
+        @if (Contact.ContactType == ContactType.Telecom)
+        {
+            <StandardInput Label="Country Code">
+                <Value>
+                    <input @bind="Contact.RegionOrStateOrCountryCode" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Prefix">
+                <Value>
+                    <input @bind="Contact.NationalDirectDialingPrefix" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Area code">
+                <Value>
+                    <input @bind="Contact.CityOrAreaCode" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Number">
+                <Value>
+                    <input @bind="Contact.Name" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Extension">
+                <Value>
+                    <input @bind="Contact.Code" class="form-control"/>
+                </Value>
+            </StandardInput>
+        }
+        @if (Contact.ContactType == ContactType.Web)
+        {
+            <StandardInput Label="Web address">
+                <Value>
+                    <input @bind="Contact.Name" class="form-control"/>
+                </Value>
+            </StandardInput>
+        }
+        @if (Contact.ContactType == ContactType.Postal)
+        {
+            <StandardInput Label="Address line">
+                <Value>
+                    <input @bind="Contact.Name" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="City">
+                <Value>
+                    <input @bind="Contact.CityOrAreaCode" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="State">
+                <Value>
+                    <input @bind="Contact.RegionOrStateOrCountryCode" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Zip">
+                <Value>
+                    <input @bind="Contact.Code" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Country">
+                <Value>
+                    <select @bind="Contact.CountryId" class="form-control">
+                        @foreach (var country in Countries)
+                        {
+                            <option value="@country.Value">@country.Text</option>
+                        }
+                    </select>
+                </Value>
+            </StandardInput>
+        }
+    </dl>
+    </ModalContent>
+</Modal>
+
+@code {
+    [Parameter]
+    public PartyContactView Contact { get; set; }
+    [Parameter]
+    public Action<PartyContactView> Hide { get; set; }
+    [Parameter] public int Index { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> Countries { get; set; }
+
+    private PartyContactView Backup { get; set; }
+
+    private void OnCancel()
+    {
+        Contact = Backup;
+        Hide(Backup);
+    }
+
+    private void OnSave() => Hide(Contact);
+
+    protected override Task OnInitializedAsync()
+    {
+
+        var backup = Newtonsoft.Json.JsonConvert.SerializeObject(Contact);
+        Backup = Newtonsoft.Json.JsonConvert.DeserializeObject<PartyContactView>(backup);
+        return base.OnInitializedAsync();
+    }
+
+    private string partyName(int index, string propertyName) => $"PartyContacts[{index}].{propertyName}";
+
+}

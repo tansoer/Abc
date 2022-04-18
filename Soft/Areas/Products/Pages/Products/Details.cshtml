@@ -1,0 +1,38 @@
+﻿@page
+@using Abc.Data.Products
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Products.ProductsPage
+
+@{
+    Layout = "_Details";
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+@section Details {
+
+    <a id="showFeatures"
+       asp-route-handler="ShowFeatures"
+       asp-route-id="@Model.ItemId">Features</a>
+    &nbsp;
+    <a id="showPrices"
+       asp-route-handler="ShowPrices"
+       asp-route-id="@Model.ItemId">Prices</a>
+    &nbsp;
+    @if (Model.Item.ProductKind == ProductKind.Package)
+    {
+        <a id="showPackageContents"
+           asp-route-handler="ShowPackageContents"
+           asp-route-id="@Model.ItemId">Package Contents</a>
+    }
+    &nbsp;
+    if (Model.Item.ProductKind == ProductKind.Container)
+    {
+        <a id="showContainerItems"
+           asp-route-handler="ShowContainerItems"
+           asp-route-id="@Model.ItemId">Container Items</a>
+    }
+    &nbsp;
+}

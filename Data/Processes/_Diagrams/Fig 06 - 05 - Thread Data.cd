@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Processes.ProcessElementData" Collapsed="true">
+    <Position X="5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Processes\ProcessElementData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.ProcessElementTypeData" Collapsed="true">
+    <Position X="7.5" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElementTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.ProcessElementBaseData">
+    <Position X="6.25" Y="3.25" Width="2" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="2.632" />
+        <Point X="5" Y="2.875" />
+        <Point X="7.25" Y="2.875" />
+        <Point X="7.25" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElementBaseData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="Recorded" Hidden="true" />
+      <Property Name="RecordedBy" Hidden="true" />
+      <Property Name="RecordedWhy" Hidden="true" />
+      <Property Name="Replaced" Hidden="true" />
+      <Property Name="Timestamp" Hidden="true" />
+      <Property Name="ValidFrom" Hidden="true" />
+      <Property Name="ValidTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAABAAAEAQAiAAQAgAAAACAAACAAAAAAIAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.ProcessData">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="2.632" />
+        <Point X="5" Y="2.875" />
+        <Point X="1.25" Y="2.875" />
+        <Point X="1.25" Y="3.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAACBAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Processes\ProcessData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Processes.ProcessTypeData">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityTypeData" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.ThreadData">
+    <Position X="5" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAACAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ThreadData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Processes.ThreadTypeData">
+    <Position X="7.5" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ThreadTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRoleData">
+    <Position X="2.75" Y="4" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.562" Y="3.941" />
+        <Point X="3.562" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyAttributeData" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyAttributeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Rules.RuleContextData">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Rules\RuleContextData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

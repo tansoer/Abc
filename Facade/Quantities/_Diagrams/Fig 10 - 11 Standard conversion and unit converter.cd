@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Every unit is either factored, functioned or derived unit and includes all the needed information for the unit conversion to the base unit and vice versa.">
+    <Position X="0.5" Y="4.75" Height="0.5" Width="6.148" />
+  </Comment>
+  <Class Name="Abc.Facade.Quantities.UnitRulesView">
+    <Position X="5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitRulesView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitFactorView">
+    <Position X="3" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitFactorView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitAttributeView">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitAttributeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitView">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UnitType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitType">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

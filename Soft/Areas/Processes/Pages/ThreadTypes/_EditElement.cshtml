@@ -1,0 +1,15 @@
+﻿@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Processes
+@using Abc.Soft.Pages.Components
+@using Abc.Facade.Processes
+@model Abc.Pages.Processes.ThreadTypesPage
+
+<body>
+    <component>@(await Html.RenderComponentAsync<DynamicInputCollection<TaskTypeView>>
+        (RenderMode.Server, new {
+        BoundPropertyListName = Html.NameFor(x => x.TaskTypes), 
+        BoundPropertyList = Model.TaskTypes,
+        InputFields = Model.TaskTypesInputs,
+        Title = ProcessTitles.TaskTypes
+    }))</component>
+</body>

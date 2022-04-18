@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="DateCreated is ValidFrom&#xD;&#xA;&#xD;&#xA;SalesChannelId is link to the ClassifierData.Id&#xD;&#xA;&#xD;&#xA;TermsAndConditionsData is link to terms and conditions&#xD;&#xA;&#xD;&#xA;DiscountRuleContextId is link to the rule context&#xD;&#xA;&#xD;&#xA;The order has &#xD;&#xA;    &#xD;&#xA;      order lines (OrderLineData), &#xD;&#xA;&#xD;&#xA;      events log (OrderEventData) and &#xD;&#xA;&#xD;&#xA;      related parties (PartySymmaryData) &#xD;&#xA;&#xD;&#xA;In addition, a purchase order records date sent and a sales order records date received in the DateSentReceived property&#xD;&#xA;&#xD;&#xA;A sales order also records the purchase order Id.">
+    <Position X="9.177" Y="0.5" Height="5.115" Width="2.44" />
+  </Comment>
+  <Class Name="Abc.Facade.Orders.OrderView">
+    <Position X="3.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAAIABAAAAgAAAABAAAAAACAAACAEAAAAAAA=</HashCode>
+      <FileName>Orders\OrderView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderType" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Facade.Orders.OrderEventView">
+    <Position X="0.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ECAgIAQAABQAQAAAAAAAAAAAAAAAABIEIBAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Orders.OrderLineView">
+    <Position X="3.75" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAwQAIAAAAAAAEACGAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Orders\OrderLineView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderLineType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PartySummaryView">
+    <Position X="3.75" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAQAAAAAAAACQAAAAAAAAAACAAABAoAAAAA=</HashCode>
+      <FileName>Parties\PartySummaryView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RoleInOrder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Facade.Orders.TermsAndConditionsView">
+    <Position X="6.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\TermsAndConditionsView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderType">
+    <Position X="7" Y="2" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Orders.PartyRoleInOrder">
+    <Position X="7" Y="3.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderLineType">
+    <Position X="7" Y="6" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderLifecycleStatus">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

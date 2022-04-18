@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Tests.AssemblyBaseTests">
+    <Position X="6.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAkQAAAAQAACIAAAEKCiAgAAAAAAQEACIAAiAGIA=</HashCode>
+      <FileName>AssemblyBaseTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.AssemblyTests">
+    <Position X="2.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCgAAACAAAAAAAEAAAAABAAAAAAAAAAAAQAAACAAJA=</HashCode>
+      <FileName>AssemblyTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Asserts">
+    <Position X="9.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EEAAAAIACgAABAAAAEAAAAABABCIAAAwAAAACAAAAAA=</HashCode>
+      <FileName>Asserts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Aids.IsAidsTested">
+    <Position X="4.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACIIAAAAAiAAABAAAAAAAgBAAAAAAABAMgAAAEQA=</HashCode>
+      <FileName>Aids\IsAidsTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Core.IsCoreTested">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAIAAAIAAAAAAAAAAgAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Core\IsCoreTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Data.IsDataTested" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Tests.AssemblyTests" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.25" />
+        <Point X="2.375" Y="2.25" />
+        <Point X="2.375" Y="0.846" />
+        <Point X="2" Y="0.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Data\IsDataTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Domain.IsDomainTested" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="Abc.Tests.AssemblyTests" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.25" />
+        <Point X="2.375" Y="2.25" />
+        <Point X="2.375" Y="1.596" />
+        <Point X="2" Y="1.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAIABAgAAIAAAABAAAAAAAgAAAAAAABAAIAASAAAA=</HashCode>
+      <FileName>Domain\IsDomainTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Facade.IsFacadeTested" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <InheritanceLine Type="Abc.Tests.AssemblyTests" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.25" />
+        <Point X="2.375" Y="2.25" />
+        <Point X="2.375" Y="2.471" />
+        <Point X="2" Y="2.471" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Facade\IsFacadeTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Infra.IsInfraTested" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Tests.AssemblyTests" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.25" />
+        <Point X="2.375" Y="2.25" />
+        <Point X="2.375" Y="3.096" />
+        <Point X="2" Y="3.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Infra\IsInfraTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Pages.IsPagesTested" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Tests.AssemblyTests" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="2.25" />
+        <Point X="2.375" Y="2.25" />
+        <Point X="2.375" Y="3.846" />
+        <Point X="2" Y="3.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Pages\IsPagesTested.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,28 @@
+﻿@page
+@using Abc.Aids.Reflection
+@using Abc.Data.Parties
+@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Parties
+@model Abc.Pages.Parties.PartyNamesPage
+
+@{
+    Layout = "_Details";
+    var nameId = GetMember.Name<NameSuffixData>(x => x.NameId);
+
+    string prefixes = PartyUrls.PersonNamePrefixes;
+    string suffixes = PartyUrls.PersonNameSuffixes;
+    var id = Model.Item.Id;
+    var prefixesUrl = new Uri($"{prefixes}/Index?handler=index&fixedFilter={nameId}&fixedValue={id}", UriKind.Relative);
+    var suffixesUrl = new Uri($"{suffixes}/Index?handler=index&fixedFilter={nameId}&fixedValue={id}", UriKind.Relative);
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+@section Details {
+    @if (Model.Item.IsPersonName()) {
+        @Html.Link(new Abc.Pages.Common.Aids.Link(" | Prefixes", prefixesUrl))
+        @Html.Link(new Abc.Pages.Common.Aids.Link(" | Suffixes", suffixesUrl))
+    }
+}

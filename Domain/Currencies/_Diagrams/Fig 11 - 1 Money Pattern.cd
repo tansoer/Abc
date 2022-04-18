@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Currencies.Currency">
+    <Position X="3" Y="4" Width="1.75" />
+    <Members>
+      <Property Name="AcceptedIn" Hidden="true" />
+      <Method Name="Currency" Hidden="true" />
+      <Property Name="IsIsoCurrency" Hidden="true" />
+      <Property Name="MajorUnitSymbol" Hidden="true" />
+      <Property Name="MinorUnitSymbol" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Method Name="Rate" Hidden="true" />
+      <Method Name="Rates" Hidden="true" />
+      <Property Name="RatioOfMinorUnit" Hidden="true" />
+    </Members>
+    <AssociationLine Name="AcceptedInCountries" Type="Abc.Domain.Parties.Contacts.Country" FixedFromPoint="true">
+      <Path>
+        <Point X="4.312" Y="5.617" />
+        <Point X="4.312" Y="6" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QIAAAAAAAAAAAAAAAAAAECAAAAhIAAgABAAIAAAAECA=</HashCode>
+      <FileName>Currencies\Currency.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AcceptedInCountries" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money">
+    <Position X="5.75" Y="3" Width="1.25" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="IsEqual" Hidden="true" />
+      <Method Name="IsGreater" Hidden="true" />
+      <Method Name="IsLess" Hidden="true" />
+      <Method Name="Money" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="Parse" Hidden="true" />
+      <Method Name="round" Hidden="true" />
+      <Method Name="Subtract" Hidden="true" />
+      <Method Name="TryParse" Hidden="true" />
+      <Property Name="Unspecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.CreditCard" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\CreditCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.DebitCard" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\DebitCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Check" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAACIAAAAAAACAAAgAAAAAAFQAAAAAAAA=</HashCode>
+      <FileName>Currencies\Check.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Cash" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentMethod" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="1.75" />
+        <Point X="5.25" Y="1.491" />
+        <Point X="6.5" Y="1.491" />
+        <Point X="6.5" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\Cash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.PaymentMethod" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Payment" Collapsed="true">
+    <Position X="0.5" Y="3" Width="3.25" />
+    <AssociationLine Name="Amount" Type="Abc.Domain.Currencies.Money">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.185" Y="0.11" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAIAAAogBCAAIAAAAAAAAAEIAAAAAA=</HashCode>
+      <FileName>Currencies\Payment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Method" />
+      <Property Name="Amount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.ExchangeRate" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <AssociationLine Name="RateType" Type="Abc.Domain.Currencies.RateType" FixedFromPoint="true">
+      <Path>
+        <Point X="1.375" Y="4.691" />
+        <Point X="1.375" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAAAAAAAAAAAACAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\ExchangeRate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+      <Property Name="RateType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.PaymentCard" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>IQAACAAAEgIAAAAAAAAIAAAAAAAAACAIAGEAACEAAAA=</HashCode>
+      <FileName>Currencies\PaymentCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.Country">
+    <Position X="2.5" Y="6" Width="2.25" />
+    <Members>
+      <Method Name="Country" Hidden="true" />
+      <Property Name="IsLoyaltyProgram" Hidden="true" />
+      <Property Name="IsoCode" Hidden="true" />
+      <Property Name="NativeName" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="OfficialName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAQAAEAAAAQAAAACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Parties\Contacts\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.RateType" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="ApplicabilityRules" Type="Abc.Domain.Rules.RuleSet" FixedFromPoint="true">
+      <Path>
+        <Point X="1.812" Y="5.941" />
+        <Point X="1.812" Y="6.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAABEAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\RateType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ApplicabilityRules" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Core.Rounding.RoundingPolicy" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <AssociationLine Name="RoundingStrategy" Type="Abc.Core.Rounding.RoundingStrategy">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.473" Y="0.195" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="RoundingStrategy" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Core.Rounding.RoundingStrategy" Collapsed="true">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

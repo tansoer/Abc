@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Inventory.Inventory">
+    <Position X="1" Y="0.5" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABQAAAAACAAEAAEAAAAIAACAAAQAACAAhBAAAA=</HashCode>
+      <FileName>Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductTypes" />
+      <Property Name="Entries" />
+      <Property Name="Reservations" />
+      <Property Name="Requests" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.InventoryEntry">
+    <Position X="1" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\InventoryEntry.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.Reservation" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\Reservation.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Request" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Inventory.ReservationRequest" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAARAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Inventory\ReservationRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProductType" Collapsed="true">
+    <Position X="4.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProductType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,37 @@
+﻿@page
+@using Abc.Aids.Reflection
+@using Abc.Pages.Parties
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Parties.PartyPage
+
+@{
+    Layout = "_Details";
+    string contacts = PartyUrls.PartyContactUsages;
+    string names = PartyUrls.Names;
+    string preferences = PartyUrls.Preferences;
+    string identifiers = PartyUrls.RegisteredIdentifiers;
+    string metrics = PartyUrls.BodyMetrics;
+    Abc.Pages.Common.Aids.Link link(string name, Uri uri) =>
+       new Abc.Pages.Common.Aids.Link(name, uri);
+    Uri uri(string page, string field, string value) =>
+       new Uri($"{page}/Index?handler=index&fixedFilter={field}&fixedValue={value}", UriKind.Relative);
+    var id = Model.Item.Id;
+    var partyId = GetMember.Name<Abc.Data.Parties.PartyNameData>(x => x.PartyId);
+    var contactsUrl = uri(contacts, partyId,id);
+    var namesUrl = uri(names, partyId, id);
+    var preferencesUrl = uri(preferences, partyId, id);
+    var identifiersUrl = uri(identifiers, partyId, id);
+    var metricsUrl = uri(metrics, partyId, id);
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+@section Details {
+    @Html.Link(link("Contacts", contactsUrl))
+    &nbsp;@Html.Link(link("Names", namesUrl))
+    &nbsp;@Html.Link(link("Preferences", preferencesUrl))
+    &nbsp;@Html.Link(link("Identifiers", identifiersUrl))
+    &nbsp;@if (Model.Item.IsPerson()) {@Html.Link(link("Body Metrics", metricsUrl))}
+}

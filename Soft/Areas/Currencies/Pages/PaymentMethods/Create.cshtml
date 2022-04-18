@@ -1,0 +1,13 @@
+﻿@page
+@using Abc.Data.Currencies
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Currencies.PaymentMethodsPage
+
+@{
+    Layout = "_Create";
+}
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.PaymentMethodType" />
+    @Html.EditItem(Model)
+</body>

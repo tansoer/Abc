@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Currencies.CurrencyData">
+    <Position X="3.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAACAAAABIAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Currencies\CurrencyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.MeasureData">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="MeasureData" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitData">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="UnitData" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.SystemOfUnitsData" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="1.688" />
+        <Point X="2.625" Y="1.688" />
+        <Point X="2.625" Y="1.096" />
+        <Point X="2.25" Y="1.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\SystemOfUnitsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitFactorData">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitFactorData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.CommonTermData">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="CommonTermData" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.625" />
+        <Point X="4.875" Y="1.625" />
+        <Point X="4.875" Y="0.938" />
+        <Point X="5.75" Y="0.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\CommonTermData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.MeasureTermData" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="MeasureTermData" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Data.Quantities.CommonTermData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="1.5" />
+        <Point X="7.625" Y="1.5" />
+        <Point X="7.625" Y="1.803" />
+        <Point X="8" Y="1.803" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureTermData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitTermData" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="UnitTermData" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Data.Quantities.CommonTermData" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="1.5" />
+        <Point X="7.625" Y="1.5" />
+        <Point X="7.625" Y="0.846" />
+        <Point X="8" Y="0.846" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitTermData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitAttributeData" Collapsed="true">
+    <Position X="5.75" Y="2.25" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.625" />
+        <Point X="4.875" Y="1.625" />
+        <Point X="4.875" Y="2.596" />
+        <Point X="5.75" Y="2.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitAttributeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.MetricBaseData" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="1.688" />
+        <Point X="2.625" Y="1.688" />
+        <Point X="2.625" Y="2.096" />
+        <Point X="2" Y="2.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\MetricBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

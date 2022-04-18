@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Orders.PurchaseOrder">
+    <Position X="4.75" Y="2" Width="1.75" />
+    <Members>
+      <Method Name="acceptRefund" Hidden="true" />
+      <Property Name="DateSent" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Method Name="makePayment" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="PurchaseOrder" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Orders.Order" FixedFromPoint="true">
+      <Path>
+        <Point X="5.625" Y="1.733" />
+        <Point X="5.625" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAgAAAAgAAAAAIAAAAAAIQAAACAAAAAA=</HashCode>
+      <FileName>Orders\PurchaseOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Order">
+    <Position X="4.75" Y="0.5" Width="4.5" />
+    <Members>
+      <Method Name="acceptPayment" Hidden="true" />
+      <Method Name="acceptRefund" Hidden="true" />
+      <Property Name="DateCreated" Hidden="true" />
+      <Property Name="DiscountRuleContext" Hidden="true" />
+      <Property Name="DiscountRuleContextId" Hidden="true" />
+      <Field Name="eventsManager" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Field Name="linesManager" Hidden="true" />
+      <Method Name="makePayment" Hidden="true" />
+      <Method Name="makeRefund" Hidden="true" />
+      <Method Name="Order" Hidden="true" />
+      <Property Name="OrderManagerId" Hidden="true" />
+      <Property Name="OrdersManager" Hidden="true" />
+      <Field Name="partiesManager" Hidden="true" />
+      <Property Name="PartiesManager" Hidden="true" />
+      <Method Name="processAmend" Hidden="true" />
+      <Method Name="processDiscount" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="processLifecycle" Hidden="true" />
+      <Method Name="processPayment" Hidden="true" />
+      <Method Name="processReceipt" Hidden="true" />
+      <Method Name="processUnspecified" Hidden="true" />
+      <Property Name="SalesChannel" Hidden="true" />
+      <Property Name="SalesChannelId" Hidden="true" />
+      <Method Name="SetEventsManager" Hidden="true" />
+      <Method Name="SetLinesManager" Hidden="true" />
+      <Method Name="setManager" Hidden="true" />
+      <Method Name="SetPartiesManager" Hidden="true" />
+      <Method Name="SetStatusManager" Hidden="true" />
+      <Method Name="SetTermsManager" Hidden="true" />
+      <Field Name="statusManager" Hidden="true" />
+      <Property Name="StatusManager" Hidden="true" />
+      <Field Name="termsManager" Hidden="true" />
+      <Property Name="TermsManager" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AMIAIEFAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventsManager" />
+      <Property Name="LinesManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLinesManager" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.75" />
+    <Members>
+      <Method Name="AcceptPayment" Hidden="true" />
+      <Method Name="AcceptReceipt" Hidden="true" />
+      <Method Name="AcceptRefund" Hidden="true" />
+      <Method Name="Add" Hidden="true" />
+      <Method Name="Amend" Hidden="true" />
+      <Method Name="AmendParty" Hidden="true" />
+      <Property Name="ChargeLines" Hidden="true" />
+      <Method Name="DispatchItems" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Method Name="isOrderLine" Hidden="true" />
+      <Method Name="isRemovable" Hidden="true" />
+      <Method Name="MakePayment" Hidden="true" />
+      <Method Name="MakeRefund" Hidden="true" />
+      <Method Name="newOrderLine" Hidden="true" />
+      <Property Name="orderIdInLine" Hidden="true" />
+      <Property Name="orderLines" Hidden="true" />
+      <Method Name="OrderLinesManager" Hidden="true" />
+      <Method Name="ReceiptReturned" Hidden="true" />
+      <Method Name="ReceiveInvoice" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+      <Method Name="ReturnItems" Hidden="true" />
+      <Method Name="SendInvoice" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AANYQAAAAAAAggRAAAAADBAAIAAAUgAIQAAIAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductLines" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEventsManager" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.75" />
+    <Members>
+      <Method Name="OrderEventsManager" Hidden="true" />
+      <Property Name="orderIdInEvent" Hidden="true" />
+      <Method Name="RegisterEvent" Hidden="true" />
+      <Method Name="Unspecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABAAAAABAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLine" Collapsed="true">
+    <Position X="7.5" Y="5" Width="1.75" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="AddItems" Hidden="true" />
+      <Method Name="AmendLine" Hidden="true" />
+      <Method Name="AmendParty" Hidden="true" />
+      <Property Name="ChargeLines" Hidden="true" />
+      <Property Name="Clone" Hidden="true" />
+      <Method Name="deleteChargeLine" Hidden="true" />
+      <Method Name="deleteReceiver" Hidden="true" />
+      <Property Name="DeliveryReceiver" Hidden="true" />
+      <Property Name="ExpectedDelivery" Hidden="true" />
+      <Property Name="hasDeliveryReceiver" Hidden="true" />
+      <Method Name="isChargeLine" Hidden="true" />
+      <Method Name="isDeliveryReceiver" Hidden="true" />
+      <Method Name="isReceiver" Hidden="true" />
+      <Method Name="newChargeLine" Hidden="true" />
+      <Method Name="newReceiver" Hidden="true" />
+      <Method Name="newRole" Hidden="true" />
+      <Property Name="NumberOfProducts" Hidden="true" />
+      <Method Name="OrderLine" Hidden="true" />
+      <Property Name="orderLineIdField" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductType" Hidden="true" />
+      <Property Name="productTypeId" Hidden="true" />
+      <Property Name="relatedParties" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+      <Property Name="UnitPrice" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Product" Type="Abc.Domain.Products.IProduct" FixedFromPoint="true">
+      <Path>
+        <Point X="7.625" Y="5" />
+        <Point X="7.625" Y="4.691" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.764" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>oAMCgBAwGEAANAAAAAAABQACAAQAgAEAAABKAAAAABA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Delivery.DeliveryEvent" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Members>
+      <Method Name="DeliveryEvent" Hidden="true" />
+      <Property Name="DeliveryId" Hidden="true" />
+      <Property Name="DeliveryLines" Hidden="true" />
+      <Method Name="RejectProductInstances" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAg=</HashCode>
+      <FileName>Orders\Events\Delivery\DeliveryEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Delivery" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEvent" Collapsed="true">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MCEAAQAAEBAAAAAAIAAAAAAAAAKACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Delivery.RejectedItem" Collapsed="true">
+    <Position X="4.75" Y="6" Width="1.75" />
+    <Members>
+      <Method Name="RejectedItem" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Delivery\RejectedItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.ReceiptLine">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <Members>
+      <Method Name="ReceiptLine" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\ReceiptLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Delivery.ReceiptEvent">
+    <Position X="0.5" Y="3.75" Width="2.25" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Delivery.DeliveryEvent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="3.191" />
+        <Point X="1.75" Y="3.75" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="ReceiptLines" Type="Abc.Domain.Orders.Lines.DeliveryOrderLine" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="4.625" />
+        <Point X="4.5" Y="4.625" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Delivery\ReceiptEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ReceiptLines" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.DeliveryOrderLine">
+    <Position X="4.5" Y="4" Width="1.75" />
+    <Members>
+      <Method Name="DeliveryOrderLine" Hidden="true" />
+      <Property Name="orderLineIdInRejectItem" Hidden="true" />
+      <Method Name="RejectProductInstances" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEIABAAAAEBAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\DeliveryOrderLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductLine" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="RejectedItems" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Delivery.ProductDelivery" Collapsed="true">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Delivery\ProductDelivery.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLineItem" Collapsed="true">
+    <Position X="7.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLineItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLinesManager" Collapsed="true">
+    <Position X="7.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAJIQAAAAAAAgAAAAAAABBAAIAAAEgAIQAAAAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEventsManager" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEvent" Collapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Products.IProduct" Collapsed="true">
+    <Position X="6.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLineItem" Collapsed="true">
+    <Position X="3" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLineItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

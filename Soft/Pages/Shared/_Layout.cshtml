@@ -1,0 +1,189 @@
+﻿@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Consts
+@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Orders
+@using Abc.Pages.Currencies
+@using Abc.Pages.Parties
+@using Abc.Pages.Processes
+@using Abc.Pages.Quantities
+@using Abc.Pages.Products
+@using Abc.Pages.Rules
+@using Abc.Pages.Classifiers
+@using Abc.Pages.Inventory
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Soft</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <base href="~/">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">Soft</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                    <ul class="navbar-nav flex-grow-1">
+                          @Html.DropMenu(PartyTitles.Parties,
+                            new Link(PartyTitles.Parties, PartyUrls.Parties),
+                            new Link(PartyTitles.Roles, PartyUrls.Roles),
+                            new Link(PartyTitles.RoleTypes, PartyUrls.RolesTypes),
+                            new Link(PartyTitles.Relationships, PartyUrls.Relationships),
+                            new Link("Details"),
+                            new Link(PartyTitles.RegisteredIdentifiers, PartyUrls.RegisteredIdentifiers),
+                            new Link(PartyTitles.PartyContactUsages, PartyUrls.PartyContactUsages),
+                            new Link(PartyTitles.PartyContacts, PartyUrls.PartyContacts),
+                            new Link(PartyTitles.Names, PartyUrls.Names),
+                            new Link(PartyTitles.BodyMetrics, PartyUrls.BodyMetrics),
+                            new Link("Unknown"),
+                            new Link(PartyTitles.BodyMetricTypes, PartyUrls.BodyMetricTypes),
+                            new Link(PartyTitles.SignedEntityTypes, PartyUrls.SignedEntityTypes),
+                            new Link(PartyTitles.PersonNamePrefixes, PartyUrls.PersonNamePrefixes),
+                            new Link(PartyTitles.PersonNameSuffixes, PartyUrls.PersonNameSuffixes),
+                            new Link(PartyTitles.PersonEthnicities, PartyUrls.PersonEthnicities),
+                            new Link(PartyTitles.Preferences, PartyUrls.Preferences))
+                        @Html.DropMenu(ProductTitles.Products,
+                            new Link(ProductTitles.ProductCatalogs, ProductUrls.ProductCatalogs),
+                            new Link(ProductTitles.CatalogEntries, ProductUrls.CatalogEntries),
+                            new Link(ProductTitles.CatalogedProducts, ProductUrls.CatalogedProducts),
+                            new Link(ProductTitles.ProductTypes, ProductUrls.ProductTypes),
+                            new Link(ProductTitles.FeatureTypes, ProductUrls.FeatureTypes),
+                            new Link(ProductTitles.PossibleFeatureValues, ProductUrls.PossibleFeatureValues)
+                            //TODO 
+                            //new Link($"2.{ProductTitles.Products}", ProductUrls.Products),
+                            //new Link("Batch"),
+                            //new Link($"3.{ProductTitles.Batches}", ProductUrls.Batches),
+                            //new Link($"4.{ProductTitles.BatchCheckedBy}", ProductUrls.BatchCheckedBy),
+                            //new Link("Product specification"),
+                            //new Link($"7.{ProductTitles.Features}", ProductUrls.Features),
+                            //new Link("Catalog"),
+                            //new Link($"11.{ProductTitles.ProductCategories}", ProductUrls.ProductCategories),
+                            //new Link("Packages"),
+                            //new Link($"12.{ProductTitles.PackageComponents}", ProductUrls.PackageComponents),
+                            //new Link($"13.{ProductTitles.PackageContents}", ProductUrls.PackageContents),
+                            //new Link($"15.{ProductTitles.ProductInclusionRules}", ProductUrls.ProductInclusionRules),
+                            //new Link($"16.{ProductTitles.ProductSets}", ProductUrls.ProductSets),
+                            //new Link($"17.{ProductTitles.ProductSetContents}", ProductUrls.ProductSetContents),
+                            //new Link(),
+                            //new Link(ProductTitles.ProductRelationshipTypes, ProductUrls.ProductRelationshipTypes),
+                            //new Link(ProductTitles.ProductRelationships, ProductUrls.ProductRelationships),                                                                                    
+                            //new Link(ProductTitles.ContainerItems, ProductUrls.ContainerItems),
+                            //new Link(ProductTitles.Prices, ProductUrls.Prices),
+                            //new Link(ProductTitles.PriceEndorsements, ProductUrls.PriceEndorsements)
+                        )
+                        @Html.DropMenu("Inventory", 
+                            new Link(InventoryTitles.Inventories, InventoryUrls.Inventories),
+                            new Link(InventoryTitles.InventoryEntries, InventoryUrls.InventoryEntries),
+                            new Link(InventoryTitles.OutstandingOrders, InventoryUrls.OutstandingOrders),
+                            new Link(InventoryTitles.Reservations, InventoryUrls.Reservations),
+                            new Link(InventoryTitles.ReservationReceivers, InventoryUrls.ReservationReceivers),
+                            new Link(InventoryTitles.ReservationRequests, InventoryUrls.ReservationRequests),
+                            new Link(InventoryTitles.RestockPolicies, InventoryUrls.RestockPolicies),
+                            new Link(InventoryTitles.CapacityManagers, InventoryUrls.CapacityManagers))
+                        @Html.DropMenu(ProcessTitles.Processes,
+                            new Link(ProcessTitles.ProcessTypes, ProcessUrls.ProcessTypes),
+                            new Link(ProcessTitles.ThreadTypes, ProcessUrls.ThreadTypes),
+                            new Link(ProcessTitles.TaskTypes, ProcessUrls.TaskTypes),
+                            new Link(ProcessTitles.ActionTypes, ProcessUrls.ActionTypes),
+                            new Link(ProcessTitles.OutcomeTypes, ProcessUrls.OutcomeTypes),
+                            new Link(ProcessTitles.ActionApprovers, ProcessUrls.ActionApprovers),
+                            new Link(ProcessTitles.Actions, ProcessUrls.Actions),
+                            new Link(ProcessTitles.AttributeTypes, ProcessUrls.AttributeTypes),
+                            new Link(ProcessTitles.AttributeValues, ProcessUrls.AttributeValues),
+                            new Link(ProcessTitles.OutcomeApprovers, ProcessUrls.OutcomeApprovers),
+                            new Link(ProcessTitles.Outcomes, ProcessUrls.Outcomes),
+                            new Link(ProcessTitles.Processes, ProcessUrls.Processes),
+                            new Link(ProcessTitles.TaskParticipants, ProcessUrls.TaskParticipants),
+                            new Link(ProcessTitles.Tasks, ProcessUrls.Tasks),
+                            new Link(ProcessTitles.Threads, ProcessUrls.Threads),
+                            new Link(ProcessTitles.Marketing, ProcessUrls.Marketing),
+                            new Link(ProcessTitles.Recruiting, ProcessUrls.Recruiting)
+                       )
+                       @Html.DropMenu(OrderTitles.Orders,
+                            new Link(OrderTitles.TermsAndConditions, OrderUrls.TermsAndConditions),
+                            new Link(OrderTitles.TermsAndConditionsTypes, OrderUrls.TermsAndConditionsTypes),
+                            new Link("Not implemented"),
+                            new Link(OrderTitles.Orders, OrderUrls.Orders),
+                            new Link(OrderTitles.Discounts, OrderUrls.Discounts),
+                            new Link(OrderTitles.DiscountTypes, OrderUrls.DiscountTypes),
+                            new Link(OrderTitles.OrderEvents, OrderUrls.OrderEvents),
+                            new Link(OrderTitles.OrderLines, OrderUrls.OrderLines),
+                            new Link(OrderTitles.OrderManagers, OrderUrls.OrderManagers),
+                            new Link(OrderTitles.OrderParties, OrderUrls.OrderParties),
+                            new Link(OrderTitles.OrderPartyTypes, OrderUrls.OrderPartyTypes),
+                            new Link(OrderTitles.Payments, OrderUrls.Payments),
+                            new Link(OrderTitles.RejectedItems, OrderUrls.RejectedItems),
+                            new Link(OrderTitles.SalesChannels, OrderUrls.SalesChannels),
+                            new Link(OrderTitles.TaxationPolicies, OrderUrls.TaxationPolicies),
+                            new Link(OrderTitles.TaxationTypes, OrderUrls.TaxationTypes)
+                        )
+                        @Html.DropMenu(QuantityTitles.Units,
+                            new Link(QuantityTitles.SystemsOfUnits, QuantityUrls.SystemsOfUnits),
+                            new Link(QuantityTitles.Measures, QuantityUrls.Measures),
+                            new Link(QuantityTitles.Units, QuantityUrls.Units)
+                        )
+                        @Html.DropMenu(MoneyTitles.Currencies,
+                            new Link(MoneyTitles.Cards, MoneyUrls.Cards),
+                            new Link(MoneyTitles.Currencies, MoneyUrls.Currencies),
+                            new Link(MoneyTitles.CurrencyUsages, MoneyUrls.CurrencyUsages),
+                            new Link(MoneyTitles.RateTypes, MoneyUrls.RateTypes),
+                            new Link(MoneyTitles.ExchangeRules, MoneyUrls.ExchangeRules),
+                            new Link(MoneyTitles.ExchangeRates, MoneyUrls.ExchangeRates),
+                            new Link(MoneyTitles.PaymentMethods, MoneyUrls.PaymentMethods)
+                        )
+                        @Html.DropMenu(RuleTitles.Rules,
+                            new Link(RuleTitles.RuleSets, RuleUrls.RuleSets),
+                            new Link(RuleTitles.Usages, RuleUrls.Usages),
+                            new Link(RuleTitles.Rules, RuleUrls.Rules),
+                            new Link(RuleTitles.Contexts, RuleUrls.Contexts),
+                            new Link(RuleTitles.RuleElements, RuleUrls.RuleElements),
+                            new Link(RuleTitles.Overrides, RuleUrls.Overrides)
+                        )
+                        @Html.DropMenu("Help",
+                            new Link("About", new Uri("/Index", UriKind.Relative)),
+                            new Link("Privacy", new Uri("/Privacy", UriKind.Relative)),
+                            new Link(),
+                            new Link(MoneyTitles.Countries, MoneyUrls.Countries),
+                            new Link(ClassifierTitles.Classifiers, ClassifierUrls.Classifiers),
+                            new Link(),
+                            new Link(ClassifierTitles.RegisteredIdentifierTypes, ClassifierUrls.RegisteredIdentifierTypes),
+                            new Link(ClassifierTitles.RegistrationAuthorities, ClassifierUrls.RegistrationAuthorities),
+                            new Link(ClassifierTitles.PersonNamePrefixTypes, ClassifierUrls.PersonNamePrefixTypes),
+                            new Link(ClassifierTitles.PersonNameSuffixTypes, ClassifierUrls.PersonNameSuffixTypes))
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Soft - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="_framework/blazor.server.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Products.ProductCategoriesPage
+
+
+@{
+    Layout = "_Details";
+}
+
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+@section Details {
+    <a id="showCatalogEntries"
+       asp-route-handler="ShowCatalogEntries"
+       asp-route-id="@Model.ItemId">Catalog Entries</a>
+}

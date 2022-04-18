@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Tests.TestsBase">
+    <Position X="8.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAABAAAAAAAgAgAAAAAAAAABQAYAAAAAAECAAAE=</HashCode>
+      <FileName>TestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.SealedTests&lt;TClass, TBaseClass&gt;">
+    <Position X="0.5" Y="4.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SealedTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.ClassTests&lt;TClass, TBaseClass&gt;">
+    <Position X="0.5" Y="2.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.BaseClassTests&lt;TClass, TBaseClass&gt;">
+    <Position X="3.25" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAIgAAAAAAAiAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>BaseClassTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.Soft.TestsHost">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgABAAAAAA=</HashCode>
+      <FileName>TestsHost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.TestsAssertions">
+    <Position X="10.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ESAoAAAACIEABAAQAEAAAAABIACIEAIyAAASCAAABAA=</HashCode>
+      <FileName>TestsAssertions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.TestsAids">
+    <Position X="13.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABCAAAAAgAAAgAAAAAIAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>TestsAids.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.AbstractTests&lt;TClass, TBaseClass&gt;">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAQAAAAAAAAAAAAAAAACAAAAAAAACA=</HashCode>
+      <FileName>AbstractTests.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Tests.TestsData">
+    <Position X="5.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AwAAACAAAAAAAACBAAAAAQAQAAABAAIAAAgCAIACAAA=</HashCode>
+      <FileName>TestsData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

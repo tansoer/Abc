@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Parties.PartyView">
+    <Position X="4.5" Y="3" Width="1.75" />
+    <InheritanceLine Type="Abc.Facade.Common.EntityBaseView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.438" Y="2.312" />
+        <Point X="5.438" Y="3" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEgAACEAAAAAAQQAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.EntityBaseView" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAABAAAAA=</HashCode>
+      <FileName>Common\EntityBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.PartyAttributeView" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\PartyAttributeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PersonEthnicityView" Collapsed="true">
+    <Position X="1.5" Y="6.25" Width="1.75" />
+    <InheritanceLine Type="Abc.Facade.Common.PartyAttributeView" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.441" />
+        <Point X="3.75" Y="6.562" />
+        <Point X="3.25" Y="6.562" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PersonEthnicityView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.BodyMetricView" Collapsed="true">
+    <Position X="1.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAIAAAAAEAAAAAAAAAAgAAAAgAAAkAAAAAAA=</HashCode>
+      <FileName>Parties\BodyMetricView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PartyNameView" Collapsed="true">
+    <Position X="6" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Abc.Facade.Common.EntityBaseView" FixedFromPoint="true">
+      <Path>
+        <Point X="5.438" Y="2.312" />
+        <Point X="5.438" Y="2.687" />
+        <Point X="6.75" Y="2.687" />
+        <Point X="6.75" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAAAQAAAEQAAAAAQCgAQAAQAAAAA=</HashCode>
+      <FileName>Parties\PartyNameView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.RegisteredIdentifierView" Collapsed="true">
+    <Position X="1.25" Y="4.25" Width="2" />
+    <InheritanceLine Type="Abc.Facade.Common.PartyAttributeView" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.441" />
+        <Point X="3.75" Y="4.562" />
+        <Point X="3.25" Y="4.562" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAQAgAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\RegisteredIdentifierView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PreferenceView" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Facade.Common.PartyAttributeView" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.441" />
+        <Point X="3.75" Y="3.812" />
+        <Point X="3.25" Y="3.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAACEAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Parties\PreferenceView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.SignedEntityTypeView" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\SignedEntityTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PartyCapabilityView" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Facade.Common.PartyAttributeView" FixedToPoint="true">
+      <Path>
+        <Point X="3.75" Y="2.441" />
+        <Point X="3.75" Y="3.125" />
+        <Point X="3.25" Y="3.125" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Parties\PartyCapabilityView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Parties.PartyContactView" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAABAAAhAyAGCIWgAAcAAAAQQAgAAAAAAAAAAAE=</HashCode>
+      <FileName>Parties\PartyContactView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.PartySignatureBaseView" Collapsed="true">
+    <Position X="5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAA=</HashCode>
+      <FileName>Common\PartySignatureBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

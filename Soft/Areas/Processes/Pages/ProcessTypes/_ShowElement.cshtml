@@ -1,0 +1,26 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Pages.Common.Extensions
+@using Abc.Facade.Processes
+@model Abc.Pages.Processes.ProcessTypesPage
+
+<body>
+    @if (Model.ThreadTypes.Count != 0)
+    {
+        <h3>Thread types for selected process type</h3>
+        <table class="table">
+            <tr>
+                <th>@(GetMember.DisplayName<ThreadTypeView>(x => x.Name))</th>
+                <th>@(GetMember.DisplayName<ThreadTypeView>(x => x.ValidFrom))</th>
+                <th>@(GetMember.DisplayName<ThreadTypeView>(x => x.ValidTo))</th>
+            </tr>
+            @foreach (var item in Model.ThreadTypes)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Name) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidFrom) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidTo) </td>
+                </tr>
+            }
+        </table>
+    }
+</body>

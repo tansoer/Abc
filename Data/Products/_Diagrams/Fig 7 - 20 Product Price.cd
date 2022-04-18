@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Possible price is for product type and agreed and applyed for product.">
+    <Position X="2.437" Y="6.322" Height="0.5" Width="4.596" />
+  </Comment>
+  <Class Name="Abc.Data.Products.ProductData">
+    <Position X="0.5" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAEAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductTypeData">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAEAAAAAAEACQAAAAAAABAAAEAAgAACA=</HashCode>
+      <FileName>Products\ProductTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.PriceData">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAwFAAAAAIAEAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PriceData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySignatureData">
+    <Position X="3" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartySignatureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySignatureBaseData">
+    <Position X="5.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAA=</HashCode>
+      <FileName>Parties\PartySignatureBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.PriceEndorsementData">
+    <Position X="2.75" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Products\PriceEndorsementData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Products.PriceKind">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAIAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PriceKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

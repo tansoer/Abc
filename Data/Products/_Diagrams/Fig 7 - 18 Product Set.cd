@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Maximum and minimum are specified as quantities with one and the same Unit. The Unit is specified with UnitId">
+    <Position X="0.503" Y="6.328" Height="0.75" Width="6.912" />
+  </Comment>
+  <Class Name="Abc.Data.Products.ProductSetData">
+    <Position X="0.5" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductSetData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductTypeData" Collapsed="true">
+    <Position X="2.75" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAAAAAAAEgCQAAAAABAAAAAEAAAQACA=</HashCode>
+      <FileName>Products\ProductTypeData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductSetContentData">
+    <Position X="0.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductSetContentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductInclusionRuleData">
+    <Position X="2.75" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAQAAAAAIAAACAAAAAAAABAAEAAQAAAA=</HashCode>
+      <FileName>Products\ProductInclusionRuleData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="InclusionKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.PackageComponentData">
+    <Position X="2.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PackageComponentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Products.ProductKind">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAQBAAAAAAAAAAAQAAAAAAAAQABAAAQAAAAAAAA=</HashCode>
+      <FileName>Products\ProductKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Products.ProductInclusionKind">
+    <Position X="6" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAECAA=</HashCode>
+      <FileName>Products\ProductInclusionKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

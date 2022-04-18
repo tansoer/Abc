@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.Person">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Person" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAACAAAAAAAAAAAAQAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="BodyMetrics" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BodyMetric&lt;T&gt;">
+    <Position X="5.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="BodyMetric" Hidden="true" />
+      <Property Name="signatureId" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+      <Property Name="Value" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAgIAAAAAE=</HashCode>
+      <FileName>Parties\Attributes\BodyMetric.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BodyMetricType" Collapsed="true">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAIAAgAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\BodyMetricType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BodyMetricString">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="BodyMetricString" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\BodyMetricString.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BodyMetricQuantity" Collapsed="true">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="BodyMetricQuantity" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAACQAAAAgAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\BodyMetricQuantity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Value" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Quantity" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="CompareAlmostEqual" Hidden="true" />
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="convertTo" Hidden="true" />
+      <Method Name="ConvertTo" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="Inverse" Hidden="true" />
+      <Method Name="IsEqual" Hidden="true" />
+      <Method Name="IsGreater" Hidden="true" />
+      <Method Name="IsLess" Hidden="true" />
+      <Method Name="IsSameMeasure" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="Opposite" Hidden="true" />
+      <Method Name="Parse" Hidden="true" />
+      <Method Name="Power" Hidden="true" />
+      <Method Name="Quantity" Hidden="true" />
+      <Method Name="Round" Hidden="true" />
+      <Method Name="Sqrt" Hidden="true" />
+      <Method Name="Subtract" Hidden="true" />
+      <Method Name="ToBase" Hidden="true" />
+      <Method Name="TryParse" Hidden="true" />
+      <Property Name="Unspecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAABE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Unit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Unit" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAiAEAAEAIBJAAEAwQQBAgBAAAIAIAAAQI=</HashCode>
+      <FileName>Quantities\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.MeasurableValue&lt;TQuantity, TAmount, TMeasure&gt;">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="ConvertTo" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="IsEqual" Hidden="true" />
+      <Method Name="IsGreater" Hidden="true" />
+      <Method Name="IsLess" Hidden="true" />
+      <Method Name="MeasurableValue" Hidden="true" />
+      <Field Name="measure" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="Round" Hidden="true" />
+      <Method Name="Subtract" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQAAAAQEAQADAACAAEAAACAAACAAAIIAAAE=</HashCode>
+      <FileName>Quantities\MeasurableValue.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Abc.Domain.Parties.Attributes.IBodyMetric" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\IBodyMetric.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

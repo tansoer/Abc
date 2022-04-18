@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="0.75" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRelationship" Collapsed="true">
+    <Position X="0.75" Y="5" Width="2.25" />
+    <AssociationLine Name="Consumer" Type="Abc.Domain.Roles.PartyRole" FixedFromPoint="true">
+      <Path>
+        <Point X="1.812" Y="5" />
+        <Point X="1.812" Y="3.941" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Provider" Type="Abc.Domain.Roles.PartyRole" FixedFromPoint="true">
+      <Path>
+        <Point X="2.812" Y="5" />
+        <Point X="2.812" Y="3.941" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQACAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationship.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Consumer" />
+      <Property Name="Provider" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRelationshipType">
+    <Position X="4" Y="4.5" Width="2.75" />
+    <Members>
+      <Method Name="canFormRelationship" Hidden="true" />
+      <Method Name="PartyRelationshipType" Hidden="true" />
+      <Property Name="Requirements" Hidden="true" />
+      <Property Name="ruleSetId" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAABAAIAABAAAAAAIAAAAAQ=</HashCode>
+      <FileName>Roles\PartyRelationshipType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Constraints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRoleType">
+    <Position X="4" Y="1.75" Width="2.75" />
+    <Members>
+      <Property Name="BaseType" Hidden="true" />
+      <Method Name="FindResponsibility" Hidden="true" />
+      <Method Name="HasResponsibility" Hidden="true" />
+      <Method Name="IsCapableForMandatoryResponsibilities" Hidden="true" />
+      <Method Name="IsCapableForOptionalResponsibilities" Hidden="true" />
+      <Method Name="IsCapableForRole" Hidden="true" />
+      <Method Name="newResponsibility" Hidden="true" />
+      <Method Name="newResponsibilityData" Hidden="true" />
+      <Method Name="PartyRoleType" Hidden="true" />
+      <Property Name="Requirements" Hidden="true" />
+      <Property Name="responsibilities" Hidden="true" />
+      <Property Name="roleTypeId" Hidden="true" />
+      <Property Name="ruleSetId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAgAAEAAAAiAgABAAIAABlIAEAAgCgAAgA=</HashCode>
+      <FileName>Roles\PartyRoleType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Constraints" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRoleConstraint" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAABAAQAAIAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Roles.RelationshipConstraint" Collapsed="true">
+    <Position X="4.5" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAQAAAAAAAAQ=</HashCode>
+      <FileName>Roles\RelationshipConstraint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.IParty" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Parties\IParty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

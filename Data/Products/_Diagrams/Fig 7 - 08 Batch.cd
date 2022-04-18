@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="NumberInBatch is not needed as in domain layer it is possible to calculate from number of BatchProductData.&#xD;&#xA;&#xD;&#xA;The DateProduced of BatchData is kept in ValidFrom">
+    <Position X="0.5" Y="5.656" Height="0.75" Width="4.512" />
+  </Comment>
+  <Class Name="Abc.Data.Products.BatchData">
+    <Position X="3" Y="2.75" Width="2" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="3.188" />
+        <Point X="5.375" Y="3.188" />
+        <Point X="5.375" Y="3.188" />
+        <Point X="5" Y="3.188" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAIAAAAAAAAAAAAAAAIAAABAEAAAACA=</HashCode>
+      <FileName>Products\BatchData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySignatureData">
+    <Position X="0.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartySignatureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySignatureBaseData">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAA=</HashCode>
+      <FileName>Parties\PartySignatureBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductData" HideInheritanceLine="true">
+    <Position X="3" Y="0.5" Width="2" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="DeliveredFrom" Hidden="true" />
+      <Property Name="DeliveredTo" Hidden="true" />
+      <Property Name="DeliveryStatus" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="ProductTypeId" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Property Name="ScheduledFrom" Hidden="true" />
+      <Property Name="ScheduledTo" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAECAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.BatchCheckedByData" HideInheritanceLine="true">
+    <Position X="0.5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Products\BatchCheckedByData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <Members>
+      <Property Name="Code" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Property Name="Recorded" Hidden="true" />
+      <Property Name="RecordedBy" Hidden="true" />
+      <Property Name="RecordedWhy" Hidden="true" />
+      <Property Name="Replaced" Hidden="true" />
+      <Property Name="Timestamp" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+      <Property Name="ValidFrom" Hidden="true" />
+      <Property Name="ValidTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAABAAAEAQAiAAQAgAAAACAAACAAAAAAIAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

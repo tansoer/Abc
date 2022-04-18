@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Processes.ProcessElementData" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Processes.ProcessElementBaseData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.562" Y="1.441" />
+        <Point X="2.562" Y="1.7" />
+        <Point X="3.625" Y="1.7" />
+        <Point X="3.625" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Processes\ProcessElementData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.ProcessElementBaseData" Collapsed="true">
+    <Position X="1.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElementBaseData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.ProcessElementTypeData" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Processes.ProcessElementBaseData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.562" Y="1.441" />
+        <Point X="2.562" Y="1.7" />
+        <Point X="1.312" Y="1.7" />
+        <Point X="1.312" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElementTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Processes.AttributeTypeData">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\AttributeTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Processes.AttributeValueData">
+    <Position X="2.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAEAAAAAAAAAAAQAhAAAAAAA=</HashCode>
+      <FileName>Processes\AttributeValueData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Value" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Common.ValueData">
+    <Position X="5.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAACAgAAAAGAA=</HashCode>
+      <FileName>Common\ValueData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ValueType" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Abc.Data.Common.ValueType">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAABAQAgAQAAQAAAAAAAAAACAgQAAAAAgAAAAAA=</HashCode>
+      <FileName>Common\ValueType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

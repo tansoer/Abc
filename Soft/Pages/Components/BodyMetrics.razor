@@ -1,0 +1,92 @@
+﻿@using Abc.Facade.Parties
+@using Abc.Aids.Enums
+@using Abc.Core.Loinc.Infra
+@using Abc.Core.Loinc.Response
+@using Abc.Domain.Parties.Attributes
+@using Microsoft.AspNetCore.Mvc.Rendering
+@inject ILoincRepo loinc
+@inject IBodyMetricTypesRepo metricTypes;
+
+<dl class="row">
+    <dd class="col-sm-2">Add Metric</dd>
+    <dd class="col-sm-4">
+        <select @bind="Item.TypeId" class="form-control">
+            @foreach (var t in Types)
+            {
+                <option value="@t.Value">@t.Text</option>
+            }
+        </select>
+    </dd>
+    <dd class="col-sm-1">
+        @*<input class="form-control" @bind="LoincTermFilterString" placeholder="Loinc term filter"/>*@
+    </dd>
+    <dd class="col-sm-2"></dd>
+    <dd class="col-sm-2">
+        <button type="button" class="text-success btn btn-link" @onclick="() => addMetric(MetricType.Quantity)">Add metric</button>
+    </dd>
+    <dd class="col-sm-1">
+        @if (loading)
+        {
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        }
+    </dd>
+    @for (int i = 0; i < Metrics.Count; i++)
+    {
+        <BodyMetric Remove="remove" Units="Units" Index="i" Items="Metrics"/>
+    }
+    @if(edit) { <BodyMetricModal LoincTerms="LoincTerms" Units="Units" Save="DismissModal" Cancel="CancelCreate" Item="Item"/>}
+</dl>
+
+
+@code {
+    [Parameter] public string PartyId { get; set; }
+    [Parameter] public List<BodyMetricView> Metrics { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> Types { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> Units { get; set; }
+    public List<LoincResponse> LoincTerms { get; set; }
+    public BodyMetricView Item = new();
+    private MetricType SelectedType { get; set; }
+    private string LoincTermFilterString { get; set; }
+    private bool loading = false;
+    private bool edit = false;
+
+    private async Task addMetric(MetricType type)
+    {
+        if (Item.TypeId != null)
+        {
+            loading = true;
+            StateHasChanged();
+            var metricTypesList = await metricTypes.GetAsync();
+            var metricType = metricTypesList.FirstOrDefault(x => x.Id == Item.TypeId);
+            var filter = metricType?.RuleSet.ExportExpression<LoincResponse>();
+            LoincTerms = await loinc.FilterByExpression(filter);
+            if (type == MetricType.Unspecified) return;
+            Item = new BodyMetricView {PartyId = PartyId, TypeId = metricType?.Id, MetricType = type, ValidFrom = DateTime.Now};
+            Metrics.Add(Item);
+            loading = false;
+            edit = true;
+            StateHasChanged();
+        }
+
+    }
+
+    public void CancelCreate()
+    {
+        remove(Metrics.Count - 1);
+        DismissModal();
+    }
+
+    public void DismissModal()
+    {
+        edit = false;
+        StateHasChanged();
+    }
+
+    private void remove(int i)
+    {
+        Metrics.RemoveAt(i);
+        StateHasChanged();
+    }
+}

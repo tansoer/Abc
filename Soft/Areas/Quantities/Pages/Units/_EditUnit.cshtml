@@ -1,0 +1,39 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Facade.Quantities
+@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Consts
+@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Quantities
+@using Abc.Soft.Pages.Components
+
+@model Abc.Pages.Quantities.UnitsPage
+
+<body>
+    @if(Model.Item.UnitType is Abc.Data.Quantities.UnitType.Functioned) {
+        <component>@(await Html.RenderComponentAsync<DynamicInputCollection<UnitRulesView>>
+            (RenderMode.Server, new {
+            BoundPropertyListName = Html.NameFor(x => x.UnitRules), 
+            BoundPropertyList = Model.UnitRules,
+            InputFields = Model.RulesInputs,
+            Title = QuantityTitles.UnitRules
+        }))</component>
+    }
+    @if(Model.Item.UnitType is Abc.Data.Quantities.UnitType.Factored) {
+        <component>@(await Html.RenderComponentAsync<DynamicInputCollection<UnitFactorView>>
+            (RenderMode.Server, new {
+            BoundPropertyListName = Html.NameFor(x => x.Factors), 
+            BoundPropertyList = Model.Factors,
+            InputFields = Model.FactorsInputs,
+            Title = QuantityTitles.UnitFactors
+        }))</component>
+    }
+    @if(Model.Item.UnitType is Abc.Data.Quantities.UnitType.Derived) {
+        <component>@(await Html.RenderComponentAsync<DynamicInputCollection<UnitTermView>>
+            (RenderMode.Server, new {
+            BoundPropertyListName = Html.NameFor(x => x.Terms), 
+            BoundPropertyList = Model.Terms,
+            InputFields = Model.TermsInputs,
+            Title = QuantityTitles.UnitTerms
+        }))</component>
+    }
+</body>

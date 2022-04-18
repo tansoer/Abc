@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Orders.OrderEventView">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ECAgIAQAABQAQAAAAAAAAAAAAAAAABIEIBAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderEventType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Facade.Currencies.PaymentView">
+    <Position X="0.5" Y="4.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>GAAAAEAAAgAAAAAAAAAAgACAAIEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Currencies.PaymentMethodView">
+    <Position X="3.5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ARgAAAAAAgAABAAAAAAAAAAIgAgAAAAAABEAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentMethodView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PaymentMethodType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderEventType">
+    <Position X="4.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Currencies.PaymentMethodType">
+    <Position X="7.25" Y="4.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

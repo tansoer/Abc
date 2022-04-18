@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Processes.Process" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="3.75" />
+    <AssociationLine Name="Manager" Type="Abc.Domain.Roles.PartyRole" FixedFromPoint="true">
+      <Path>
+        <Point X="2.023" Y="1.75" />
+        <Point X="2.023" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Initiator" Type="Abc.Domain.Roles.PartyRole" FixedFromPoint="true">
+      <Path>
+        <Point X="3.898" Y="1.75" />
+        <Point X="3.898" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAQAAABQCAAABAAAAQAAIAAgAAA=</HashCode>
+      <FileName>Processes\Process.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Manager" />
+      <Property Name="Initiator" />
+      <Property Name="Priority" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.ThreadType" Collapsed="true">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Previous" Type="Abc.Domain.Processes.ThreadType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.375" Y="3.941" />
+        <Point X="5.375" Y="4.191" />
+        <Point X="5.995" Y="4.191" />
+        <Point X="5.995" Y="3.941" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Next" Type="Abc.Domain.Processes.ThreadType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.328" Y="3.25" />
+        <Point X="5.328" Y="3" />
+        <Point X="5.995" Y="3" />
+        <Point X="5.995" Y="3.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAAgAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ThreadType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Previous" />
+      <Property Name="Next" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Classifiers.Processes.ProcessPriority" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classifiers\Processes\ProcessPriority.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Processes.Thread" Collapsed="true">
+    <Position X="2.75" Y="3.25" Width="1.5" />
+    <AssociationLine Name="Terminator" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedFromPoint="true">
+      <Path>
+        <Point X="4" Y="3.941" />
+        <Point X="4" Y="4.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Process" Type="Abc.Domain.Processes.Process" FixedFromPoint="true">
+      <Path>
+        <Point X="2.938" Y="3.25" />
+        <Point X="2.938" Y="2.441" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Next" Type="Abc.Domain.Processes.Thread" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="3.375" />
+        <Point X="2.5" Y="3.375" />
+        <Point X="2.5" Y="3.701" />
+        <Point X="2.75" Y="3.701" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Previous" Type="Abc.Domain.Processes.Thread" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="3.941" />
+        <Point X="3" Y="4.191" />
+        <Point X="3.742" Y="4.191" />
+        <Point X="3.742" Y="3.941" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAggAAgAAAAAQAAAAAAAAAQAIICEAAAA=</HashCode>
+      <FileName>Processes\Thread.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Terminator" />
+      <Property Name="Process" />
+      <Property Name="Next" />
+      <Property Name="Previous" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

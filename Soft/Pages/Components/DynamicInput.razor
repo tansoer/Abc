@@ -1,0 +1,74 @@
+﻿@using System.Reflection
+@using Microsoft.AspNetCore.Mvc.Rendering
+
+@RenderInput()
+
+@code {
+    [Parameter] public object InputProperty { get; set; }
+    [Parameter] public Type InputPropertyType { get; set; }
+    [Parameter] public string InputPropertyName { get; set; }
+    [Parameter] public EventCallback<object> InputPropertyChanged { get; set; }
+    [Parameter] public EventCallback OnChange { get; set; }
+    [Parameter] public bool IsHiddenInput { get; set; } = false;
+    [Parameter] public object DefaultValue { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> SelectList { get; set; }
+    private string inputType => getInputType();
+
+    private async Task UpdateProperty(ChangeEventArgs a) {
+        InputProperty = isDateTime() ? DateTime.Parse(a?.Value?.ToString()) : Convert.ChangeType(a?.Value?.ToString(), InputPropertyType);
+        await InputPropertyChanged.InvokeAsync(InputProperty);
+        await OnChange.InvokeAsync();
+    }
+
+    public RenderFragment RenderInput() => isSelectList ? RenderSelectList() : RenderSimpleInput();
+
+    public RenderFragment RenderSimpleInput() => builder =>  {
+        builder.OpenElement(1, "input");
+        if (!IsHiddenInput) builder.AddAttribute(1, "oninput", EventCallback.Factory.Create(this, UpdateProperty));
+        builder.AddAttribute(1, "type", getInputType());
+        builder.AddAttribute(1, "name", InputPropertyName);
+        builder.AddAttribute(1, "value", getValueForTag());
+        if (!IsHiddenInput) builder.AddAttribute(1, "class", "form-control");
+        builder.CloseElement();
+    };
+
+    public RenderFragment RenderSelectList() => builder => {
+        builder.OpenElement(1, "select");
+        builder.AddAttribute(1, "onchange", EventCallback.Factory.Create(this, UpdateProperty));
+        builder.AddAttribute(1, "name", InputPropertyName);
+        if (!IsHiddenInput) builder.AddAttribute(1, "class", "form-control valid");
+        foreach (var line in SelectList) {
+            builder.OpenElement(2, "option");
+            builder.AddAttribute(2, "value", line.Value);
+            if (line.Value == InputProperty?.ToString()) builder.AddAttribute(2, "selected");
+            builder.AddContent(2, line.Text);
+            builder.CloseElement();
+        }
+        builder.CloseElement();
+    };
+
+    private string getInputType() {
+        var type = InputPropertyType;
+        if (IsHiddenInput) return "hidden";
+        return type switch
+        {
+            Type _ when type == typeof(string) => "text",
+            Type _ when type == typeof(int) => "number",
+            Type _ when type == typeof(long) => "number",
+            Type _ when type == typeof(short) => "number",
+            Type _ when type == typeof(float) => "number",
+            Type _ when type == typeof(double) => "number",
+            Type _ when type == typeof(decimal) => "number",
+            Type _ when type == typeof(bool) => "checkbox",
+            Type _ when type == typeof(DateTime) => "datetime-local",
+            Type _ when type == typeof(DateTime?) => "datetime-local",
+            _ => "text"
+        };
+    }
+
+    private bool isSelectList => SelectList is not null;
+    private bool isDateTime() => InputPropertyType == typeof(DateTime) || InputPropertyType == typeof(DateTime?);
+
+    private object getValueForTag() => InputProperty is null ? DefaultValue : (isDateTime() ? toDateString((DateTime) InputProperty) : InputProperty);
+    private string toDateString(DateTime date) => date.ToString("yyyy-MM-ddThh:mm:ss");
+}

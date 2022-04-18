@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="Perform() performs the activity with the default context. Perform(RuleContext c) performs the activity with the given context. Perform(RuleContext rule, IVariable value, RuleContext activity) performs the activity with activity context only after rule evaluation returns a value equal to the given.">
+    <Position X="0.52" Y="6.885" Height="0.635" Width="7.263" />
+  </Comment>
+  <Class Name="Abc.Domain.Rules.ActivityRule">
+    <Position X="0.5" Y="5" Width="5.5" />
+    <Members>
+      <Method Name="ActivityRule" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Rules.BaseRule" FixedToPoint="true">
+      <Path>
+        <Point X="4.25" Y="3.338" />
+        <Point X="4.25" Y="3.446" />
+        <Point X="5.812" Y="3.446" />
+        <Point X="5.812" Y="5" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Activity" Type="Abc.Domain.Rules.IRuleElement" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="5" />
+        <Point X="4.5" Y="4.441" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.158" Y="0.225" Height="0.182" Width="2.59" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Context" Type="Abc.Domain.Rules.IRuleElement">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.557" Y="0.227" Height="0.182" Width="2.506" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Rules\ActivityRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Activity" />
+      <Property Name="Context" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Rule" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\Rule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseRule">
+    <Position X="0.5" Y="0.5" Width="7.5" />
+    <Members>
+      <Method Name="BaseRule" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Elements" Type="Abc.Domain.Rules.IRuleElement" FixedToPoint="true">
+      <Path>
+        <Point X="1" Y="3.338" />
+        <Point X="1" Y="3.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-2.168" Y="0.203" Height="0.182" Width="2.732" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAAAQAgAAAAIAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Elements" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Rules.IRuleElement" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\IRuleElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

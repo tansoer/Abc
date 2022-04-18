@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Common.EntityType&lt;TRepo, TDomain, TData&gt;" Collapsed="true">
+    <Position X="4.75" Y="5.5" Width="2" />
+    <InheritanceLine Type="Abc.Domain.Common.Entity&lt;TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.375" Y="3.944" />
+        <Point X="5.375" Y="5.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Common.Entity&lt;TData&gt;">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="Entity" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAAAAAAAA=</HashCode>
+      <FileName>Common\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Roles.AssignedResponsibility" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAEAAAAABAAAUAA=</HashCode>
+      <FileName>Roles\AssignedResponsibility.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Responsibility" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.Responsibility" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="9" />
+    <Members>
+      <Method Name="Responsibility" Hidden="true" />
+      <Property Name="roleTypeId" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Common.Entity&lt;TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="1.75" />
+        <Point X="5.5" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Type" Type="Abc.Domain.Roles.ResponsibilityType" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="1.191" />
+        <Point X="8.5" Y="5.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAIQAAIAAAAAA=</HashCode>
+      <FileName>Roles\Responsibility.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Roles.ResponsibilityType" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.75" />
+    <AssociationLine Name="Requirements" Type="Abc.Domain.Rules.RuleSet" FixedToPoint="true">
+      <Path>
+        <Point X="7.812" Y="5.5" />
+        <Point X="7.812" Y="3.941" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.492" Y="0.12" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="ConditionsOfSatisfaction" Type="Abc.Domain.Rules.RuleSet" FixedFromPoint="true">
+      <Path>
+        <Point X="7.125" Y="5.5" />
+        <Point X="7.125" Y="3.941" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.805" Y="0.329" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAMAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Roles\ResponsibilityType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Requirements" />
+      <Property Name="ConditionsOfSatisfaction" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="6.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <Members>
+      <Property Name="Addresses" Hidden="true" />
+      <Property Name="Authentications" Hidden="true" />
+      <Property Name="Contacts" Hidden="true" />
+      <Property Name="Emails" Hidden="true" />
+      <Method Name="GetAddress" Hidden="true" />
+      <Method Name="getContact" Hidden="true" />
+      <Method Name="getContacts" Hidden="true" />
+      <Method Name="GetEmail" Hidden="true" />
+      <Method Name="getFirstName" Hidden="true" />
+      <Method Name="GetName" Hidden="true" />
+      <Method Name="getOfficialName" Hidden="true" />
+      <Method Name="GetPhone" Hidden="true" />
+      <Property Name="Identifiers" Hidden="true" />
+      <Method Name="names" Hidden="true" />
+      <Property Name="Names" Hidden="true" />
+      <Property Name="OfficialName" Hidden="true" />
+      <Method Name="Party" Hidden="true" />
+      <Property Name="partyId" Hidden="true" />
+      <Property Name="partyNames" Hidden="true" />
+      <Property Name="Phones" Hidden="true" />
+      <Property Name="Preferences" Hidden="true" />
+      <Property Name="Roles" Hidden="true" />
+      <Method Name="ToPartySummary" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Capabilities" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Capabilities.PartyCapability">
+    <Position X="2.5" Y="5.75" Width="1.75" />
+    <Members>
+      <Property Name="contextId" Hidden="true" />
+      <Method Name="PartyCapability" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Capabilities\PartyCapability.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Capability" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleContext" Collapsed="true">
+    <Position X="3.75" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="Abc.Domain.Common.Entity&lt;TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.812" Y="3.944" />
+        <Point X="4.812" Y="4.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAEAAAAAAAAEAAAAAAAAAAAAAAAwAAAAEAgA=</HashCode>
+      <FileName>Rules\RuleContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRoleType">
+    <Position X="0.5" Y="7.25" Width="8" />
+    <Members>
+      <Method Name="AddMandatoryResponsibility" Hidden="true" />
+      <Method Name="AddOptionalResponsibility" Hidden="true" />
+      <Property Name="BaseType" Hidden="true" />
+      <Method Name="CanPlayRole" Hidden="true" />
+      <Property Name="Constraints" Hidden="true" />
+      <Method Name="DeleteResponsibility" Hidden="true" />
+      <Method Name="FindResponsibility" Hidden="true" />
+      <Method Name="HasResponsibility" Hidden="true" />
+      <Property Name="MandatoryResponsibilities" Hidden="true" />
+      <Method Name="newResponsibility" Hidden="true" />
+      <Method Name="newResponsibilityData" Hidden="true" />
+      <Property Name="OptionalResponsibilities" Hidden="true" />
+      <Method Name="PartyRoleType" Hidden="true" />
+      <Property Name="Requirements" Hidden="true" />
+      <Property Name="responsibilities" Hidden="true" />
+      <Property Name="roleTypeId" Hidden="true" />
+      <Property Name="ruleSetId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Common.EntityType&lt;TRepo, TDomain, TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="6.191" />
+        <Point X="5.75" Y="7.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAgAAEAAAAiAgABAAIAABlIAEAAgCgAAgA=</HashCode>
+      <FileName>Roles\PartyRoleType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.IParty" Collapsed="true">
+    <Position X="1.5" Y="2.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Parties\IParty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

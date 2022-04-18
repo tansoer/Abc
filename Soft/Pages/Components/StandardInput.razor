@@ -1,0 +1,13 @@
+﻿<dd class="col-2">
+    <label>
+        @Label
+    </label>
+</dd>
+<dd class="col-10">
+    @Value
+</dd>
+
+@code {
+    [Parameter] public string Label { get; set; }
+    [Parameter] public RenderFragment Value { get; set; }
+}

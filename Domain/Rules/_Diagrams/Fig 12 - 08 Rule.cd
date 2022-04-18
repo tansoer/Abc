@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Abc.Domain.Rules.Rule" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="5.75" />
+    <InheritanceLine Type="Abc.Domain.Rules.BaseRule" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.5" />
+        <Point X="4.75" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\Rule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseRule">
+    <Position X="3.25" Y="1.5" Width="3" />
+    <Members>
+      <Method Name="BaseRule" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAAAQAgAAAAIAhAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Operator" Collapsed="true">
+    <Position X="1" Y="4.75" Width="2.25" />
+    <InheritanceLine Type="Abc.Domain.Rules.RuleElement" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.75" Y="4.191" />
+        <Point X="0.75" Y="5.062" />
+        <Point X="1" Y="5.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Rules\Operator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.Operand" Collapsed="true">
+    <Position X="3.5" Y="6" Width="2.25" />
+    <InheritanceLine Type="Abc.Domain.Rules.BaseOperand" FixedFromPoint="true">
+      <Path>
+        <Point X="3.25" Y="6.062" />
+        <Point X="3.5" Y="6.062" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\Operand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseVariable&lt;TVariable, TValue&gt;" Collapsed="true">
+    <Position X="3.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>IAKiGAAiK0hGwABABQMDAAAAAGQAgCAhJAAgIAkfIgE=</HashCode>
+      <FileName>Rules\BaseVariable.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseOperand" Collapsed="true">
+    <Position X="1" Y="5.5" Width="2.25" />
+    <InheritanceLine Type="Abc.Domain.Rules.RuleElement" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="0.75" Y="4.191" />
+        <Point X="0.75" Y="5.812" />
+        <Point X="1" Y="5.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseOperand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleElement" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\RuleElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleContext" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAEAAAAAAAAEAAAAAAAAQAAAAAAwAAAAEAgA=</HashCode>
+      <FileName>Rules\RuleContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Rule" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Rules.IRuleElement" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEABAAAAIAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAoA=</HashCode>
+      <FileName>Rules\IRuleElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

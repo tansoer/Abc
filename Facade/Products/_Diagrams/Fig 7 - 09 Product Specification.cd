@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Products.ProductView" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAgIASQAAACAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.ProductTypeView" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAASAAAAAAAAAgEgCQAAAAABAAAAAEAAAQAQA=</HashCode>
+      <FileName>Products\ProductTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.EntityTypeView" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.FeatureView">
+    <Position X="0.75" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Products\FeatureView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.FeatureTypeView">
+    <Position X="0.75" Y="1.5" Width="1.75" />
+    <Members>
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="ValueType" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAECA=</HashCode>
+      <FileName>Products\FeatureTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.PossibleFeatureValueView">
+    <Position X="3.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PossibleFeatureValueView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.FeatureSpecView">
+    <Position X="3.5" Y="3.25" Width="1.75" />
+    <Members>
+      <Property Name="BooleanValue" Hidden="true" />
+      <Property Name="CurrencyId" Hidden="true" />
+      <Property Name="DateTimeValue" Hidden="true" />
+      <Property Name="DecimalValue" Hidden="true" />
+      <Property Name="DoubleValue" Hidden="true" />
+      <Property Name="FeatureValue" Hidden="true" />
+      <Property Name="IntegerValue" Hidden="true" />
+      <Property Name="StringValue" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAEAEQAAAAQAAgAAEAgAAAEAAQAEAA=</HashCode>
+      <FileName>Products\FeatureSpecView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

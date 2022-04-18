@@ -1,0 +1,12 @@
+﻿@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Classifiers
+@model RegisteredIdentifierTypesPage
+
+    <body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.Timestamp" />
+    <input type="hidden" asp-for="Item.ClassifierType" />
+
+    @Html.EditItem(Model)
+
+    </body>

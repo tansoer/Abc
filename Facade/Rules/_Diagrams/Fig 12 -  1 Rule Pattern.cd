@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Rules.RuleSetView" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleSetView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Rules.RuleView">
+    <Position X="4.25" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Facade.Rules.CommonRuleIdView" ManuallyRouted="true">
+      <Path>
+        <Point X="3.25" Y="4.233" />
+        <Point X="3.25" Y="4.45" />
+        <Point X="5" Y="4.45" />
+        <Point X="5" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Rules.RuleContextView">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Rules\RuleContextView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Rules.RuleElementView">
+    <Position X="2.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Facade.Rules.CommonRuleIdView" ManuallyRouted="true">
+      <Path>
+        <Point X="3.25" Y="4.233" />
+        <Point X="3.25" Y="4.491" />
+        <Point X="3.25" Y="4.491" />
+        <Point X="3.25" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAgAAAAAAAEQAAAAAAAgAAEAgAAEkAAQAAIA=</HashCode>
+      <FileName>Rules\RuleElementView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Rules.CommonSetIdView">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\CommonSetIdView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.EntityBaseView">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="Code" Hidden="true" />
+      <Property Name="setDisplayNameValue" Hidden="true" />
+      <Property Name="ValidFrom" Hidden="true" />
+      <Property Name="ValidTo" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAABAAAAA=</HashCode>
+      <FileName>Common\EntityBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Rules.CommonRuleIdView">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Rules\CommonRuleIdView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Rules.RuleOverrideView">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAoA=</HashCode>
+      <FileName>Rules\RuleOverrideView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.PartySignatureBaseView" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAA=</HashCode>
+      <FileName>Common\PartySignatureBaseView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Common.PartyAttributeView" Collapsed="true">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\PartyAttributeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

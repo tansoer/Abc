@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Designed according to the LIMS Sentry.">
+    <Position X="0.562" Y="4.834" Height="0.75" Width="5.919" />
+  </Comment>
+  <Class Name="Abc.Domain.Products.Container" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="2.5" />
+    <AssociationLine Name="Type" Type="Abc.Domain.Products.ContainerType" FixedToPoint="true">
+      <Path>
+        <Point X="1.312" Y="3.75" />
+        <Point X="1.312" Y="2.569" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAgAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Container.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.ContainerType">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAAABAAAAAAgAAAA=</HashCode>
+      <FileName>Products\ContainerType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAIAEAIAAAAABCAAQAAAACgEJAAAAAAAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEkAIAAEAABAAAQAAkBCACgAQAAAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.ContainerItem">
+    <Position X="2.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Property Name="ContainerId" Hidden="true" />
+      <Method Name="ContainerItem" Hidden="true" />
+      <Property Name="ProductId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAIAAACAAAAAAAABAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ContainerItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProduct" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

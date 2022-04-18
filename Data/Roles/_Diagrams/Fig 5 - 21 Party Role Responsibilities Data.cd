@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Roles.AssignedResponsibilityData">
+    <Position X="0.5" Y="0.75" Width="2.25" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="3.5" />
+        <Point X="2.5" Y="2.367" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAQAAA=</HashCode>
+      <FileName>Roles\AssignedResponsibilityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRoleData">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRoleTypeData">
+    <Position X="5.5" Y="2.5" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Common.EntityTypeData" FixedFromPoint="true">
+      <Path>
+        <Point X="6.375" Y="4" />
+        <Point X="6.375" Y="3.733" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.ResponsibilityData">
+    <Position X="3" Y="0.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.375" Y="3.5" />
+        <Point X="3.375" Y="2.367" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Roles\ResponsibilityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="2.25" Y="3.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Rules.RuleSetData" Collapsed="true">
+    <Position X="3.75" Y="2.5" Width="1.25" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="4.375" Y="3.5" />
+        <Point X="4.375" Y="3.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleSetData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.ResponsibilityTypeData">
+    <Position X="5" Y="0.75" Width="2.75" />
+    <InheritanceLine Type="Abc.Data.Common.EntityTypeData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.438" Y="4" />
+        <Point X="7.438" Y="2.175" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\ResponsibilityTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityTypeData">
+    <Position X="5.5" Y="4" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

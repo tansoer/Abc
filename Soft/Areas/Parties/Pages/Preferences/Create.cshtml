@@ -1,0 +1,11 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Parties.PreferencesPage
+
+@{
+    Layout = "_Create";
+}
+<body>
+    @if (Model.FixedFilter != null) {<input type="hidden" asp-for="Item.PartyId" />}
+    @Html.EditItem(Model)
+</body>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="The Description has the same content as the Details. Just for consistency with the original patterns from the archetype patterns book.&#xD;&#xA;">
+    <Position X="8.052" Y="1.506" Height="0.94" Width="3.649" />
+  </Comment>
+  <Class Name="Abc.Domain.Products.ProductType" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Products.BaseProductType" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="2.117" />
+        <Point X="6.25" Y="2.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Product" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="BaseProductType" Hidden="true" />
+      <Property Name="BaseTypeId" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="productTypeId" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="Relations" Hidden="true" />
+      <Property Name="WhereConsumer" Hidden="true" />
+      <Property Name="WhereProvider" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Common.Entity&lt;TData&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="1.187" />
+        <Point X="5.5" Y="1.187" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAAAkAICAAAABAAAQAAgACgEIAAAAAQAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BaseType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;">
+    <Position X="3" Y="2.75" Width="1.75" />
+    <Members>
+      <Method Name="BaseProduct" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="Relations" Hidden="true" />
+      <Property Name="RelationsWhereConsumer" Hidden="true" />
+      <Property Name="RelationsWhereProvider" Hidden="true" />
+      <Property Name="type" Hidden="true" />
+      <Property Name="Type" Hidden="true" />
+      <Property Name="TypeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEEAIABEAABAAAQAAkDCACgAQACAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Common.Entity&lt;TData&gt;">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <Members>
+      <Property Name="Code" Hidden="true" />
+      <Method Name="Entity" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Common.Value&lt;TData&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAACBAAAEAQAAABAAAAAQAAAAAAA=</HashCode>
+      <FileName>Common\Value.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProductType" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProductType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

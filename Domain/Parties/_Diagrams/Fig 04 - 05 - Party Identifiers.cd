@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;">
+    <Position X="3.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Property Name="Addresses" Hidden="true" />
+      <Property Name="Emails" Hidden="true" />
+      <Method Name="GetAddress" Hidden="true" />
+      <Method Name="getContact" Hidden="true" />
+      <Method Name="getContacts" Hidden="true" />
+      <Method Name="GetEmail" Hidden="true" />
+      <Method Name="getFirstName" Hidden="true" />
+      <Method Name="GetName" Hidden="true" />
+      <Method Name="getOfficialName" Hidden="true" />
+      <Method Name="GetPhone" Hidden="true" />
+      <Method Name="names" Hidden="true" />
+      <Method Name="Party" Hidden="true" />
+      <Property Name="partyId" Hidden="true" />
+      <Property Name="partyNames" Hidden="true" />
+      <Property Name="Phones" Hidden="true" />
+      <Method Name="ToPartySummary" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Identifiers" />
+      <Property Name="Authentications" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.Authentication">
+    <Position X="3.75" Y="5.25" Width="2" />
+    <Members>
+      <Method Name="Authentication" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Parties\Signatures\Authentication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.RegisteredIdentifier">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <Members>
+      <Property Name="authorityId" Hidden="true" />
+      <Method Name="RegisteredIdentifier" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAABAAAAAAAQAAYAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\RegisteredIdentifier.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Authority" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="7" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.RegistrationAuthority" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.75" />
+    <Members>
+      <Method Name="RegistrationAuthority" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\RegistrationAuthority.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.BasePartySignature&lt;T&gt;">
+    <Position X="7" Y="5.25" Width="1.5" />
+    <Members>
+      <Method Name="BasePartySignature" Hidden="true" />
+      <Method Name="IsSigned" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Authentication" Type="Abc.Domain.Parties.Signatures.Authentication" FixedFromPoint="true">
+      <Path>
+        <Point X="7" Y="6.625" />
+        <Point X="5.75" Y="6.625" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.099" Y="0.112" Height="0.182" Width="1.232" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAIAAAAAAAAAAAAAAAEAAEAAABAAICgAA=</HashCode>
+      <FileName>Parties\Signatures\BasePartySignature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Authentication" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Common.Entity&lt;TData&gt;">
+    <Position X="7" Y="1.25" Width="1.5" />
+    <Members>
+      <Method Name="Entity" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAEAAAgAAQAAAAAACAAACAgAAAAAAA=</HashCode>
+      <FileName>Common\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.IdentifierType" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\IdentifierType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.AuthorityType" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\AuthorityType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Organization" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Parties.Party&lt;TName&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.875" Y="3.146" />
+        <Point X="3.875" Y="3.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Organization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

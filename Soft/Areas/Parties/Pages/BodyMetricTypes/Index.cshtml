@@ -1,0 +1,15 @@
+﻿@page
+@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Consts
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Parties.BodyMetricTypesPage
+
+@{
+    Layout = "_Index";
+    var page = Model.PageUrl;
+}
+
+@section Create {
+    @Html.Link(string.Empty, new Link(Captions.Create, Model.CreateUrl))
+}
+@Html.ShowTable(Model)

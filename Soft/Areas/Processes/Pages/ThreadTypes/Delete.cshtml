@@ -1,0 +1,14 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Processes.ThreadTypesPage
+
+@{
+    Layout = "_Delete";
+    Model.LoadDetails();
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+<partial name="_ShowElement" />

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Processes.AttributeValueView">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAEAAAAAEQAAEAAAAgAAEAgAQAlAAQAEAA=</HashCode>
+      <FileName>Processes\AttributeValueView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ValueType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.AttributeType">
+    <Position X="2.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Common.ValueType">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Facade.Processes.TaskView">
+    <Position X="2.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAjAAAgAIAAAAAAACAAAAAAAAAAEAAABIA=</HashCode>
+      <FileName>Processes\TaskView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Processes.TaskTypeView">
+    <Position X="2.5" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Processes\TaskTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Processes.ProcessView">
+    <Position X="4.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAACBAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Processes\ProcessView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Processes.ProcessTypeView">
+    <Position X="4.5" Y="5.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

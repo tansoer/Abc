@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Orders.OrderData">
+    <Position X="5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAAAAAAAAAgAAAABAAAAAACAAAAAFAAAAAAA=</HashCode>
+      <FileName>Orders\OrderData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderType" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderLineData" Collapsed="true">
+    <Position X="5" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAwQAIAAAAAAAEACGAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Orders\OrderLineData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderLineType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Orders.SalesTaxPolicyData" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Orders\SalesTaxPolicyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.DiscountTypeData" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAIAAAAAAAAACAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Orders\DiscountTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.DiscountData" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAgAAAAAAAAAAAACAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Orders\DiscountData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Rules.RuleSetData" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleSetData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderEventData" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ECAgIAQAABQAQAAAAAAAAAAAAAAAABIEIBAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderEventData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySummaryData">
+    <Position X="7.25" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAQAAAAAAAACQAAAAAAAAAACAAABAoAAAAA=</HashCode>
+      <FileName>Parties\PartySummaryData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RoleInOrder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Common.ManagerData" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ManagerData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Orders.OrderLifecycleStatus">
+    <Position X="2.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AABAEAABACAAIAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Orders\OrderLifecycleStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Orders.OrderLineType">
+    <Position X="5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAARAAAAAAAAAAAGAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderLineType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Orders.OrderType">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAABAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Orders\OrderType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Orders.PartyRoleInOrder">
+    <Position X="7.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAABAAAAAACgAAAAAAAAAAQAAABAAAAAAQAAAAA=</HashCode>
+      <FileName>Orders\PartyRoleInOrder.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

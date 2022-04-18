@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="25/12/2020 - We still need unique ID-s for all the Party attributes. Otherwise, for instance,  we can't allow for a party to move out from one address, and later move back to the same house/apartment.&#xD;&#xA;&#xD;&#xA;Comment by Kaur 12/11/2021: Is it still relevant? We can use contactusage for that and bodymetric, registeredidentifier, preference etc are unique anyway">
+    <Position X="0.5" Y="7.184" Height="1.01" Width="6.783" />
+  </Comment>
+  <Class Name="Abc.Data.Parties.PartyData" Collapsed="true">
+    <Position X="4" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAQAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyAttributeData">
+    <Position X="6.5" Y="2.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyAttributeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.AuthenticationData" Collapsed="true">
+    <Position X="11.5" Y="3" Width="2" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedFromPoint="true">
+      <Path>
+        <Point X="10.75" Y="3" />
+        <Point X="11.125" Y="3" />
+        <Point X="11.125" Y="3.346" />
+        <Point X="11.5" Y="3.346" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIBAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Parties\AuthenticationData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySignatureData" Collapsed="true">
+    <Position X="11.5" Y="1.25" Width="2" />
+    <InheritanceLine Type="Abc.Data.Parties.PartySignatureBaseData" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.5" Y="2.25" />
+        <Point X="12.5" Y="1.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartySignatureData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySignatureBaseData" Collapsed="true">
+    <Position X="11.5" Y="2.25" Width="2" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedFromPoint="true">
+      <Path>
+        <Point X="10.75" Y="3" />
+        <Point X="11.125" Y="3" />
+        <Point X="11.125" Y="2.596" />
+        <Point X="11.5" Y="2.596" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAUAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAA=</HashCode>
+      <FileName>Parties\PartySignatureBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PreferenceData" Collapsed="true">
+    <Position X="8" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="2.5" />
+        <Point X="8.75" Y="1.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAACEAAAAAAAAFAAAAAAA=</HashCode>
+      <FileName>Parties\PreferenceData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Parties.RegisteredIdentifierData" Collapsed="true">
+    <Position X="9" Y="4.75" Width="2" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedToPoint="true">
+      <Path>
+        <Point X="8.625" Y="3.733" />
+        <Point X="8.625" Y="4.375" />
+        <Point X="10.5" Y="4.375" />
+        <Point X="10.5" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\RegisteredIdentifierData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyNameData" Collapsed="true">
+    <Position X="9.75" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="2.5" />
+        <Point X="8.75" Y="2.241" />
+        <Point X="10.5" Y="2.241" />
+        <Point X="10.5" Y="1.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAQAAAAAAAAAAACgAAAAQAAAAA=</HashCode>
+      <FileName>Parties\PartyNameData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyContactData" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.625" Y="3.978" />
+        <Point X="2.625" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAUAAAAAAAAQQAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Parties\PartyContactData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.148" />
+  </Class>
+  <Class Name="Abc.Data.Parties.PersonEthnicityData" Collapsed="true">
+    <Position X="6" Y="1.25" Width="1.75" />
+    <InheritanceLine Type="Abc.Data.Parties.PartyAttributeData" FixedFromPoint="true">
+      <Path>
+        <Point X="8.75" Y="2.5" />
+        <Point X="8.75" Y="2.241" />
+        <Point X="6.875" Y="2.241" />
+        <Point X="6.875" Y="1.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PersonEthnicityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.BodyMetricData" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAgAAAAgAAAkAAAAAAA=</HashCode>
+      <FileName>Parties\BodyMetricData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="1.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAABAAAEAQAiAAQAgAAAACAAACAAAAAAIAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Common.RelationshipData" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Common\RelationshipData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Orders.Order">
+    <Position X="7.5" Y="3" Width="1.75" />
+    <Members>
+      <Method Name="acceptPayment" Hidden="true" />
+      <Method Name="acceptRefund" Hidden="true" />
+      <Property Name="DateCreated" Hidden="true" />
+      <Property Name="DiscountRuleContextId" Hidden="true" />
+      <Field Name="eventsManager" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Field Name="linesManager" Hidden="true" />
+      <Property Name="LinesManager" Hidden="true" />
+      <Method Name="makePayment" Hidden="true" />
+      <Method Name="makeRefund" Hidden="true" />
+      <Method Name="Order" Hidden="true" />
+      <Property Name="OrderManagerId" Hidden="true" />
+      <Property Name="OrdersManager" Hidden="true" />
+      <Field Name="partiesManager" Hidden="true" />
+      <Property Name="PartiesManager" Hidden="true" />
+      <Method Name="processAmend" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="processLifecycle" Hidden="true" />
+      <Method Name="processPayment" Hidden="true" />
+      <Method Name="processReceipt" Hidden="true" />
+      <Method Name="processUnspecified" Hidden="true" />
+      <Property Name="SalesChannel" Hidden="true" />
+      <Property Name="SalesChannelId" Hidden="true" />
+      <Method Name="SetEventsManager" Hidden="true" />
+      <Method Name="SetLinesManager" Hidden="true" />
+      <Method Name="setManager" Hidden="true" />
+      <Method Name="SetPartiesManager" Hidden="true" />
+      <Method Name="SetStatusManager" Hidden="true" />
+      <Method Name="SetTermsManager" Hidden="true" />
+      <Field Name="statusManager" Hidden="true" />
+      <Property Name="StatusManager" Hidden="true" />
+      <Field Name="termsManager" Hidden="true" />
+      <Property Name="TermsManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="EventsManager" Type="Abc.Domain.Orders.Events.IOrderEventsManager">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.39" Y="0.258" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="DiscountRuleContext" Type="Abc.Domain.Rules.RuleContext" FixedFromPoint="true">
+      <Path>
+        <Point X="8.812" Y="3" />
+        <Point X="8.812" Y="2.441" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.7" Y="0.193" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AMIAIEFAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventsManager" />
+      <Property Name="DiscountRuleContext" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Discounts.PercentageDiscount">
+    <Position X="2.25" Y="4" Width="1.75" />
+    <Members>
+      <Property Name="amount" Hidden="true" />
+      <Method Name="PercentageDiscount" Hidden="true" />
+      <Property Name="unit" Hidden="true" />
+      <Property Name="unitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAIAAAAAAACAAAAAgAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\PercentageDiscount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Amount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Discounts.MonetaryDiscount">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <Members>
+      <Property Name="amount" Hidden="true" />
+      <Property Name="currency" Hidden="true" />
+      <Property Name="currencyId" Hidden="true" />
+      <Method Name="MonetaryDiscount" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAIAAAAIAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\MonetaryDiscount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Amount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Discounts.Discount">
+    <Position X="1.25" Y="2.25" Width="1.5" />
+    <Members>
+      <Method Name="calculatePrice" Hidden="true" />
+      <Method Name="Discount" Hidden="true" />
+      <Property Name="DiscountTypeId" Hidden="true" />
+      <Property Name="OrderEventId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAAAAAAIAAAAAAAAAACAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\Discount.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DiscountType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Discounts.DiscountEvent" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <Members>
+      <Method Name="DiscountEvent" Hidden="true" />
+      <Property Name="discountEventId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Discounts" Type="Abc.Domain.Orders.Events.Discounts.IDiscount">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.286" Y="0.06" Height="0.182" Width="1.118" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\DiscountEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discounts" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.179" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEvent" Collapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MCEAAQAAEBAAAAAAIAAAAAAAAAKACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Order" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleContext" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="2" />
+    <Members>
+      <Property Name="contextId" Hidden="true" />
+      <Method Name="FindVariable" Hidden="true" />
+      <Method Name="getVariables" Hidden="true" />
+      <Property Name="Rule" Hidden="true" />
+      <Method Name="RuleContext" Hidden="true" />
+      <Property Name="RuleId" Hidden="true" />
+      <Property Name="RuleSetId" Hidden="true" />
+      <Field Name="variables" Hidden="true" />
+      <Property Name="Variables" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABEAAAAAEAAAAAAAAEAAAAAAAAQAAAAAAwAAAAEAgA=</HashCode>
+      <FileName>Rules\RuleContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RuleSet" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEventsManager">
+    <Position X="6.5" Y="5" Width="1.75" />
+    <Members>
+      <Method Name="OrderEventsManager" Hidden="true" />
+      <Property Name="orderIdInEvent" Hidden="true" />
+      <Method Name="Unspecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>ABAAAAABAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQEAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Quantity" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAABE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.OrdersManager">
+    <Position X="5" Y="0.75" Width="2" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="isDiscountType" Hidden="true" />
+      <Method Name="isListed" Hidden="true" />
+      <Method Name="isOrder" Hidden="true" />
+      <Method Name="isSalesTaxPolicy" Hidden="true" />
+      <Field Name="managerInDiscountType" Hidden="true" />
+      <Field Name="managerInOrder" Hidden="true" />
+      <Field Name="managerInTaxPolicy" Hidden="true" />
+      <Property Name="mockDiscountTypes" Hidden="true" />
+      <Method Name="newDiscountType" Hidden="true" />
+      <Method Name="newOrder" Hidden="true" />
+      <Method Name="newTaxPolicy" Hidden="true" />
+      <Method Name="OrdersManager" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+      <Property Name="TaxPolicies" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAMABAAgAAIAAAgiAAAAhAACEAggAAAAAAAAACAAAIA=</HashCode>
+      <FileName>Orders\OrdersManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+      <Property Name="DiscountTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.SalesOrder">
+    <Position X="9.75" Y="3" Width="1.75" />
+    <Members>
+      <Method Name="acceptPayment" Hidden="true" />
+      <Property Name="DatePurchaseOrderReceived" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Method Name="makeRefund" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="processReceipt" Hidden="true" />
+      <Property Name="PurchaseOrder" Hidden="true" />
+      <Property Name="PurchaseOrderId" Hidden="true" />
+      <Method Name="SalesOrder" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAABAAABAgAQAAAIAAAACAIQAAAAAAAgAA=</HashCode>
+      <FileName>Orders\SalesOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.IOrder" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAQAAAAAEAAABIIAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEvent" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.Discounts.IDiscount" Collapsed="true">
+    <Position X="3" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\Discount.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEventsManager" Collapsed="true">
+    <Position X="8.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Rules.IRuleSet" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.Discounts.IDiscountType">
+    <Position X="0.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Discounts\DiscountType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Eligibility" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

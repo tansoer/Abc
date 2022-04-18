@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="OrderStatus and Lifecycle Event:                                      (1)  OrderEventManager AcceptEvent(IOderEvent) triggers the event handling procedure;                            (2) In case of the lifecycle event, the processLifecycle method is called;                                                                 (3) OrderEventsManager is calling  ProcessOrderEvent of OrderStatusManager;                                                       (4) Overridden cancel, close, error or open methods are processing the lifecycle events and are triggering the OnStatusChanged event handler;                                (5) Orders doOnOrderStatusChanged is recording to the database new order status;                                            (6) OrderEventsManager is saving new order into database in case status change is allowed ">
+    <Position X="6.822" Y="0.5" Height="2.625" Width="3.242" />
+  </Comment>
+  <Class Name="Abc.Domain.Orders.Order" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="AcceptEvent" Hidden="true" />
+      <Method Name="acceptPayment" Hidden="true" />
+      <Method Name="acceptRefund" Hidden="true" />
+      <Property Name="DateCreated" Hidden="true" />
+      <Property Name="DiscountRuleContext" Hidden="true" />
+      <Property Name="DiscountRuleContextId" Hidden="true" />
+      <Field Name="eventsManager" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Field Name="linesManager" Hidden="true" />
+      <Property Name="LinesManager" Hidden="true" />
+      <Method Name="makePayment" Hidden="true" />
+      <Method Name="makeRefund" Hidden="true" />
+      <Method Name="Order" Hidden="true" />
+      <Property Name="OrderManagerId" Hidden="true" />
+      <Field Name="partiesManager" Hidden="true" />
+      <Property Name="PartiesManager" Hidden="true" />
+      <Method Name="processAmend" Hidden="true" />
+      <Method Name="processDiscount" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="processLifecycle" Hidden="true" />
+      <Method Name="processPayment" Hidden="true" />
+      <Method Name="processReceipt" Hidden="true" />
+      <Method Name="processUnspecified" Hidden="true" />
+      <Property Name="SalesChannel" Hidden="true" />
+      <Property Name="SalesChannelId" Hidden="true" />
+      <Method Name="SetEventsManager" Hidden="true" />
+      <Method Name="SetLinesManager" Hidden="true" />
+      <Method Name="setManager" Hidden="true" />
+      <Method Name="SetPartiesManager" Hidden="true" />
+      <Method Name="SetStatusManager" Hidden="true" />
+      <Method Name="SetTermsManager" Hidden="true" />
+      <Field Name="statusManager" Hidden="true" />
+      <Field Name="termsManager" Hidden="true" />
+      <Property Name="TermsManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="StatusManager" Type="Abc.Domain.Orders.Statuses.IOrderStatusManager" FixedFromPoint="true">
+      <Path>
+        <Point X="1.562" Y="1.191" />
+        <Point X="1.562" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AMIAIEBAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EventsManager" />
+      <Property Name="StatusManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEventsManager" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="OrderEventsManager" Hidden="true" />
+      <Property Name="orderIdInEvent" Hidden="true" />
+    </Members>
+    <AssociationLine Name="AuditTrail" Type="Abc.Domain.Orders.Events.IOrderEvent">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.868" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAABAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.OrderStatusManager">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <Members>
+      <Property Name="orderIdInStatus" Hidden="true" />
+      <Method Name="OrderStatusManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="AuditTrail" Type="Abc.Domain.Orders.Statuses.IOrderStatus" FixedFromPoint="true">
+      <Path>
+        <Point X="1" Y="4.425" />
+        <Point X="1" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.536" Y="0.174" Height="0.182" Width="0.878" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CurrentStatus" Type="Abc.Domain.Orders.Statuses.IOrderStatus" FixedFromPoint="true">
+      <Path>
+        <Point X="2" Y="4.425" />
+        <Point X="2" Y="5.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.598" Y="0.165" Height="0.182" Width="1.076" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAgAAA=</HashCode>
+      <FileName>Orders\Statuses\OrderStatusManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CurrentStatus" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AuditTrail" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.OpenOrderStatus">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <Members>
+      <Method Name="OpenOrderStatus" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\OpenOrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.OrderStatus">
+    <Position X="4.75" Y="4.5" Width="1.75" />
+    <Members>
+      <Method Name="cancel" Hidden="true" />
+      <Method Name="changeStatus" Hidden="true" />
+      <Method Name="close" Hidden="true" />
+      <Method Name="doOnStatusChanged" Hidden="true" />
+      <Method Name="error" Hidden="true" />
+      <Method Name="open" Hidden="true" />
+      <Property Name="Order" Hidden="true" />
+      <Property Name="OrderEventId" Hidden="true" />
+      <Property Name="OrderId" Hidden="true" />
+      <Method Name="OrderStatus" Hidden="true" />
+      <Property Name="Status" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAFAAEAEAAAAAAAAACEIAAAQAAAAAAAEAIAgAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\OrderStatus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.ClosedOrderStatus" Collapsed="true">
+    <Position X="5.5" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\ClosedOrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.CancelledOrderStatus" Collapsed="true">
+    <Position X="7.25" Y="6.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\CancelledOrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.CancellingOrderStatus">
+    <Position X="3.75" Y="6.75" Width="1.75" />
+    <Members>
+      <Method Name="CancellingOrderStatus" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\CancellingOrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Statuses.InitializedOrderStatus">
+    <Position X="0.5" Y="6.75" Width="1.75" />
+    <Members>
+      <Method Name="InitializedOrderStatus" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\InitializedOrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.OrderEvent" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>MCEAAQAAEBAAAAAAIAAAAAAAAAKACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Lifecycle.LifecycleEvent" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Lifecycle\LifecycleEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Lifecycle.OpenOrderEvent" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Lifecycle.LifecycleEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.812" />
+        <Point X="4.51" Y="3.812" />
+        <Point X="4.51" Y="5.096" />
+        <Point X="4.25" Y="5.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Lifecycle\OpenOrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Lifecycle.CloseOrderEvent" Collapsed="true">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Lifecycle.LifecycleEvent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.812" />
+        <Point X="4.51" Y="3.812" />
+        <Point X="4.51" Y="4.25" />
+        <Point X="4.25" Y="4.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Lifecycle\CloseOrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Lifecycle.CancelOrderEvent" Collapsed="true">
+    <Position X="2.75" Y="2.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Domain.Orders.Events.Lifecycle.LifecycleEvent" FixedFromPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.812" />
+        <Point X="4.51" Y="3.812" />
+        <Point X="4.51" Y="3.096" />
+        <Point X="4.25" Y="3.096" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Orders\Events\Lifecycle\CancelOrderEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ReturnedItems" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Events.Delivery.ReturnedItem" Collapsed="true">
+    <Position X="2.75" Y="1.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\Delivery\ReturnedItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEvent" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Statuses.IOrderStatus" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAAAAAAAAAAAQAAAAAAAAACAgAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\OrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Events.IOrderEventsManager" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Orders\Events\OrderEventsManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Statuses.IOrderStatusManager" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Statuses\OrderStatusManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

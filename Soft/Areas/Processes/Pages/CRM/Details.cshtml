@@ -1,0 +1,14 @@
+﻿@page
+@model Abc.Pages.Processes.CrmPage
+
+@{
+    Layout = "_Details";
+}
+
+<partial name="_ShowElement" />
+
+@section Details {
+    <a id="showThreads"
+       asp-route-handler="ShowThreads"
+       asp-route-id="@Model.ItemId">Threads</a>
+}

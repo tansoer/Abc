@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="In case of identical products the ProductId is null&#xD;&#xA;In case of identifyable products, each product has exaxtly one ordel line with NumberOfProducts equal to the 1 and the ProductId is not null">
+    <Position X="4.24" Y="5.552" Height="0.75" Width="4.96" />
+  </Comment>
+  <Class Name="Abc.Data.Orders.OrderData">
+    <Position X="1" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAEAAAAAAAAAgAAAABAAAAAACAAAAAFAAAAAAA=</HashCode>
+      <FileName>Orders\OrderData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Orders.OrderLineData">
+    <Position X="1" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAwQAIAAAAAAAEACGAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Orders\OrderLineData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="OrderLineType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyAttributeData">
+    <Position X="7.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyAttributeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartySummaryData">
+    <Position X="4.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAQAAAAQAAAAAAAACQAAAAAAAAAACAAABAoAAAAA=</HashCode>
+      <FileName>Parties\PartySummaryData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RoleInOrder" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Abc.Data.Orders.OrderLineType">
+    <Position X="4.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAARAAAAAAAAAAAGAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\OrderLineType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Orders.PartyRoleInOrder">
+    <Position X="7.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAABAAAAAACgAAAAAAAAAAQAAABAAAAAAQAAAAA=</HashCode>
+      <FileName>Orders\PartyRoleInOrder.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

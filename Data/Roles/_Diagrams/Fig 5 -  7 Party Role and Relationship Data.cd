@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Parties.PartyData" Collapsed="true">
+    <Position X="0.75" Y="1.25" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="2.32" Y="2.5" />
+        <Point X="2.32" Y="2.283" />
+        <Point X="1.5" Y="2.283" />
+        <Point X="1.5" Y="1.941" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAQAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRoleData">
+    <Position X="4.25" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRoleData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Roles.PartyRelationshipData" Collapsed="true">
+    <Position X="4.25" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Roles\PartyRelationshipData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Parties.PartyAttributeData">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <InheritanceLine Type="Abc.Data.Common.EntityBaseData" FixedFromPoint="true">
+      <Path>
+        <Point X="2.32" Y="2.5" />
+        <Point X="2.32" Y="2.283" />
+        <Point X="3" Y="2.283" />
+        <Point X="3" Y="1.983" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\PartyAttributeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.EntityBaseData">
+    <Position X="1.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityBaseData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Common.RelationshipData">
+    <Position X="4.25" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Common\RelationshipData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

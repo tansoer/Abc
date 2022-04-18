@@ -1,0 +1,9 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Rules.RulesPage
+
+<body>
+    <input type="hidden" asp-for="Item.RuleKind" />
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.RuleId" />
+    @Html.EditItem(Model)
+</body>

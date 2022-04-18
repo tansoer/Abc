@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <Members>
+      <Method Name="BaseProduct" Hidden="true" />
+      <Property Name="Batch" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Method Name="CancelReservation" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="Price" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="Relations" Hidden="true" />
+      <Property Name="RelationsWhereConsumer" Hidden="true" />
+      <Property Name="RelationsWhereProvider" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Method Name="Reserve" Hidden="true" />
+      <Property Name="SerialNumber" Hidden="true" />
+      <Property Name="type" Hidden="true" />
+      <Property Name="TypeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEEAIABEAABAAAQAAkDCACgAQACAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="BaseProductType" Hidden="true" />
+      <Property Name="BaseType" Hidden="true" />
+      <Property Name="BaseTypeId" Hidden="true" />
+      <Property Name="consumerId" Hidden="true" />
+      <Property Name="ConsumerProducts" Hidden="true" />
+      <Property Name="PossiblePrices" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="productTypeId" Hidden="true" />
+      <Property Name="providerId" Hidden="true" />
+      <Property Name="ProviderProducts" Hidden="true" />
+      <Property Name="RelatedPrices" Hidden="true" />
+      <Property Name="RelatedProducts" Hidden="true" />
+      <Property Name="WhereConsumer" Hidden="true" />
+      <Property Name="WhereProvider" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEAAAQIIAAAkAICAAAABAAAQAAgACgEIAAAAAQAAAQA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.Feature">
+    <Position X="3.25" Y="3" Width="1.75" />
+    <Members>
+      <Method Name="Feature" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Features\Feature.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FeatureType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureType">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="FeatureType" Hidden="true" />
+      <Property Name="MustSatisfyAll" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="ProductTypeId" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAAAAAAgAAAAAAAIAAAAgAAAAIAAAECA=</HashCode>
+      <FileName>Products\Features\FeatureType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PossibleValues" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.PossibleFeatureValue">
+    <Position X="6" Y="0.5" Width="1.75" />
+    <Members>
+      <Method Name="isEqual" Hidden="true" />
+      <Method Name="isError" Hidden="true" />
+      <Method Name="isGreater" Hidden="true" />
+      <Method Name="isLess" Hidden="true" />
+      <Method Name="isMuchGreater" Hidden="true" />
+      <Method Name="isMuchLess" Hidden="true" />
+      <Method Name="isNotEqual" Hidden="true" />
+      <Method Name="isNotGreater" Hidden="true" />
+      <Method Name="isNotLess" Hidden="true" />
+      <Method Name="IsValid" Hidden="true" />
+      <Method Name="PossibleFeatureValue" Hidden="true" />
+      <Method Name="val" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABgAAAAIhQQAEAAAgAAAAAAAAACQAAAAA=</HashCode>
+      <FileName>Products\Features\PossibleFeatureValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureSpec">
+    <Position X="9" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Products\Features\FeatureSpec.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Value" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureValue&lt;TData&gt;">
+    <Position X="6" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgQgAEAAAAA=</HashCode>
+      <FileName>Products\Features\FeatureValue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ValueSpec" />
+      <Property Name="Value" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.IValue" Collapsed="true">
+    <Position X="9" Y="4.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAABAAQAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IValue.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,64 @@
+﻿@using Abc.Pages.Classifiers
+@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Extensions
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model.Title;
+    int pageIndex = Model.PageIndex;
+    int totalPages = Model.TotalPages;
+    string fixedFilter = Model.FixedFilter;
+    string fixedValue = Model.FixedValue;
+    string sortOrder = Model.SortOrder;
+    string searchString = Model.SearchString;
+    string currentFilter = Model.CurrentFilter;
+    Uri pageUrl = Model.PageUrl;
+    var a = new Args(pageUrl, null, fixedFilter, fixedValue
+        , sortOrder, searchString, pageIndex, currentFilter);
+  
+}
+
+<p>
+    <h1>@ViewData["Title"]</h1>
+     @if (Model.IsMasterDetail()) {
+        <a href='@Model.MasterUri()'>@Model.SubTitle</a>
+     }
+    @await RenderSectionAsync("Create")
+</p>
+
+<form id="indexForm" asp-page="./Index" method="get">
+    <input type="hidden" name="FixedFilter" value="@Model.FixedFilter" />
+    <input type="hidden" name="FixedValue" value="@Model.FixedValue" />
+    <input type="hidden" name="Handler" value="Index" />
+    <div class="form-inline">
+        <p>
+            Find by:
+            &nbsp;
+            <input id="searchTextBox" class="form-control" type="text" name="SearchString" value="@Model.SearchString" />
+            &nbsp;
+            <input id="searchButton" type="submit" value="Search" class="btn btn-light" />
+            &nbsp;
+            @if (Model.IsMasterDetail()) {
+               <a id="backToList"asp-page="./Index"
+               asp-route-handler="Index"
+               asp-route-sortorder="@Model.SortOrder"
+               asp-route-fixedFilter="@{ if (Model.GetType() != typeof(ClassifiersPage)) @Model.FixedFilter }"
+               asp-route-fixedValue="@{ if (Model.GetType() != typeof(ClassifiersPage)) @Model.FixedValue }">Back to master details</a>
+            }
+            &nbsp;
+            <a id="backToList"asp-page="./Index"
+               asp-route-handler="Index"
+               asp-route-sortorder="@Model.SortOrder">Back to full list</a>
+        </p>
+    </div>
+
+    <div class="form-inline">
+        @Html.NavButtons(a, totalPages)
+    </div>
+</form>
+
+<p />
+
+@RenderBody()
+
+

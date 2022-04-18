@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Products.ProductType" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="0.5" Y="3" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAIAEAIAAAAABCAAQAAAACgEJAAAAAAAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="RelatedProducts" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;" Collapsed="true">
+    <Position X="4.75" Y="3" Width="3" />
+    <AssociationLine Name="Relations" Type="Abc.Domain.Products.ProductRelationship" FixedFromPoint="true">
+      <Path>
+        <Point X="7.231" Y="3" />
+        <Point X="7.231" Y="1.191" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEkAIAAEAABAAAQAAkBCACgAQAAAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Relations" />
+      <Property Name="RelatedProducts" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.Product" Collapsed="true">
+    <Position X="4.75" Y="4.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.ProductRelationship" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="3" />
+    <AssociationLine Name="Consumer" Type="Abc.Domain.Products.IProduct" FixedFromPoint="true">
+      <Path>
+        <Point X="5.218" Y="1.191" />
+        <Point X="5.218" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Provider" Type="Abc.Domain.Products.IProduct" FixedToPoint="true">
+      <Path>
+        <Point X="6.188" Y="1.191" />
+        <Point X="6.188" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQACAAAAAAA=</HashCode>
+      <FileName>Products\ProductRelationship.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Consumer" />
+      <Property Name="Provider" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.ProductRelationshipType" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="3.25" />
+    <AssociationLine Name="Consumer" Type="Abc.Domain.Products.IProductType" FixedFromPoint="true">
+      <Path>
+        <Point X="2.438" Y="1.191" />
+        <Point X="2.438" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Provider" Type="Abc.Domain.Products.IProductType" FixedFromPoint="true">
+      <Path>
+        <Point X="3.438" Y="1.191" />
+        <Point X="3.438" Y="1.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Products\ProductRelationshipType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Consumer" />
+      <Property Name="Provider" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Products.IProductType" Collapsed="true">
+    <Position X="1.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProductType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Products.IProduct" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IProduct.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

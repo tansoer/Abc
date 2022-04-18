@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="This model is different from the Arlow&amp;Neustadt model and even from the model proposed in my PhD thesis. UniqueProduct is a sort of &quot;singleton&quot;, by keeping only one possible product instance for every unique product type. UniqueProduct overrides the Features property and shows all PossibleValues of the UniqueProductType.&#xD;&#xA;&#xD;&#xA;We keep the common price model. And we keep &quot;duplicated&quot; records for the unique product both in database ProductTypes and ProductInstances tables. &#xD;&#xA;&#xD;&#xA;We override SerialNumber, Definition, Name, Code, Id, ValidFrom and ValidTo for UniqueProduct. &#xD;&#xA;">
+    <Position X="0.5" Y="6.416" Height="1.729" Width="7.544" />
+  </Comment>
+  <Class Name="Abc.Domain.Products.UniqueProductType" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Products.BaseProductType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.562" Y="1.441" />
+        <Point X="2.562" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\UniqueProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="7.5" />
+    <AssociationLine Name="PossiblePrices" Type="Abc.Domain.Products.Price.PossiblePrice" FixedToPoint="true">
+      <Path>
+        <Point X="1.49" Y="1.441" />
+        <Point X="1.49" Y="2" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAIAEAIAAAAABCAAQAAAACgEJAAAAAAAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+      <Property Name="PossiblePrices" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="7.5" />
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEkAIAAEAABAAAQAAkBCACgAQAAAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Price" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureType" Collapsed="true">
+    <Position X="3.75" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAAAAAAAAAAAAAAIAAAAgAAAAIAAAECA=</HashCode>
+      <FileName>Products\Features\FeatureType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PossibleValues" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Price.PossiblePrice" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAQAAAAAAAAkAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Products\Price\PossiblePrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.PossibleFeatureValue" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Products.Features.FeatureValue&lt;TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="3" />
+        <Point X="7.25" Y="2.691" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABgAAAAIhQQAEAAAgAAAAAAAAACQAAAAA=</HashCode>
+      <FileName>Products\Features\PossibleFeatureValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.Feature" Collapsed="true">
+    <Position X="6.5" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Features\Feature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Price.AppliedPrice" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Price\AppliedPrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureValue&lt;TData&gt;" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>Products\Features\FeatureValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Price.BasePrice" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Price\BasePrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.PoleomorfProduct&lt;T&gt;">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="copyMembers" Hidden="true" />
+      <Method Name="PoleomorfProduct" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Products.BaseProduct&lt;TType&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="4.5" Y="5.5" />
+        <Point X="4.5" Y="5.002" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAhAAQAAAAAQCAAACAAAAAAAAA=</HashCode>
+      <FileName>Products\PoleomorfProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.UniqueProduct" Collapsed="true">
+    <Position X="2" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Products\UniqueProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

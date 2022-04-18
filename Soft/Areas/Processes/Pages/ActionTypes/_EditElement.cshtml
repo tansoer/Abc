@@ -1,0 +1,15 @@
+﻿@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Processes
+@using Abc.Soft.Pages.Components
+@using Abc.Facade.Processes
+@model Abc.Pages.Processes.ActionTypesPage
+
+<body>
+    <component>@(await Html.RenderComponentAsync<DynamicInputCollection<OutcomeTypeView>>
+        (RenderMode.Server, new {
+        BoundPropertyListName = Html.NameFor(x => x.OutcomeTypes), 
+        BoundPropertyList = Model.OutcomeTypes,
+        InputFields = Model.OutcomeTypesInputs,
+        Title = ProcessTitles.OutcomeTypes
+    }))</component>
+</body>

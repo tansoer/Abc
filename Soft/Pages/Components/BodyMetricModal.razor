@@ -1,0 +1,97 @@
+﻿@using Abc.Facade.Parties
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Abc.Core.Loinc.Response
+@using Abc.Core.Loinc.Infra
+@using Abc.Domain.Quantities
+@using System.Security.Cryptography.X509Certificates
+@inject IUnitsRepo unitsRepo;
+
+<Modal OnCancel="Cancel" OnSave="Save">
+    <ModalContent>
+        <dl class="row">
+            @if (LoincTerms != null)
+            {
+                <StandardInput Label="Loinc term (Code)">
+                    <Value>
+                        <select @bind="LoincTermId" class="form-control">
+                            <option>Select LOINC term</option>
+                            @foreach (var term in LoincTerms)
+                            {
+                                <option value="@term.Id">@term.LongCommonName</option>
+                            }
+                        </select>
+                    </Value>
+                </StandardInput>
+            }
+            <StandardInput Label="Name">
+                <Value>
+                    <input @bind="Item.Name" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Code">
+                <Value>
+                    <input @bind="Item.Code" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Details">
+                <Value>
+                    <input @bind="Item.Details" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Value">
+                <Value>
+                    <input type="number" @bind="Item.QuantityValue" class="form-control"/>
+                </Value>
+            </StandardInput>
+            <StandardInput Label="Unit">
+                <Value>
+                    <select @bind="Item.UnitId" class="form-control">
+                        <option>Select unit</option>
+                        @foreach (var unit in FilteredUnits)
+                        {
+                            <option value="@unit.Value">@unit.Text</option>
+                        }
+                    </select>
+                </Value>
+            </StandardInput>
+        </dl>
+    </ModalContent>
+</Modal>
+
+@code {
+    [Parameter] public Action Save { get; set; }
+    [Parameter] public Action Cancel { get; set; }
+    [Parameter] public BodyMetricView Item { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> Units { get; set; }
+    [Parameter] public List<LoincResponse> LoincTerms { get; set; }
+    public List<SelectListItem> FilteredUnits = new();
+    public LoincResponse LoincTerm { get; set; }
+    private string loincTermId;
+    public string LoincTermId
+    {
+        get => loincTermId;
+        set
+        {
+            loincTermId = value;
+            Select();
+        }
+    }
+
+    private async void Select()
+    {
+        LoincTerm = LoincTerms.FirstOrDefault(x => x.Id == loincTermId);
+        if (LoincTerm != null)
+        {
+            Item.Code = LoincTermId;
+            Item.Name = LoincTerm.Component;
+            Item.Details = LoincTerm.LongCommonName;
+            FilteredUnits.Clear();
+            var unitsList = await unitsRepo.GetByCodesAsync(LoincTerm.GetUnitCodes());
+            if (unitsList == null) return;
+            foreach (var unit in unitsList)
+            {
+                FilteredUnits.Add(new SelectListItem(unit.Name, unit.Id));
+            }
+        }
+    }
+}

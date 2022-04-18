@@ -1,0 +1,26 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Facade.Currencies
+@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Consts
+@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Currencies
+@using Abc.Soft.Pages.Components
+
+@model Abc.Pages.Currencies.CurrenciesPage
+
+<body>
+    <component>@(await Html.RenderComponentAsync<DynamicInputCollection<CurrencyUsageView>>
+        (RenderMode.Server, new {
+        BoundPropertyListName = Html.NameFor(x => x.Countries), 
+        BoundPropertyList = Model.Countries,
+        InputFields = Model.CountriesInputs,
+        Title = MoneyTitles.Countries
+    }))</component>
+    <component>@(await Html.RenderComponentAsync<DynamicInputCollection<ExchangeRateView>>
+        (RenderMode.Server, new {
+        BoundPropertyListName = Html.NameFor(x => x.Rates), 
+        BoundPropertyList = Model.Rates,
+        InputFields = Model.RatesInputs,
+        Title = MoneyTitles.ExchangeRates
+    }))</component>
+</body>

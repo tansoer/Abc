@@ -1,0 +1,91 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Facade.Common
+@using Abc.Pages.Common.Aids
+@using Microsoft.AspNetCore.Mvc.Rendering
+@typeparam TBound where TBound :BaseView, new()
+
+&nbsp;
+    <h3>@Title</h3>
+&nbsp;
+
+@if(InputFields != null){
+        <table class="table">   
+        <tr>       
+            @foreach(var field in InputFields) {
+                if (!field.IsHidden) {
+                    <th>@(GetMember.DisplayName<TBound>(field.PropertyName))</th>
+                }
+            }            
+            <th></th>
+            <th></th>
+        </tr>
+
+        @for (int i = 0; i < BoundPropertyList.Count; i++) {
+            int rowIndex = i;
+            var rowProperty = BoundPropertyList[i];
+            <tr>
+                @foreach (var field in InputFields) {
+                    var property = typeof(TBound).GetProperty(field.PropertyName);
+                    Type type = property.PropertyType;
+                    object input = property.GetValue(rowProperty);
+                    if (!field.IsHidden) {
+                        <td>
+                            <DynamicInput @bind-InputProperty="input" OnChange="() => property.SetValue(rowProperty, input)"
+                             InputPropertyType="type"  InputPropertyName="@getName(rowIndex, field.PropertyName)" 
+                             IsHiddenInput="field.IsHidden" DefaultValue="field.DefaultValue" SelectList="field.SelectList"/>
+                        </td>
+                    } else {
+                        <DynamicInput @bind-InputProperty="input" OnChange="() => property.SetValue(rowProperty, input)"
+                         InputPropertyType="type"  InputPropertyName="@getName(rowIndex, field.PropertyName)" 
+                         IsHiddenInput="field.IsHidden" DefaultValue="field.DefaultValue" SelectList="field.SelectList"/>
+                    }
+                }
+                <th>
+                    <button type="button" class="btn btn-link col-sm-2" @onclick="() => removeItem(rowIndex)">Remove</button>
+                </th>
+                <th>
+                    <button type="button" class="btn btn-link col-sm-1" @onclick="() => addItem(rowIndex)">Add</button>
+                </th>
+            </tr>           
+        }
+        @if (BoundPropertyList.Count == 0)
+            {
+                <tr>
+                    @foreach(var field in InputFields) {
+                        if (!field.IsHidden) {
+                            <th></th>
+                        }
+                    }  
+                    <th> </th>
+                    <th>
+                      <button type="button" class="btn btn-link col-sm-1" @onclick="() => addItem()">Add</button>
+                    </th>
+                </tr>
+         }
+    </table>
+}
+
+@code {
+    [Parameter] public List<TBound> BoundPropertyList { get; set; }
+    [Parameter] public string BoundPropertyListName { get; set; }
+    [Parameter] public List<ComponentArgs> InputFields { get; set; }
+    [Parameter] public string Title { get; set; }
+
+    private void addItem() { 
+        BoundPropertyList.Add(new());
+        StateHasChanged();
+    }
+
+    private void addItem(int idx) {
+        BoundPropertyList.Insert(idx + 1, new());
+        StateHasChanged();
+    }
+
+    private void removeItem(int i) {
+        BoundPropertyList.RemoveAt(i);
+        StateHasChanged();
+    }
+
+    private string getName(int index, string fieldName) => $"{BoundPropertyListName}[{index}].{fieldName}";
+}
+

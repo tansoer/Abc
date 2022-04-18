@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.Person">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="Person" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAACAAAAAAAAAAAAQAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Ethnicity" />
+      <Property Name="BodyMetrics" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;" Collapsed="true">
+    <Position X="1" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Identifiers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.RegisteredIdentifier" Collapsed="true">
+    <Position X="1" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAABAAAAAAAQAAYAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\RegisteredIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.Ethnicity" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\Ethnicity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.PersonName">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <Members>
+      <Property Name="familyName" Hidden="true" />
+      <Property Name="firstName" Hidden="true" />
+      <Property Name="givenName" Hidden="true" />
+      <Property Name="lastName" Hidden="true" />
+      <Property Name="middleName" Hidden="true" />
+      <Property Name="nameId" Hidden="true" />
+      <Property Name="personName" Hidden="true" />
+      <Method Name="PersonName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAgBAAgAEAIAUAAAAEAAAAAAAgAAICQAAAAA=</HashCode>
+      <FileName>Parties\Names\PersonName.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Prefixes" />
+      <Property Name="Suffixes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.PartyName" Collapsed="true">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="PartyName" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgQAAAAAAAAA=</HashCode>
+      <FileName>Parties\Names\PartyName.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="NameUse" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.PartyNameUse" Collapsed="true">
+    <Position X="3.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Names\PartyNameUse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BodyMetric&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAQAgIAAAAAE=</HashCode>
+      <FileName>Parties\Attributes\BodyMetric.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.PersonEthnicity" Collapsed="true">
+    <Position X="5.25" Y="3.5" Width="1.5" />
+    <Members>
+      <Method Name="PersonEthnicity" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\PersonEthnicity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ethnicity" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.NamePrefix" Collapsed="true">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <AssociationLine Name="Type" Type="Abc.Domain.Classifiers.Parties.NamePrefixType">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.12" Y="0.06" Height="0.182" Width="0.545" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Parties\Names\NamePrefix.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.NameSuffix" Collapsed="true">
+    <Position X="3.5" Y="5" Width="1.5" />
+    <AssociationLine Name="Type" Type="Abc.Domain.Classifiers.Parties.NameSuffixType">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="0.587" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Names\NameSuffix.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Classifiers.Parties.NamePrefixType" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classifiers\Parties\NamePrefixType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Classifiers.Parties.NameSuffixType" Collapsed="true">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classifiers\Parties\NameSuffixType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.Attributes.IBodyMetric" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\IBodyMetric.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

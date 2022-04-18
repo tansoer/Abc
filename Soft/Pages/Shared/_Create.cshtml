@@ -1,0 +1,45 @@
+﻿@using Abc.Pages.Common.Aids
+@using Abc.Pages.Common.Extensions
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = Model.Title;
+    ViewData["Subtitle"] = Model.SubTitle ?? "Create";
+}
+
+<p>
+    <h1>@ViewData["Title"]</h1>
+</p>
+
+<h4>@ViewData["Subtitle"]</h4>
+
+<hr />
+<form id="createForm"
+      asp-page-handler="Create"
+      asp-route-sortorder="@Model.SortOrder"
+      asp-route-fixedFilter="@Model.FixedFilter"
+      asp-route-fixedValue="@Model.FixedValue"
+      asp-route-pageIndex="@Model.PageIndex"
+      method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    @RenderBody()
+    <div class="form-inline">
+        <input id="createButton" type="submit" value="Create" class="btn btn-primary" />
+        &nbsp;
+        @Html.BackTo(
+            new Args(
+                Model.PageUrl,
+                null,
+                Model.FixedFilter,
+                Model.FixedValue,
+                Model.SortOrder,
+                Model.SearchString,
+                Model.PageIndex
+            ))
+    </div>
+
+</form>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,13 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Inventory.OutstandingOrdersPage
+
+@{
+    Layout = "_Edit";
+
+}
+
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    @Html.EditItem(Model)
+</body>

@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Currencies.Payment">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <Members>
+      <Property Name="currency" Hidden="true" />
+      <Property Name="CurrencyId" Hidden="true" />
+      <Method Name="getAmount" Hidden="true" />
+      <Method Name="Payment" Hidden="true" />
+      <Property Name="PaymentMethodId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Amount" Type="Abc.Domain.Currencies.Money">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.234" Y="0.216" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAIAAAogBCAAIAAAAAAAAAEIAAAAAA=</HashCode>
+      <FileName>Currencies\Payment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Method" />
+      <Property Name="Amount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.PaymentMethod" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\PaymentMethod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Cash" Collapsed="true">
+    <Position X="4.75" Y="2" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentMethod" FixedFromPoint="true">
+      <Path>
+        <Point X="5.375" Y="5.25" />
+        <Point X="5.375" Y="2.691" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\Cash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Check">
+    <Position X="6" Y="2" Width="1.5" />
+    <Members>
+      <Method Name="Check" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentMethod" FixedFromPoint="true">
+      <Path>
+        <Point X="6.75" Y="5.25" />
+        <Point X="6.75" Y="4.579" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAACIAAAAAAACAAAgAAAAAAFQAAAAAAAA=</HashCode>
+      <FileName>Currencies\Check.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.PaymentCard">
+    <Position X="2.75" Y="2" Width="2" />
+    <Members>
+      <Property Name="CardAssociationId" Hidden="true" />
+      <Property Name="currency" Hidden="true" />
+      <Property Name="CurrencyId" Hidden="true" />
+      <Method Name="daylyLimit" Hidden="true" />
+      <Method Name="PaymentCard" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentMethod" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="5.25" />
+        <Point X="3.25" Y="4.579" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="CardAssociation" Type="Abc.Domain.Currencies.CardAssociation" FixedToPoint="true">
+      <Path>
+        <Point X="4.562" Y="2" />
+        <Point X="4.562" Y="1.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.513" Y="0.204" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IQAACAAAEgIAAAAAAAAIAAAAAAAAACAIAGEAACEAAAA=</HashCode>
+      <FileName>Currencies\PaymentCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CardAssociation" />
+      <Property Name="DaylyLimit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.CreditCard" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <Members>
+      <Method Name="CreditCard" Hidden="true" />
+      <Method Name="creditLimit" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentCard" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.875" Y="2" />
+        <Point X="2.875" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="CreditLimit" Type="Abc.Domain.Currencies.Money" FixedFromPoint="true">
+      <Path>
+        <Point X="1.393" Y="1.191" />
+        <Point X="1.393" Y="1.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.38" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\CreditCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CreditLimit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.DebitCard" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Currencies.PaymentCard" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.562" Y="2" />
+        <Point X="3.562" Y="1.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\DebitCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.CardAssociation" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\CardAssociation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

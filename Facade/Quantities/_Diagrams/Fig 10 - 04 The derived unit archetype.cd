@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="The CommonTermData is used for both the measure and the unit.">
+    <Position X="3.938" Y="4.229" Height="1.448" Width="2.398" />
+  </Comment>
+  <Class Name="Abc.Facade.Quantities.MeasureView">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MeasureType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitView">
+    <Position X="0.5" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitView.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UnitType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.CommonTermView">
+    <Position X="4" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\CommonTermView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.MeasureTermView">
+    <Position X="6.5" Y="1.75" Width="1.75" />
+    <InheritanceLine Type="Abc.Facade.Quantities.CommonTermView" FixedFromPoint="true">
+      <Path>
+        <Point X="5.75" Y="3.062" />
+        <Point X="6.125" Y="3.062" />
+        <Point X="6.125" Y="2.249" />
+        <Point X="6.5" Y="2.249" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureTermView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Quantities.UnitTermView">
+    <Position X="6.5" Y="3" Width="1.75" />
+    <InheritanceLine Type="Abc.Facade.Quantities.CommonTermView" FixedFromPoint="true">
+      <Path>
+        <Point X="5.75" Y="3.062" />
+        <Point X="6.125" Y="3.062" />
+        <Point X="6.125" Y="3.53" />
+        <Point X="6.5" Y="3.53" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitTermView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.MeasureType">
+    <Position X="4" Y="0.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Abc.Data.Quantities.UnitType">
+    <Position X="0.5" Y="3.75" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

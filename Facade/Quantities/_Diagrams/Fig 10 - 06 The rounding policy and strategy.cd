@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Rounding policy and strategy are designed to be general. ">
+    <Position X="0.552" Y="3.219" Height="0.573" Width="5.992" />
+  </Comment>
+  <Class Name="Abc.Core.Rounding.RoundingPolicy">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="RoundingStrategy" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Core.Rounding.RoundingStrategy">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

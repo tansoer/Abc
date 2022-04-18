@@ -1,0 +1,31 @@
+﻿@page
+@using Abc.Aids.Reflection
+@using Abc.Data.Quantities
+@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Quantities
+@model Abc.Pages.Quantities.MeasuresPage
+
+
+@{
+    Layout = "_Details";
+    Model.LoadDetails();
+    string units = QuantityUrls.Units;
+    var measureId = GetMember.Name<UnitData>(x => x.MeasureId);
+    string terms = QuantityUrls.MeasureTerms;
+    var masterId = GetMember.Name<CommonTermData>(x => x.MasterId);
+    var id = Model.Item.Id;
+    var unitsUrl = new Uri($"{units}/Index?handler=index&fixedFilter={measureId}&fixedValue={id}", UriKind.Relative);
+    var termsUrl = new Uri($"{terms}/Index?handler=index&fixedFilter={masterId}&fixedValue={id}", UriKind.Relative);
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+<partial name="_ShowMeasure" />
+
+@section Details {
+    @Html.Link(new Abc.Pages.Common.Aids.Link("Show Units", unitsUrl))
+    &nbsp;
+    @Html.Link(new Abc.Pages.Common.Aids.Link("Show Terms", termsUrl))
+}

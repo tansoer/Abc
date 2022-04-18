@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="The CommonTermData is used for both the measure and the unit.">
+    <Position X="3.021" Y="4.646" Height="1.448" Width="2.398" />
+  </Comment>
+  <Class Name="Abc.Data.Quantities.UnitData">
+    <Position X="0.5" Y="2.25" Width="2" />
+    <AssociationLine Name="UnitType" Type="Abc.Data.Quantities.UnitType" FixedFromPoint="true">
+      <Path>
+        <Point X="1.438" Y="4.127" />
+        <Point X="1.438" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAABAAAAAAAAAAABAA=</HashCode>
+      <FileName>Quantities\UnitData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UnitType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Quantities.CommonTermData">
+    <Position X="3" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\CommonTermData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Quantities.MeasureData">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\MeasureData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MeasureType" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Abc.Data.Quantities.MeasureType">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Quantities\MeasureType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Quantities.UnitType">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABAAAIAQAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

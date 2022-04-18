@@ -1,0 +1,18 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Classifiers.ClassifiersPage
+
+@{
+    Layout = "_Create";
+}
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.Timestamp" />
+    <input type="hidden" asp-for="Item.ClassifierType" />
+    @Html.DropDown(m => m.Item.BaseTypeId, Model.BaseTypes)
+    @Html.Editor(m => m.Item.Name)
+    @Html.Editor(m => m.Item.Code)
+    @Html.Editor(m => m.Item.Details)
+    @Html.Editor(m => m.Item.ValidFrom)
+    @Html.Editor(m => m.Item.ValidTo)
+</body>

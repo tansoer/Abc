@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="This model is different from the Arlow&amp;Neustadt model and even from the model proposed in my PhD thesis. IdenticalProduct  overrides the Features property and shows all PossibleValues of the IdenticalProductType, like UniqueProduct.&#xD;&#xA;&#xD;&#xA;We keep the common price model as well as batch and components models. We override  Definition, Name, Code, ValidFrom and ValidTo for UniqueProduct. &#xD;&#xA;">
+    <Position X="0.5" Y="5.187" Height="1.031" Width="7.544" />
+  </Comment>
+  <Class Name="Abc.Domain.Products.IdenticalProduct" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAACAAAAAAAAAAQAEgAAAAAA=</HashCode>
+      <FileName>Products\IdenticalProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Quantity" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.IdenticalProductType" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.75" />
+    <InheritanceLine Type="Abc.Domain.Products.QuantifiedProductType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.125" Y="1.441" />
+        <Point X="1.125" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\IdenticalProductType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProductType" Collapsed="true">
+    <Position X="3.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BEAAAAIIAIAEAIAAAAABCAAQAAAACgEJAAAAAAAAACA=</HashCode>
+      <FileName>Products\BaseProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.BaseProduct&lt;TType&gt;" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>BUAAABAIAQEkAIAAEAABAAAQAAkBCACgAQAAAAAAAAA=</HashCode>
+      <FileName>Products\BaseProduct.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Products.PoleomorfProduct&lt;T&gt;">
+    <Position X="3.25" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="copyMembers" Hidden="true" />
+      <Method Name="PoleomorfProduct" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAhAAQAAAAAQCAAACAAAAAAAAA=</HashCode>
+      <FileName>Products\PoleomorfProduct.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Features" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.Feature" Collapsed="true">
+    <Position X="5.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\Features\Feature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureValue&lt;TData&gt;" Collapsed="true">
+    <Position X="5.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAEAAAAA=</HashCode>
+      <FileName>Products\Features\FeatureValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.FeatureType" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAAAAAAAAAAAAAAIAAAAgAAAAIAAAECA=</HashCode>
+      <FileName>Products\Features\FeatureType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="PossibleValues" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Products.Features.PossibleFeatureValue" Collapsed="true">
+    <Position X="5.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAABgAAAAIhQQAEAAAgAAAAAAAAACQAAAAA=</HashCode>
+      <FileName>Products\Features\PossibleFeatureValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Products.QuantifiedProductType" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="2.5" />
+    <AssociationLine Name="QuantityOnHand" Type="Abc.Domain.Quantities.Quantity" FixedFromPoint="true">
+      <Path>
+        <Point X="2.856" Y="1.441" />
+        <Point X="2.856" Y="2" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAIAAAAASAAAAAAAAgAAAEAAAAAAA=</HashCode>
+      <FileName>Products\QuantifiedProductType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="QuantityOnHand" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Quantity" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAABE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

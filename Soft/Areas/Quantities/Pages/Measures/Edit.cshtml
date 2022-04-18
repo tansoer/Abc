@@ -1,0 +1,24 @@
+﻿@page
+@using Abc.Facade.Quantities
+@using Abc.Pages.Common.Extensions
+@using Abc.Pages.Quantities
+@using Abc.Soft.Pages.Components
+@model Abc.Pages.Quantities.MeasuresPage
+
+@{
+    Layout = "_Edit";
+}
+
+<body>
+   @Html.EditItem(Model)
+
+   @if(Model.Item.MeasureType is Abc.Data.Quantities.MeasureType.Derived) {
+        <component>@(await Html.RenderComponentAsync<DynamicInputCollection<MeasureTermView>>(RenderMode.Server, new {
+            BoundPropertyListName = Html.NameFor(x => x.MeasureTerms), 
+            BoundPropertyList = Model.MeasureTerms,
+            InputFields = Model.TermInputs,
+            Title = QuantityTitles.MeasureTerms
+        }))</component>
+    }
+</body>
+

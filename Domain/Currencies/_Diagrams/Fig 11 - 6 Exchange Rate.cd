@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="ConvertTo starts the procedure. It uses Currency FromBase and ToBase methods to convert Money from and to any Currency. When converting, a Currency is using the CentralBankDayRate, which is an official rate. ">
+    <Position X="0.563" Y="7.125" Height="0.75" Width="6.231" />
+  </Comment>
+  <Class Name="Abc.Domain.Currencies.Money">
+    <Position X="4.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="IsEqual" Hidden="true" />
+      <Method Name="IsGreater" Hidden="true" />
+      <Method Name="IsLess" Hidden="true" />
+      <Method Name="Money" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="Parse" Hidden="true" />
+      <Method Name="round" Hidden="true" />
+      <Method Name="Round" Hidden="true" />
+      <Method Name="Subtract" Hidden="true" />
+      <Method Name="TryParse" Hidden="true" />
+      <Property Name="Unspecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Currency">
+    <Position X="4.5" Y="2.25" Width="2.25" />
+    <Members>
+      <Property Name="AcceptedIn" Hidden="true" />
+      <Property Name="AcceptedInCountries" Hidden="true" />
+      <Method Name="Currency" Hidden="true" />
+      <Property Name="IsIsoCurrency" Hidden="true" />
+      <Property Name="MajorUnitSymbol" Hidden="true" />
+      <Property Name="MinorUnitSymbol" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Method Name="Rate" Hidden="true" />
+      <Method Name="Rates" Hidden="true" />
+      <Property Name="RatioOfMinorUnit" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QIAAAAAAAAAAAAAAAAAAECAAAAhIAAgABAAIAAAAECA=</HashCode>
+      <FileName>Currencies\Currency.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.ExchangeRate">
+    <Position X="0.5" Y="2.25" Width="2.75" />
+    <Members>
+      <Property Name="CurrencyId" Hidden="true" />
+      <Method Name="ExchangeRate" Hidden="true" />
+      <Property Name="RateTypeId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="RateType" Type="Abc.Domain.Currencies.RateType" FixedToPoint="true">
+      <Path>
+        <Point X="1.875" Y="3.483" />
+        <Point X="1.875" Y="4" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAgAAAAAAAAAAAAAACAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\ExchangeRate.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+      <Property Name="RateType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.RateType">
+    <Position X="0.5" Y="4" Width="2.75" />
+    <Members>
+      <Method Name="RateType" Hidden="true" />
+    </Members>
+    <AssociationLine Name="ExchangeRateRules" Type="Abc.Domain.Currencies.ExchangeRule" FixedFromPoint="true">
+      <Path>
+        <Point X="2.975" Y="5.877" />
+        <Point X="2.975" Y="6.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAABEAQAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Currencies\RateType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ExchangeRateRules" />
+      <Property Name="ApplicabilityRules" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Rules.RuleSet" Collapsed="true">
+    <Position X="5" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Rules\RuleSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.ExchangeRule" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="6.25" />
+    <Members>
+      <Method Name="ExchangeRule" Hidden="true" />
+      <Property Name="RateTypeId" Hidden="true" />
+      <Property Name="RuleSetId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="RateType" Type="Abc.Domain.Currencies.RateType" FixedFromPoint="true">
+      <Path>
+        <Point X="1.375" Y="6.25" />
+        <Point X="1.375" Y="5.877" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAEAAAAAAAAACAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Currencies\ExchangeRule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RuleSet" />
+      <Property Name="RateType" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

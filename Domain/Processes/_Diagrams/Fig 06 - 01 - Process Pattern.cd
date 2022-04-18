@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Processes.ProcessElement&lt;TRepo, TEntity, TData&gt;" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="2.5" />
+    <InheritanceLine Type="Abc.Domain.Processes.ProcessElementBase&lt;TRepo, TEntity, TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="4.5" />
+        <Point X="3.26" Y="4.5" />
+        <Point X="3.26" Y="4" />
+        <Point X="3" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAEAAAQAAAQAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Processes\ProcessElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ProcessElementBase&lt;TRepo, TEntity, TData&gt;" Collapsed="true">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAABAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ProcessElementBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ProcessElementType&lt;TRepo, TEntity, TData&gt;" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="2.5" />
+    <InheritanceLine Type="Abc.Domain.Processes.ProcessElementBase&lt;TRepo, TEntity, TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.5" Y="4.5" />
+        <Point X="3.26" Y="4.5" />
+        <Point X="3.26" Y="5.188" />
+        <Point X="3" Y="5.188" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAARAAIAAAAIBEAAAABAAAA=</HashCode>
+      <FileName>Processes\ProcessElementType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.Action" Collapsed="true">
+    <Position X="2.5" Y="2" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Processes.ProcessElement&lt;TRepo, TEntity, TData&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="2.688" Y="3.75" />
+        <Point X="2.688" Y="3.066" />
+        <Point X="3.125" Y="3.066" />
+        <Point X="3.125" Y="2.691" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Approvers" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedFromPoint="true">
+      <Path>
+        <Point X="3.125" Y="2" />
+        <Point X="3.125" Y="1.441" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAQQAAAAAAAAABAAAAACAIAAAgAAAAAAUIEAQAAAgA=</HashCode>
+      <FileName>Processes\Action.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Task" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Approvers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.Outcome" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Processes.ProcessElement&lt;TRepo, TEntity, TData&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="2.688" Y="3.75" />
+        <Point X="2.688" Y="3.066" />
+        <Point X="1.125" Y="3.066" />
+        <Point X="1.125" Y="2.691" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Approvers" Type="Abc.Domain.Parties.Signatures.PartySignature" FixedFromPoint="true">
+      <Path>
+        <Point X="1.562" Y="2" />
+        <Point X="1.562" Y="1.441" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAACAAAAABAAAAAAQAAMAAAAAQ=</HashCode>
+      <FileName>Processes\Outcome.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Action" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Approvers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.Thread" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.25" />
+    <InheritanceLine Type="Abc.Domain.Processes.ProcessElement&lt;TRepo, TEntity, TData&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.688" Y="3.75" />
+        <Point X="2.688" Y="3.066" />
+        <Point X="6.688" Y="3.066" />
+        <Point X="6.688" Y="2.691" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Process" Type="Abc.Domain.Processes.Process">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.05" Y="0.412" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAggAAgAAAAAQAAAAAAAAAQAIICEAAAA=</HashCode>
+      <FileName>Processes\Thread.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Terminator" />
+      <Property Name="Process" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.Process" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <AssociationLine Name="Type" Type="Abc.Domain.Processes.ProcessType">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.684" Y="0.31" Height="0.182" Width="0.576" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Manager" Type="Abc.Domain.Roles.PartyRole" FixedFromPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.875" />
+        <Point X="5" Y="3.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAIAAAEAAQEAABQCAAQBAAAAQAAIAAgAAE=</HashCode>
+      <FileName>Processes\Process.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+      <Property Name="Manager" />
+      <Property Name="Initiator" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ThreadType" Collapsed="true">
+    <Position X="6.5" Y="6.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAgAAAgAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\ThreadType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Process" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.TaskType" Collapsed="true">
+    <Position X="4.5" Y="6.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AoAAAAAAAQAAAgAAABAAAAAQAAAAAAAIhEAAAABAAAA=</HashCode>
+      <FileName>Processes\TaskType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Thread" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Processes.ActionType" Collapsed="true">
+    <Position X="2.5" Y="6.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAEAAAAAAAAA=</HashCode>
+      <FileName>Processes\ActionType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Task" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Processes.OutcomeType" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Processes\OutcomeType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ActionType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Signatures.PartySignature" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="7.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Signatures\PartySignature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Processes.ProcessType" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAARAAIAAAAIBEAAAABAAAA=</HashCode>
+      <FileName>Processes\ProcessType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Processes.ITask" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIQAAAAAAABAAAAAAAAAAAAAAASAAgAAABAA=</HashCode>
+      <FileName>Processes\TaskBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Thread" />
+    </ShowAsAssociation>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,13 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Products.PricesPage
+
+@{
+    Layout = "_Edit";
+}
+
+<body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.Kind" />
+    @Html.EditItem(Model)
+</body>

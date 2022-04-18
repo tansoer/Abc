@@ -1,0 +1,21 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Products.FeatureTypesPage
+
+@{
+    Layout = "_Details";
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+@section Details {
+    <a id="showFeatures"
+       asp-route-handler="ShowFeatures"
+       asp-route-id="@Model.ItemId">Features</a>
+    &nbsp;
+    <a id="showPossbileValues"
+       asp-route-handler="ShowPossibleValues"
+       asp-route-id="@Model.ItemId">Possible values</a>
+}

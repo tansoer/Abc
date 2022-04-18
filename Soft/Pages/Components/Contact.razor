@@ -1,0 +1,67 @@
+﻿@using Abc.Facade.Parties
+@using Microsoft.AspNetCore.Mvc
+@using Microsoft.AspNetCore.Mvc.Rendering
+@using Abc.Aids.Enums
+      
+@if (Index != -1)
+{
+    <dd class="col-2">Contact @(Index+1):</dd>
+    <dd class="col-7"> @Items[Index].ToString()</dd>
+    <dd class="col-1"><button type="button" class="text-danger btn btn-link" @onclick="() => Remove(Index)">Remove</button></dd>
+    <dd class="col-1"><button type="button" class="btn btn-link" @onclick="EditItem">Edit</button></dd>
+    <dd class="col-1"><button type="button" class="text-success btn btn-link" @onclick="AddItem">Add</button></dd>
+@if (edit) { <ContactModal Contact="Items[Index]" Hide="Hide" Index="Index" Countries="Countries"></ContactModal> }
+    <input type="hidden" value="@Items[Index].Id" name="PartyContacts[@(Index)].Id"/>
+    <input type="hidden" value="@Items[Index].ContactType" name="PartyContacts[@(Index)].ContactType"/>
+    <input type="hidden" value="@Items[Index].PartyId" name="PartyContacts[@(Index)].PartyId"/>
+    <input type="hidden" value="@Items[Index].Name" name="PartyContacts[@(Index)].Name"/>
+    <input type="hidden" value="@Items[Index].CityOrAreaCode" name="PartyContacts[@(Index)].CityOrAreaCode"/>
+    <input type="hidden" value="@Items[Index].RegionOrStateOrCountryCode" name="PartyContacts[@(Index)].RegionOrStateOrCountryCode"/>
+    <input type="hidden" value="@Items[Index].Code" name="PartyContacts[@(Index)].PartyId"/>
+    <input type="hidden" value="@Items[Index].CountryId" name="PartyContacts[@(Index)].PartyId"/>
+    <input type="hidden" value="@Items[Index].ContactUsageId" name="PartyContacts[@(Index)].ContactUsageId"/>
+}
+@if (Index == -1)
+{
+    <dd class="col-2">Add contact</dd>
+    <dd class="col-8"></dd>
+    <dd class="col-1"><button type="button" class="btn btn-link"></button></dd>
+    <dd class="col-1"><button type="button" class="btn btn-link" @onclick="AddItem">Add</button></dd>
+}
+
+
+@code {
+    [Parameter] public int Index { get; set; }
+    [Parameter] public List<PartyContactView> Items { get; set; }
+    [Parameter] public IEnumerable<SelectListItem> Countries { get; set; }
+    [Parameter] public Action Refresh { get; set; }
+    [Parameter] public Action<int> Remove { get; set; }
+    private bool edit = false;
+
+    public void AddItem()
+    {
+        Items.Add(new PartyContactView {ContactType = ContactType.Unspecified});
+        StateHasChanged();
+        Refresh();
+    }
+
+    public void EditItem()
+    {
+        edit = true;
+        StateHasChanged();
+    }
+
+    public void Hide(PartyContactView view)
+    {
+        Items[Index] = view;
+        edit = false;
+        StateHasChanged();
+    }
+
+    protected override Task OnInitializedAsync()
+    {
+        if (Index != -1 && Items[Index].ContactType == ContactType.Unspecified) edit = true;
+        return base.OnInitializedAsync();
+    }
+
+}

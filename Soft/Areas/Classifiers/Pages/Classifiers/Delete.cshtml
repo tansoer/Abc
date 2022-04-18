@@ -1,0 +1,18 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@using Abc.Aids.Extensions
+@model Abc.Pages.Classifiers.ClassifiersPage
+
+@{
+    Layout = "_Delete";
+}
+
+<body>
+    @Html.Show(m => m.Item.ClassifierType, Model.Item.ClassifierType.ToStr())
+    @Html.Show(m => m.Item.BaseTypeId)
+    @Html.Show(m => m.Item.Name)
+    @Html.Show(m => m.Item.Code)
+    @Html.Show(m => m.Item.Details)
+    @Html.Show(m => m.Item.ValidFrom)
+    @Html.Show(m => m.Item.ValidTo)
+</body>

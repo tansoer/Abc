@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="ToPartySummary is creating PartySummary. PartySummary is related to particular PartyRole and only ParyRole has knowledge about the Party itself.">
+    <Position X="0.562" Y="5.458" Height="0.521" Width="5.502" />
+  </Comment>
+  <Class Name="Abc.Domain.Roles.PartySummary">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="PartySummary" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAQAAAAAAAAAECAAAAAgAAAAA=</HashCode>
+      <FileName>Roles\PartySummary.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Role" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BasePartyAttribute&lt;T&gt;">
+    <Position X="2.5" Y="3.5" Width="1.5" />
+    <Members>
+      <Method Name="BasePartyAttribute" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\BasePartyAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Common.Entity&lt;TData&gt;">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAABAAAAAAAgAAQAAAAAACAAACAAAAAAAAA=</HashCode>
+      <FileName>Common\Entity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Property Name="Addresses" Hidden="true" />
+      <Property Name="Authentications" Hidden="true" />
+      <Property Name="Capabilities" Hidden="true" />
+      <Property Name="Contacts" Hidden="true" />
+      <Property Name="Emails" Hidden="true" />
+      <Method Name="GetAddress" Hidden="true" />
+      <Method Name="getContact" Hidden="true" />
+      <Method Name="getContacts" Hidden="true" />
+      <Method Name="GetEmail" Hidden="true" />
+      <Method Name="getFirstName" Hidden="true" />
+      <Method Name="GetName" Hidden="true" />
+      <Method Name="getOfficialName" Hidden="true" />
+      <Method Name="GetPhone" Hidden="true" />
+      <Property Name="Identifiers" Hidden="true" />
+      <Method Name="names" Hidden="true" />
+      <Property Name="Names" Hidden="true" />
+      <Property Name="OfficialName" Hidden="true" />
+      <Method Name="Party" Hidden="true" />
+      <Property Name="partyId" Hidden="true" />
+      <Property Name="partyNames" Hidden="true" />
+      <Property Name="Phones" Hidden="true" />
+      <Property Name="Preferences" Hidden="true" />
+      <Property Name="Roles" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Roles.PartyRole" Collapsed="true">
+    <Position X="1.5" Y="1.75" Width="2.5" />
+    <InheritanceLine Type="Abc.Domain.Parties.Attributes.BasePartyAttribute&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="3.25" Y="3.5" />
+        <Point X="3.25" Y="2.441" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AEAIAAQAAAACAAAAAAAABABAAAAAAgAAAQAAIAAAAEA=</HashCode>
+      <FileName>Roles\PartyRole.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Party" />
+    </ShowAsAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.IParty" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Parties\IParty.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

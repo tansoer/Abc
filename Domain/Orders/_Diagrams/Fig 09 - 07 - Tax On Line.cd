@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Any Add, Remove and AmendLine of TaxableLine, OrderLine and ChargeLine si triggered and monitored by OrderLineManager">
+    <Position X="0.521" Y="7.771" Height="0.531" Width="6.617" />
+  </Comment>
+  <Class Name="Abc.Domain.Orders.SalesTaxPolicy">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <Members>
+      <Method Name="SalesTaxPolicy" Hidden="true" />
+      <Property Name="TaxationTypeId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Orders\SalesTaxPolicy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Order" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMIAIEBAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LinesManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLinesManager" Collapsed="true">
+    <Position X="5.5" Y="4" Width="1.75" />
+    <Members>
+      <Method Name="AmendParty" Hidden="true" />
+      <Method Name="isOrderLine" Hidden="true" />
+      <Method Name="isRemovable" Hidden="true" />
+      <Method Name="newOrderLine" Hidden="true" />
+      <Property Name="orderIdInLine" Hidden="true" />
+      <Property Name="orderLines" Hidden="true" />
+      <Method Name="OrderLinesManager" Hidden="true" />
+    </Members>
+    <AssociationLine Name="ProductLines" Type="Abc.Domain.Orders.Lines.OrderLine">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.234" Y="0.279" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AANYQAAAAAAAggRAAAAADBAAIAAAUgAIQAAIAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductLines" />
+      <Property Name="ChargeLines" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.ChargeLine">
+    <Position X="2.5" Y="4.25" Width="1.5" />
+    <Members>
+      <Method Name="ChargeLine" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\ChargeLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Amount" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLine">
+    <Position X="2.5" Y="6" Width="4.75" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="AddItems" Hidden="true" />
+      <Method Name="AmendLine" Hidden="true" />
+      <Method Name="AmendParty" Hidden="true" />
+      <Property Name="ChargeLines" Hidden="true" />
+      <Property Name="Clone" Hidden="true" />
+      <Method Name="deleteChargeLine" Hidden="true" />
+      <Method Name="deleteReceiver" Hidden="true" />
+      <Property Name="DeliveryReceiver" Hidden="true" />
+      <Property Name="hasDeliveryReceiver" Hidden="true" />
+      <Method Name="isChargeLine" Hidden="true" />
+      <Method Name="isDeliveryReceiver" Hidden="true" />
+      <Method Name="isReceiver" Hidden="true" />
+      <Method Name="newChargeLine" Hidden="true" />
+      <Method Name="newReceiver" Hidden="true" />
+      <Method Name="newRole" Hidden="true" />
+      <Method Name="OrderLine" Hidden="true" />
+      <Property Name="orderLineIdField" Hidden="true" />
+      <Property Name="Product" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductType" Hidden="true" />
+      <Property Name="productTypeId" Hidden="true" />
+      <Property Name="relatedParties" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>oAMCgBAwGEAANAAAAAAABQACAAQAgAEAAABKAAAAABA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ChargeLines" />
+      <Property Name="UnitPrice" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.TaxableLine">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="AmendLine" Hidden="true" />
+      <Method Name="isTaxLine" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+      <Method Name="TaxableLine" Hidden="true" />
+    </Members>
+    <AssociationLine Name="TaxLines" Type="Abc.Domain.Orders.Lines.TaxLine" FixedFromPoint="true">
+      <Path>
+        <Point X="0.938" Y="5" />
+        <Point X="0.938" Y="3.983" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.338" Y="0.227" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAABEEAAEACAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Orders\Lines\TaxableLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TaxLines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.TaxLine">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <Members>
+      <Property Name="SalesTaxPolicyId" Hidden="true" />
+      <Method Name="TaxLine" Hidden="true" />
+    </Members>
+    <AssociationLine Name="SalesTaxPolicy" Type="Abc.Domain.Orders.SalesTaxPolicy">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-0.567" Y="0.279" Height="0.182" Width="1.264" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAEBAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\TaxLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SalesTaxPolicy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Currencies.Money" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAAQADAAAACEAAACAAAgAAAAIAAAE=</HashCode>
+      <FileName>Currencies\Money.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.OrdersManager">
+    <Position X="3.25" Y="0.75" Width="1.75" />
+    <Members>
+      <Property Name="DiscountTypes" Hidden="true" />
+      <Method Name="isDiscountType" Hidden="true" />
+      <Method Name="isListed" Hidden="true" />
+      <Method Name="isOrder" Hidden="true" />
+      <Method Name="isSalesTaxPolicy" Hidden="true" />
+      <Field Name="managerInDiscountType" Hidden="true" />
+      <Field Name="managerInTaxPolicy" Hidden="true" />
+      <Method Name="newDiscountType" Hidden="true" />
+      <Method Name="newOrder" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>QAMABAAgAAIAAAgCAAAABAACEAgAAAAAAAAAACAAAIA=</HashCode>
+      <FileName>Orders\OrdersManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TaxPolicies" />
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.IOrder" Collapsed="true">
+    <Position X="5.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAQAAAAAEAAABIIAAAAAAAQAAEAAAAAAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLinesManager" Collapsed="true">
+    <Position X="5.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAJIQAAAAAAAgAAAAAAABBAAIAAAEgAIQAAAAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

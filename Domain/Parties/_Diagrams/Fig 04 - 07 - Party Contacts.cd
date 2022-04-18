@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAgAAAEAAAAAAgAAAAAQAAAgAAFAAAAAAAAEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Contacts" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.PartyContact&lt;TData&gt;" Collapsed="true">
+    <Position X="3.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\PartyContact.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.EmailAddress">
+    <Position X="0.5" Y="4" Width="1.25" />
+    <Members>
+      <Method Name="EmailAddress" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Parties.Contacts.PartyContact&lt;TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="3.441" />
+        <Point X="4.375" Y="3.7" />
+        <Point X="1.646" Y="3.7" />
+        <Point X="1.646" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\EmailAddress.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.GeographicAddress">
+    <Position X="4.75" Y="4" Width="1.75" />
+    <Members>
+      <Method Name="adr" Hidden="true" />
+      <Property Name="adrId" Hidden="true" />
+      <Method Name="city" Hidden="true" />
+      <Method Name="country" Hidden="true" />
+      <Property Name="CountryId" Hidden="true" />
+      <Method Name="GeographicAddress" Hidden="true" />
+      <Method Name="region" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+      <Method Name="zip" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Parties.Contacts.PartyContact&lt;TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="3.441" />
+        <Point X="4.375" Y="3.7" />
+        <Point X="6.125" Y="3.7" />
+        <Point X="6.125" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Country" Type="Abc.Domain.Parties.Contacts.Country" FixedFromPoint="true">
+      <Path>
+        <Point X="6.312" Y="4" />
+        <Point X="6.312" Y="2.694" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.265" Y="0.268" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAMAAAALAAAQAIQAAACAAAAAAACEAA=</HashCode>
+      <FileName>Parties\Contacts\GeographicAddress.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Country" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Devices" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.TelecomAddress">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <Members>
+      <Method Name="area" Hidden="true" />
+      <Method Name="country" Hidden="true" />
+      <Property Name="deviceId" Hidden="true" />
+      <Method Name="ext" Hidden="true" />
+      <Method Name="number" Hidden="true" />
+      <Method Name="phoneNo" Hidden="true" />
+      <Method Name="prefix" Hidden="true" />
+      <Method Name="TelecomAddress" Hidden="true" />
+      <Method Name="ToString" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Parties.Contacts.PartyContact&lt;TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="3.441" />
+        <Point X="4.375" Y="3.7" />
+        <Point X="4.438" Y="3.7" />
+        <Point X="4.438" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Registrations" Type="Abc.Domain.Parties.Contacts.DeviceRegistration" FixedFromPoint="true">
+      <Path>
+        <Point X="4.438" Y="6.194" />
+        <Point X="4.438" Y="6.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.11" Y="0.06" Height="0.182" Width="1.097" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAIAAAAAAQgAEEEAAAAAEAAAAAwACEAAAAAAAAgE=</HashCode>
+      <FileName>Parties\Contacts\TelecomAddress.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Registrations" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.WebPageAddress">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <Members>
+      <Method Name="ToString" Hidden="true" />
+      <Method Name="WebPageAddress" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Parties.Contacts.PartyContact&lt;TData&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="4.375" Y="3.441" />
+        <Point X="4.375" Y="3.7" />
+        <Point X="3" Y="3.7" />
+        <Point X="3" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\WebPageAddress.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.Country">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Country" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAQAAEAAAAQAAAACAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Parties\Contacts\Country.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.PartyContactUsage" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="2" />
+    <Members>
+      <Property Name="contactId" Hidden="true" />
+      <Method Name="PartyContactUsage" Hidden="true" />
+      <Property Name="typeId" Hidden="true" />
+    </Members>
+    <AssociationLine Name="Contact" Type="Abc.Domain.Parties.Contacts.IPartyContact" FixedFromPoint="true">
+      <Path>
+        <Point X="2.5" Y="2.062" />
+        <Point X="3.5" Y="2.062" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Type" Type="Abc.Domain.Classifiers.Parties.ContactUsageType" FixedToPoint="true">
+      <Path>
+        <Point X="2.375" Y="1.75" />
+        <Point X="2.375" Y="1.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.099" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\PartyContactUsage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Contact" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Classifiers.Parties.ContactUsageType" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Classifiers\Parties\ContactUsageType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Contacts.DeviceRegistration" Collapsed="true">
+    <Position X="3.25" Y="6.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Parties\Contacts\DeviceRegistration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Parties.Contacts.IPartyContact" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Contacts\IPartyContact.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

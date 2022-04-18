@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Facade.Products.ProductCatalogView" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductCatalogView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.CatalogedProductView">
+    <Position X="2.75" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\CatalogedProductView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.CatalogEntryView">
+    <Position X="2.75" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Products\CatalogEntryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.ProductCategoryView">
+    <Position X="0.5" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\ProductCategoryView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.ProductTypeView" Collapsed="true">
+    <Position X="2.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAAAAAAAEgCQAAAAABAAAAAEAAAQACA=</HashCode>
+      <FileName>Products\ProductTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.ProductView">
+    <Position X="2.75" Y="5" Width="2" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Property Name="Code" Hidden="true" />
+      <Property Name="DeliveredFrom" Hidden="true" />
+      <Property Name="DeliveredTo" Hidden="true" />
+      <Property Name="DeliveryStatus" Hidden="true" />
+      <Property Name="Name" Hidden="true" />
+      <Property Name="ProductKind" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Property Name="ScheduledFrom" Hidden="true" />
+      <Property Name="ScheduledTo" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAgIASQAAACAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.FeatureTypeView" Collapsed="true">
+    <Position X="5" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAECA=</HashCode>
+      <FileName>Products\FeatureTypeView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.FeatureView">
+    <Position X="5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Products\FeatureView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Facade.Products.PossibleFeatureValueView">
+    <Position X="5" Y="2.75" Width="2" />
+    <Members>
+      <Property Name="Relation" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Products\PossibleFeatureValueView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

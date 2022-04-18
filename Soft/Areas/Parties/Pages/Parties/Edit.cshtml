@@ -1,0 +1,14 @@
+﻿@page
+@using Abc.Aids.Enums
+@using Abc.Pages.Common.Extensions
+@using Abc.Soft.Pages.Components
+@model Abc.Pages.Parties.PartyPage
+
+@{
+    Layout = "_Edit";
+}
+<body>
+    @Html.EditItem(Model)
+    <component> @(await Html.RenderComponentAsync<Contacts>(RenderMode.Server, new {Model.PartyContacts, Model.Countries}))</component>
+    <component> @(await Html.RenderComponentAsync<BodyMetrics>(RenderMode.Server, new {PartyId = Model.Item.Id, Model.Metrics, Types = Model.BodyMetricTypes, Model.Units}))</component>
+</body>

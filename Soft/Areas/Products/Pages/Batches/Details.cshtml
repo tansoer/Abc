@@ -1,0 +1,22 @@
+﻿@page
+@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Products.BatchesPage
+
+@{
+    Layout = "_Details";
+}
+
+<body>
+    @Html.ShowItem(Model)
+</body>
+
+@section Details {
+    <a id="showProducts"
+       asp-route-handler="ShowProducts"
+       asp-route-id="@Model.ItemId">Products</a>
+    &nbsp;
+    <a id="showCheckedBy"
+       asp-route-handler="ShowChecks"
+       asp-route-id="@Model.ItemId">Checked By</a>
+
+}

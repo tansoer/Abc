@@ -1,0 +1,10 @@
+﻿@using Abc.Pages.Common.Extensions
+@model Abc.Pages.Orders.TermsAndConditionsTypesPage
+
+    <body>
+    <input type="hidden" asp-for="Item.Id" />
+    <input type="hidden" asp-for="Item.ClassifierType" />
+
+    @Html.EditItem(Model)
+
+    </body>

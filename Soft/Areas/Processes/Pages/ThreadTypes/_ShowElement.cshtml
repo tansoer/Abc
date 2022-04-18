@@ -1,0 +1,26 @@
+﻿@using Abc.Aids.Reflection
+@using Abc.Pages.Common.Extensions
+@using Abc.Facade.Processes
+@model Abc.Pages.Processes.ThreadTypesPage
+
+<body>
+    @if (Model.TaskTypes.Count != 0)
+    {
+        <h3>Task types for selected thread type</h3>
+        <table class="table">
+            <tr>
+                <th>@(GetMember.DisplayName<TaskTypeView>(x => x.Name))</th>
+                <th>@(GetMember.DisplayName<TaskTypeView>(x => x.ValidFrom))</th>
+                <th>@(GetMember.DisplayName<TaskTypeView>(x => x.ValidTo))</th>
+            </tr>
+            @foreach (var item in Model.TaskTypes)
+            {
+                <tr>
+                    <td> @Html.DisplayFor(modelItem => item.Name) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidFrom) </td>
+                    <td> @Html.DisplayFor(modelItem => item.ValidTo) </td>
+                </tr>
+            }
+        </table>
+    }
+</body>

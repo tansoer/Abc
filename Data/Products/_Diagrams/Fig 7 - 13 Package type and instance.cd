@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="All the different product and product type kinds are recorded in one and the same ProductData and ProductTypeData classes. PackageType and Package are of ProductKind &quot;Package&quot;.">
+    <Position X="0.5" Y="5.865" Height="0.75" Width="6.504" />
+  </Comment>
+  <Class Name="Abc.Data.Common.EntityTypeData">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\EntityTypeData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Data.Products.ProductTypeData" Collapsed="true">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="ColumnsCount" Hidden="true" />
+      <Property Name="LevelsCount" Hidden="true" />
+      <Property Name="NumericCode" Hidden="true" />
+      <Property Name="PeriodOfOperationFrom" Hidden="true" />
+      <Property Name="PeriodOfOperationTo" Hidden="true" />
+      <Property Name="PricingStrategy" Hidden="true" />
+      <Property Name="RowsCount" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Data.Common.EntityTypeData" FixedToPoint="true">
+      <Path>
+        <Point X="4" Y="1.733" />
+        <Point X="4" Y="2.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAAAAAAAAEgCQAAAAABAAAAAEAAAQACA=</HashCode>
+      <FileName>Products\ProductTypeData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductData">
+    <Position X="3.25" Y="4" Width="1.5" />
+    <Members>
+      <Property Name="Amount" Hidden="true" />
+      <Property Name="BatchId" Hidden="true" />
+      <Property Name="DeliveredFrom" Hidden="true" />
+      <Property Name="DeliveredTo" Hidden="true" />
+      <Property Name="DeliveryStatus" Hidden="true" />
+      <Property Name="ReservationStatus" Hidden="true" />
+      <Property Name="ScheduledFrom" Hidden="true" />
+      <Property Name="ScheduledTo" Hidden="true" />
+      <Property Name="UnitId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAACAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.PackageComponentData">
+    <Position X="5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PackageComponentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.PackageContentData">
+    <Position X="5" Y="4" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Products\PackageContentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Products.ProductKind">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAQBAAAAAAAAAAAQAAAAAAAAQABAAAQAAAAAAAA=</HashCode>
+      <FileName>Products\ProductKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Data.Products.ProductData">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <AssociationLine Name="ProductKind" Type="Abc.Data.Products.ProductKind" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="7" />
+        <Point X="2" Y="7" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAQAAAFAAEAAAIACQAAEAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Products\ProductData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.ProductTypeData">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAASAAAEAAAAAAEACQAAAAAAABAAAEAAgAACA=</HashCode>
+      <FileName>Products\ProductTypeData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductKind" />
+      <Property Name="PricingStrategy" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.PriceData">
+    <Position X="2.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAwFAAAAAIAEAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PriceData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Kind" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Data.Products.PackageComponentData">
+    <Position X="2.75" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PackageComponentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Data.Products.PackageContentData">
+    <Position X="2.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Products\PackageContentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Abc.Data.Products.ProductKind">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQACAAQBAAAAAAAAAAAQAAAAAAAAQABAAAQAAAAAAAA=</HashCode>
+      <FileName>Products\ProductKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Products.PriceKind">
+    <Position X="5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAIAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Products\PriceKind.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Abc.Data.Products.PricingStrategy">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Products\PricingStrategy.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

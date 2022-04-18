@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Conversion starts from the ConcertTo method of Quantity class. ConvertTo has a Unit argument. The algorithm is simple: first converting a Quantity to the base unit and then back to the new unit given by the argument.So, we do not need special conversion classes.&#xD;&#xA;">
+    <Position X="0.5" Y="7.24" Height="0.75" Width="7.575" />
+  </Comment>
+  <Class Name="Abc.Domain.Quantities.Quantity">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="CompareTo" Hidden="true" />
+      <Method Name="convertTo" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="Inverse" Hidden="true" />
+      <Method Name="IsEqual" Hidden="true" />
+      <Method Name="IsGreater" Hidden="true" />
+      <Method Name="IsLess" Hidden="true" />
+      <Method Name="IsSameMeasure" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="Opposite" Hidden="true" />
+      <Method Name="Parse" Hidden="true" />
+      <Method Name="Power" Hidden="true" />
+      <Method Name="Quantity" Hidden="true" />
+      <Method Name="Round" Hidden="true" />
+      <Method Name="Sqrt" Hidden="true" />
+      <Method Name="Subtract" Hidden="true" />
+      <Method Name="TryParse" Hidden="true" />
+      <Property Name="Unspecified" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AIIgAAABAQAAAAQAIQIDAAAACEQAACABAAAoAAMAABE=</HashCode>
+      <FileName>Quantities\Quantity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Unit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Unit">
+    <Position X="0.5" Y="1.75" Width="4.75" />
+    <Members>
+      <Method Name="addTerm" Hidden="true" />
+      <Method Name="createUnit" Hidden="true" />
+      <Method Name="Divide" Hidden="true" />
+      <Method Name="formula" Hidden="true" />
+      <Method Name="Formula" Hidden="true" />
+      <Method Name="Inverse" Hidden="true" />
+      <Field Name="measure" Hidden="true" />
+      <Property Name="MeasureId" Hidden="true" />
+      <Method Name="multiply" Hidden="true" />
+      <Method Name="Multiply" Hidden="true" />
+      <Method Name="Power" Hidden="true" />
+      <Method Name="sqrt" Hidden="true" />
+      <Method Name="Sqrt" Hidden="true" />
+      <Field Name="term" Hidden="true" />
+      <Field Name="termData" Hidden="true" />
+      <Method Name="toIdIsFormula" Hidden="true" />
+      <Method Name="toPower" Hidden="true" />
+      <Field Name="unit" Hidden="true" />
+      <Method Name="Unit" Hidden="true" />
+      <Field Name="unitData" Hidden="true" />
+      <Field Name="unitTerms" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAQAiAEAAEAIBJAAEAwQQBAgBAAAIAIAAAQI=</HashCode>
+      <FileName>Quantities\Unit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Measure" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.Measure" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAQACAQEAEAJBAAAEAwUQBAABEAAABKAAAAA=</HashCode>
+      <FileName>Quantities\Measure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.DerivedUnit">
+    <Position X="3" Y="4" Width="1.25" />
+    <Members>
+      <Method Name="DerivedUnit" Hidden="true" />
+      <Property Name="field" Hidden="true" />
+      <Method Name="formula" Hidden="true" />
+      <Method Name="multiply" Hidden="true" />
+      <Method Name="sqrt" Hidden="true" />
+      <Field Name="terms" Hidden="true" />
+      <Method Name="toPower" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Class Name="Abc.Domain.Quantities.DerivedUnit.comparer" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Quantities\DerivedUnit.cs</NewMemberFileName>
+        </TypeIdentifier>
+        <Lollipop Position="0.2" />
+      </Class>
+    </NestedTypes>
+    <InheritanceLine Type="Abc.Domain.Quantities.Unit" FixedFromPoint="true">
+      <Path>
+        <Point X="4.875" Y="3.175" />
+        <Point X="4.875" Y="3.625" />
+        <Point X="3.625" Y="3.625" />
+        <Point X="3.625" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Terms" Type="Abc.Domain.Quantities.UnitTerm" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="4.5" />
+        <Point X="2" Y="4.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACACAAAAAgAAAAAAAAAJAAEAQAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>Quantities\DerivedUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Terms" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.FactoredUnit">
+    <Position X="4.25" Y="4" Width="1.25" />
+    <Members>
+      <Property Name="Factor" Hidden="true" />
+      <Method Name="FactoredUnit" Hidden="true" />
+      <Property Name="field" Hidden="true" />
+      <Method Name="formula" Hidden="true" />
+      <Method Name="multiply" Hidden="true" />
+      <Method Name="sqrt" Hidden="true" />
+      <Method Name="toPower" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Quantities.Unit" FixedFromPoint="true">
+      <Path>
+        <Point X="4.875" Y="3.175" />
+        <Point X="4.875" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="Factors" Type="Abc.Domain.Quantities.UnitFactor" FixedFromPoint="true">
+      <Path>
+        <Point X="5.375" Y="5.425" />
+        <Point X="5.375" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.252" Y="0.173" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="SiSystemFactor" Type="Abc.Domain.Quantities.UnitFactor" FixedToPoint="true">
+      <Path>
+        <Point X="4.625" Y="5.425" />
+        <Point X="4.625" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.44" Y="0.339" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAAABAAAAAAAgIAAAAJAAEAQAAAAgAAAAIAAAAAAA=</HashCode>
+      <FileName>Quantities\FactoredUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SiSystemFactor" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Factors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.FunctionedUnit">
+    <Position X="5.5" Y="4" Width="2.5" />
+    <Members>
+      <Property Name="field" Hidden="true" />
+      <Method Name="formula" Hidden="true" />
+      <Method Name="FunctionedUnit" Hidden="true" />
+      <Method Name="multiply" Hidden="true" />
+      <Property Name="Rules" Hidden="true" />
+      <Property Name="SiSystemRules" Hidden="true" />
+      <Method Name="sqrt" Hidden="true" />
+      <Method Name="toPower" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Quantities.Unit" FixedFromPoint="true">
+      <Path>
+        <Point X="4.875" Y="3.175" />
+        <Point X="4.875" Y="3.625" />
+        <Point X="6.75" Y="3.625" />
+        <Point X="6.75" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="ToBaseUnitRule" Type="Abc.Domain.Rules.BaseRule" FixedFromPoint="true">
+      <Path>
+        <Point X="6.375" Y="5.425" />
+        <Point X="6.375" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.367" Y="0.381" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="FromBaseUnitRule" Type="Abc.Domain.Rules.BaseRule" FixedToPoint="true">
+      <Path>
+        <Point X="7.757" Y="5.425" />
+        <Point X="7.757" Y="6.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.43" Y="0.391" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AgCAAAEAAEAAAAAAAAAAJAAEAQAAAAgAAAAIAAAAACA=</HashCode>
+      <FileName>Quantities\FunctionedUnit.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ToBaseUnitRule" />
+      <Property Name="FromBaseUnitRule" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitTerm" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <Members>
+      <Method Name="Formula" Hidden="true" />
+      <Field Name="master" Hidden="true" />
+      <Property Name="MasterUnitId" Hidden="true" />
+      <Field Name="term" Hidden="true" />
+      <Property Name="TermUnitId" Hidden="true" />
+      <Method Name="UnitTerm" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAgAAABAAAAAAAAAAAQBAAAQAAAAAAAQAA=</HashCode>
+      <FileName>Quantities\UnitTerm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MasterUnit" />
+      <Property Name="TermUnit" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Quantities.UnitFactor" Collapsed="true">
+    <Position X="4.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Quantities\UnitFactor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Rules.BaseRule" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAIAAAAAAAAAAAQAgAAAAIAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Rules\BaseRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

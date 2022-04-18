@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Both, the Order and the OrderLine, have the overloaded methods for adding and removing charge lines. Both, the OrderLine and the ChargeLine, inherit methods for adding and removing tax lines from the TaxableLine abstract class.  For the description, the Charge Line is using Name property of the Entity and for the comments, it is useing Details property. Add, Remove and AmendLine methods are related so that OrderLineManager is a master for Add, Remove and AmendLine methods in OrderLine and TaxableLine.">
+    <Position X="6.927" Y="2.979" Height="2.323" Width="2.773" />
+  </Comment>
+  <Class Name="Abc.Domain.Orders.Order" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="AcceptEvent" Hidden="true" />
+      <Method Name="acceptPayment" Hidden="true" />
+      <Method Name="acceptRefund" Hidden="true" />
+      <Property Name="DateCreated" Hidden="true" />
+      <Property Name="DiscountRuleContext" Hidden="true" />
+      <Property Name="DiscountRuleContextId" Hidden="true" />
+      <Field Name="eventsManager" Hidden="true" />
+      <Property Name="EventsManager" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Field Name="linesManager" Hidden="true" />
+      <Method Name="makePayment" Hidden="true" />
+      <Method Name="makeRefund" Hidden="true" />
+      <Method Name="Order" Hidden="true" />
+      <Property Name="OrderManagerId" Hidden="true" />
+      <Field Name="partiesManager" Hidden="true" />
+      <Property Name="PartiesManager" Hidden="true" />
+      <Method Name="processAmend" Hidden="true" />
+      <Method Name="processDiscount" Hidden="true" />
+      <Method Name="processDispatch" Hidden="true" />
+      <Method Name="processInvoice" Hidden="true" />
+      <Method Name="processLifecycle" Hidden="true" />
+      <Method Name="processPayment" Hidden="true" />
+      <Method Name="processReceipt" Hidden="true" />
+      <Method Name="processUnspecified" Hidden="true" />
+      <Property Name="SalesChannel" Hidden="true" />
+      <Property Name="SalesChannelId" Hidden="true" />
+      <Method Name="SetEventsManager" Hidden="true" />
+      <Method Name="SetLinesManager" Hidden="true" />
+      <Method Name="setManager" Hidden="true" />
+      <Method Name="SetPartiesManager" Hidden="true" />
+      <Method Name="SetStatusManager" Hidden="true" />
+      <Method Name="SetTermsManager" Hidden="true" />
+      <Field Name="statusManager" Hidden="true" />
+      <Property Name="StatusManager" Hidden="true" />
+      <Field Name="termsManager" Hidden="true" />
+      <Property Name="TermsManager" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AMIAIEBAAkRAQoIBwBkAQABJIAAAQAAIQAAECAAAQAA=</HashCode>
+      <FileName>Orders\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LinesManager" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLinesManager">
+    <Position X="0.5" Y="0.5" Width="4.25" />
+    <Members>
+      <Method Name="AcceptPayment" Hidden="true" />
+      <Method Name="AcceptReceipt" Hidden="true" />
+      <Method Name="AcceptRefund" Hidden="true" />
+      <Method Name="Amend" Hidden="true" />
+      <Method Name="AmendParty" Hidden="true" />
+      <Method Name="DispatchItems" Hidden="true" />
+      <Method Name="IsCancellable" Hidden="true" />
+      <Method Name="IsClosable" Hidden="true" />
+      <Method Name="isOrderLine" Hidden="true" />
+      <Method Name="isRemovable" Hidden="true" />
+      <Method Name="MakePayment" Hidden="true" />
+      <Method Name="MakeRefund" Hidden="true" />
+      <Method Name="newOrderLine" Hidden="true" />
+      <Property Name="orderIdInLine" Hidden="true" />
+      <Property Name="orderLines" Hidden="true" />
+      <Method Name="OrderLinesManager" Hidden="true" />
+      <Method Name="ReceiptReturned" Hidden="true" />
+      <Method Name="ReceiveInvoice" Hidden="true" />
+      <Method Name="ReturnItems" Hidden="true" />
+      <Method Name="SendInvoice" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AANYQAAAAAAAggRAAAAADBAAIAAAUgAIQAAIAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ProductLines" />
+      <Property Name="ChargeLines" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.ChargeLine">
+    <Position X="0.5" Y="2.25" Width="1.25" />
+    <Members>
+      <Method Name="ChargeLine" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Orders.Lines.TaxableLine" FixedFromPoint="true">
+      <Path>
+        <Point X="1.125" Y="4" />
+        <Point X="1.125" Y="3.483" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\ChargeLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.OrderLine">
+    <Position X="3" Y="2.25" Width="1.75" />
+    <Members>
+      <Method Name="Add" Hidden="true" />
+      <Method Name="AddItems" Hidden="true" />
+      <Method Name="AmendLine" Hidden="true" />
+      <Method Name="AmendParty" Hidden="true" />
+      <Property Name="Clone" Hidden="true" />
+      <Method Name="deleteReceiver" Hidden="true" />
+      <Property Name="DeliveryReceiver" Hidden="true" />
+      <Property Name="ExpectedDelivery" Hidden="true" />
+      <Property Name="hasDeliveryReceiver" Hidden="true" />
+      <Method Name="isChargeLine" Hidden="true" />
+      <Method Name="isDeliveryReceiver" Hidden="true" />
+      <Method Name="isReceiver" Hidden="true" />
+      <Method Name="newReceiver" Hidden="true" />
+      <Method Name="newRole" Hidden="true" />
+      <Property Name="NumberOfProducts" Hidden="true" />
+      <Method Name="OrderLine" Hidden="true" />
+      <Property Name="orderLineIdField" Hidden="true" />
+      <Property Name="Product" Hidden="true" />
+      <Property Name="productId" Hidden="true" />
+      <Property Name="ProductType" Hidden="true" />
+      <Property Name="productTypeId" Hidden="true" />
+      <Property Name="relatedParties" Hidden="true" />
+      <Method Name="Remove" Hidden="true" />
+      <Property Name="UnitPrice" Hidden="true" />
+    </Members>
+    <InheritanceLine Type="Abc.Domain.Orders.Lines.TaxableLine" FixedFromPoint="true">
+      <Path>
+        <Point X="3.875" Y="4" />
+        <Point X="3.875" Y="3.675" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>oAMCgBAwGEAANAAAAAAABQACAAQAgAEAAABKAAAAABA=</HashCode>
+      <FileName>Orders\Lines\OrderLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ChargeLines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.TaxableLine">
+    <Position X="0.5" Y="4" Width="6" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="AmendLine" Hidden="true" />
+      <Method Name="isTaxLine" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+      <Method Name="TaxableLine" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAABEEAAEACAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Orders\Lines\TaxableLine.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="TaxLines" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Orders.Lines.TaxLine" Collapsed="true">
+    <Position X="5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAEBAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Orders\Lines\TaxLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Abc.Domain.Orders.Lines.IOrderLinesManager" Collapsed="true">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAJIQAAAAAAAgAAAAAAABBAAIAAAEgAIQAAAAEAIAAA=</HashCode>
+      <FileName>Orders\Lines\OrderLinesManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

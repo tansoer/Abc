@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Abc.Domain.Parties.Organization" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Organization.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Party&lt;TName&gt;">
+    <Position X="3.25" Y="0.5" Width="1.75" />
+    <Members>
+      <Property Name="Addresses" Hidden="true" />
+      <Property Name="Authentications" Hidden="true" />
+      <Property Name="Capabilities" Hidden="true" />
+      <Property Name="Contacts" Hidden="true" />
+      <Property Name="Emails" Hidden="true" />
+      <Method Name="GetAddress" Hidden="true" />
+      <Method Name="getContact" Hidden="true" />
+      <Method Name="getContacts" Hidden="true" />
+      <Method Name="GetEmail" Hidden="true" />
+      <Method Name="getFirstName" Hidden="true" />
+      <Method Name="GetName" Hidden="true" />
+      <Method Name="getOfficialName" Hidden="true" />
+      <Method Name="GetPhone" Hidden="true" />
+      <Method Name="names" Hidden="true" />
+      <Method Name="Party" Hidden="true" />
+      <Property Name="partyId" Hidden="true" />
+      <Property Name="partyNames" Hidden="true" />
+      <Property Name="Phones" Hidden="true" />
+      <Property Name="Preferences" Hidden="true" />
+      <Property Name="Roles" Hidden="true" />
+      <Method Name="ToPartySummary" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>BEBAgAAAGCAAgAAgAAAAAQIAAgCAFAAiAAAAIEIABMA=</HashCode>
+      <FileName>Parties\Party.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Identifiers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Identifiers.RegisteredIdentifier" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAQAABAAAAAAAQAAYAAAAAA=</HashCode>
+      <FileName>Parties\Identifiers\RegisteredIdentifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.OrganizationName" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Names\OrganizationName.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.OrganizationType" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\OrganizationType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.PartyName">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <Members>
+      <Method Name="PartyName" Hidden="true" />
+      <Property Name="partyNameId" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgQAAAAAAAAA=</HashCode>
+      <FileName>Parties\Names\PartyName.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="NameUse" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.PartyNameUse" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAIAAAAAA=</HashCode>
+      <FileName>Parties\Names\PartyNameUse.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Abc.Domain.Classifiers.Classifier&lt;TType&gt;">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="Classifier" Hidden="true" />
+      <Method Name="IsTypeOf" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAABAAAAAAAAAAAAAAAAgAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Classifiers\Classifier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Abc.Domain.Parties.Attributes.BasePartyAttribute&lt;T&gt;">
+    <Position X="0.5" Y="1.5" Width="1.75" />
+    <Members>
+      <Method Name="BasePartyAttribute" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Attributes\BasePartyAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Abc.Domain.Parties.Names.NameUsageType" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Parties\Names\NameUsageType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
